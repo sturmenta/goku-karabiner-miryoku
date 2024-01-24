@@ -396,11 +396,11 @@
                 },
                 "rules": [
                     {
-                        "description": "CMD + W to NOTHING",
+                        "description": "esq + q to NOTHING",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "w",
+                                    "key_code": "q",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_command"
@@ -656,11 +656,21 @@
             "simple_modifications": [
                 {
                     "from": {
-                        "key_code": "a"
+                        "key_code": "1"
                     },
                     "to": [
                         {
-                            "key_code": "b"
+                            "key_code": "q"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "x"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_command"
                         }
                     ]
                 }
