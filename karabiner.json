@@ -396,6 +396,30 @@
         },
         "rules": [
           {
+            "description": "[Nav layer] - change c to left_option. (Post spacebar if pressed alone)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_option"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "spacebar"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "Nav layer",
             "manipulators": [
               {
@@ -405,7 +429,11 @@
                     "mandatory": ["left_option"]
                   }
                 },
-                "to": [{ "key_code": "left_arrow" }],
+                "to": [
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -415,7 +443,11 @@
                     "mandatory": ["left_option"]
                   }
                 },
-                "to": [{ "key_code": "down_arrow" }],
+                "to": [
+                  {
+                    "key_code": "down_arrow"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -425,7 +457,11 @@
                     "mandatory": ["left_option"]
                   }
                 },
-                "to": [{ "key_code": "up_arrow" }],
+                "to": [
+                  {
+                    "key_code": "up_arrow"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -435,7 +471,11 @@
                     "mandatory": ["left_option"]
                   }
                 },
-                "to": [{ "key_code": "right_arrow" }],
+                "to": [
+                  {
+                    "key_code": "right_arrow"
+                  }
+                ],
                 "type": "basic"
               }
             ]
@@ -774,6 +814,16 @@
         },
         {
           "from": {
+            "key_code": "comma"
+          },
+          "to": [
+            {
+              "key_code": "right_option"
+            }
+          ]
+        },
+        {
+          "from": {
             "key_code": "d"
           },
           "to": [
@@ -874,6 +924,16 @@
         },
         {
           "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "key_code": "right_command"
+            }
+          ]
+        },
+        {
+          "from": {
             "key_code": "o"
           },
           "to": [
@@ -899,6 +959,16 @@
           "to": [
             {
               "key_code": "l"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "period"
+          },
+          "to": [
+            {
+              "key_code": "right_control"
             }
           ]
         },
@@ -974,6 +1044,16 @@
         },
         {
           "from": {
+            "key_code": "v"
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ]
+        },
+        {
+          "from": {
             "key_code": "w"
           },
           "to": [
@@ -989,56 +1069,6 @@
           "to": [
             {
               "key_code": "left_control"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "c"
-          },
-          "to": [
-            {
-              "key_code": "left_option"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "v"
-          },
-          "to": [
-            {
-              "key_code": "left_command"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "m"
-          },
-          "to": [
-            {
-              "key_code": "right_command"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "comma"
-          },
-          "to": [
-            {
-              "key_code": "right_option"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "period"
-          },
-          "to": [
-            {
-              "key_code": "right_control"
             }
           ]
         }
