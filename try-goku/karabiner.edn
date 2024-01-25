@@ -1,56 +1,59 @@
 {:main [;;
-        ;; ────── simple modifications ─────────────────────────────────────────────────────────────────────
-        ;;
+;;
+;; ────── simple modifications ─────────────────────────────────────────────────────────────────────
+;;
+        {:des "simple modifications"
+         :rules
+         [;;
+          ;; left side
+          ;;
+          [:1 :q]
+          [:2 :w]
+          [:3 :e]
+          [:4 :r]
+          [:5 :t]
+          ;;
+          [:q :a]
+          [:w :s]
+          [:e :d]
+          [:r :f]
+          [:t :g]
+          ;;
+          [:a :z]
+          [:s :x]
+          [:d :c]
+          [:f :v]
+          [:g :b]
+          ;;
+          [:x :keypad_1]
+          [:c :keypad_2]
+          [:v :keypad_3]
+          ;;
+          ;; right side
+          ;;
+          [:8 :y]
+          [:9 :u]
+          [:0 :i]
+          [:hyphen :o]
+          [:equal_sign :p]
+          ;;
+          [:u :h]
+          [:i :j]
+          [:o :k]
+          [:p :l]
+          [:open_bracket :quote]
+          ;;
+          [:j :n]
+          [:k :m]
+          [:l :comma]
+          [:semicolon :period]
+          [:quote :slash]
+          ;;
+          [:m :keypad_4]
+          [:comma :keypad_5]
+          [:period :keypad_6]
+          ;;
+          ]}
 
-        ;;
-        ;; left side
-        ;;
-        {:des "1 to q" :rules [[:1 :q]]}
-        {:des "2 to w" :rules [[:2 :w]]}
-        {:des "3 to e" :rules [[:3 :e]]}
-        {:des "4 to r" :rules [[:4 :r]]}
-        {:des "5 to t" :rules [[:5 :t]]}
-
-        {:des "q to a" :rules [[:q :a]]}
-        {:des "w to s" :rules [[:w :s]]}
-        {:des "e to d" :rules [[:e :d]]}
-        {:des "r to f" :rules [[:r :f]]}
-        {:des "t to g" :rules [[:t :g]]}
-
-        {:des "a to z" :rules [[:a :z]]}
-        {:des "s to x" :rules [[:s :x]]}
-        {:des "d to c" :rules [[:d :c]]}
-        {:des "f to v" :rules [[:f :v]]}
-        {:des "g to b" :rules [[:g :b]]}
-
-        {:des "x to keypad_1" :rules [[:x :keypad_1]]}
-        {:des "c to keypad_2" :rules [[:c :keypad_2]]}
-        {:des "v to keypad_3" :rules [[:v :keypad_3]]}
-
-        ;;
-        ;; right side
-        ;;
-        {:des "8 to y" :rules [[:8 :y]]}
-        {:des "9 to u" :rules [[:9 :u]]}
-        {:des "0 to i" :rules [[:0 :i]]}
-        {:des "hyphen to o" :rules [[:hyphen :o]]}
-        {:des "equal_sign to p" :rules [[:equal_sign :p]]}
-
-        {:des "u to h" :rules [[:u :h]]}
-        {:des "i to j" :rules [[:i :j]]}
-        {:des "o to k" :rules [[:o :k]]}
-        {:des "p to l" :rules [[:p :l]]}
-        {:des "open_bracket to quote" :rules [[:open_bracket :quote]]}
-
-        {:des "j to n" :rules [[:j :n]]}
-        {:des "k to m" :rules [[:k :m]]}
-        {:des "l to comma" :rules [[:l :comma]]}
-        {:des "semicolon to period" :rules [[:semicolon :period]]}
-        {:des "quote to slash" :rules [[:quote :slash]]}
-
-        {:des "m to keypad_4" :rules [[:m :keypad_4]]}
-        {:des "comma to keypad_5" :rules [[:comma :keypad_5]]}
-        {:des "period to keypad_6" :rules [[:period :keypad_6]]}
-
-        ;; ─────────────────────────────────────────────────────────────────────
+;; ─────────────────────────────────────────────────────────────────────
         ]}
