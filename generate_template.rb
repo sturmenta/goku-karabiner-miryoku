@@ -23,11 +23,38 @@ def main
       {
         'description' => '-- Nav layer --',
         'manipulators' => [
+          ##########
           generate_layer_switch_button('nav', 'keypad_2', 'spacebar'),
+          ##########
+          #
+          # left side
+          #
+          # row-2
+          generate_keymap_for_layer('nav', 'a', 'left_command'),
+          generate_keymap_for_layer('nav', 's', 'left_option'),
+          generate_keymap_for_layer('nav', 'd', 'left_control'),
+          generate_keymap_for_layer('nav', 'f', 'left_shift'),
+          #
+          # right side
+          #
+          # row-1
+          # generate_keymap_for_layer('nav', 'y', 'again'), # TODO: again (ctrl + y)
+          # generate_keymap_for_layer('nav', 'u', 'paste'), # TODO: paste (ctrl + v)
+          # generate_keymap_for_layer('nav', 'i', 'copy'), # TODO: copy (ctrl + c)
+          # generate_keymap_for_layer('nav', 'o', 'cut'), # TODO: cut (ctrl + x)
+          # generate_keymap_for_layer('nav', 'p', 'undo'), # TODO: undo (ctrl + z)
+          # row-2
+          # generate_keymap_for_layer('nav', 'h', 'caps_lock'), # TODO: fix -> add new logic to the function, if #{from}.lenght === 1 and is a letter -> add another line with uppercase -- also bug when caps_lock active -> not working modifier key anymore
           generate_keymap_for_layer('nav', 'j', 'left_arrow'),
           generate_keymap_for_layer('nav', 'k', 'down_arrow'),
           generate_keymap_for_layer('nav', 'l', 'up_arrow'),
-          generate_keymap_for_layer('nav', 'quote', 'right_arrow')
+          generate_keymap_for_layer('nav', 'quote', 'right_arrow'),
+          # row-3
+          generate_keymap_for_layer('nav', 'n', 'insert')
+          # generate_keymap_for_layer('nav', 'm', 'home'), # TODO: home (cmd + left_arrow)
+          # generate_keymap_for_layer('nav', ',', 'page_down'), # TODO: page_down (cmd + down_arrow)
+          # generate_keymap_for_layer('nav', '.', 'page_up'), # TODO: page_up (cmd + up_arrow)
+          # generate_keymap_for_layer('nav', '/', 'end') # TODO: end (cmd + right_arrow)
         ].flatten
       }
     ]

@@ -430,6 +430,74 @@
                 ]
               },
               {
+                "description": "if (nav-layer & a) -> left_command",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-nav",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "a"
+                },
+                "to": {
+                  "key_code": "left_command"
+                }
+              },
+              {
+                "description": "if (nav-layer & s) -> left_option",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-nav",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "s"
+                },
+                "to": {
+                  "key_code": "left_option"
+                }
+              },
+              {
+                "description": "if (nav-layer & d) -> left_control",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-nav",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "d"
+                },
+                "to": {
+                  "key_code": "left_control"
+                }
+              },
+              {
+                "description": "if (nav-layer & f) -> left_shift",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-nav",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "f"
+                },
+                "to": {
+                  "key_code": "left_shift"
+                }
+              },
+              {
                 "description": "if (nav-layer & j) -> left_arrow",
                 "type": "basic",
                 "conditions": [
@@ -495,6 +563,23 @@
                 },
                 "to": {
                   "key_code": "right_arrow"
+                }
+              },
+              {
+                "description": "if (nav-layer & n) -> insert",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-nav",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "n"
+                },
+                "to": {
+                  "key_code": "insert"
                 }
               }
             ]
