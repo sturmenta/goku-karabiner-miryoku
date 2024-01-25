@@ -407,29 +407,74 @@
                 "parameters": {
                   "basic.to_if_held_down_threshold_milliseconds": 0
                 },
-                "to_after_key_up": {
-                  "set_variable": {
-                    "name": "current-layer-is-nav",
-                    "value": 0
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-nav",
+                      "value": 0
+                    }
                   }
-                },
-                "to_if_held_down": {
-                  "set_variable": {
-                    "name": "current-layer-is-nav",
-                    "value": 1
+                ],
+                "to_if_held_down": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-nav",
+                      "value": 1
+                    }
                   }
-                }
+                ]
               },
               {
                 "description": "if (nav-layer & j) -> left_arrow",
                 "type": "basic",
-                "conditions": {
-                  "name": "current-layer-is-nav",
-                  "type": "variable_if",
-                  "value": 1
-                },
+                "conditions": [
+                  {
+                    "name": "current-layer-is-nav",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "from": { "key_code": "j" },
                 "to": { "key_code": "left_arrow" }
+              },
+              {
+                "description": "if (nav-layer & k) -> down_arrow",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-nav",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": { "key_code": "k" },
+                "to": { "key_code": "down_arrow" }
+              },
+              {
+                "description": "if (nav-layer & l) -> up_arrow",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-nav",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": { "key_code": "l" },
+                "to": { "key_code": "up_arrow" }
+              },
+              {
+                "description": "if (nav-layer & quote) -> right_arrow",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-nav",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": { "key_code": "quote" },
+                "to": { "key_code": "right_arrow" }
               }
             ]
           }
