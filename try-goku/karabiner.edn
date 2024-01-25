@@ -1,0 +1,17 @@
+;; main contains multiple manipulators
+;; each manipulator has a description and multiple rules
+
+    ;; main                -> {:main [{:des "..." :rules [rule1 rule2 ...]}]}
+    ;; manipulator         -> {:des "..." :rules [rule1 rule2 ...]}
+    ;; manipulator's rules -> [rule1 rule2 ...]
+    {:main [{:des "a to 1, b to 2, c to insert 1 2 3"
+             :rules [[:a :1] [:b :2] [:c [:1 :2 :3]]]}]}
+
+    ;; or we can separate them into three manipulators
+    {:main [{:des "a to 1" :rules [[:a :1]]}
+            {:des "b to 2" :rules [[:b :2]]}
+            {:des "c to insert 123" :rules [[:c [:1 :2 :3]]]}]}
+
+    ;; in rules [:a :1] -- [<from> <to>]
+    ;; it means from key a to key 1
+    ;; these keycode is just original karabiner keycode prefix with colon
