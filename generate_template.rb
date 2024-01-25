@@ -21,6 +21,7 @@ def main
   data = {
     'rules' => [
       # TODO: add keep pressed buttons on base layer -> comands like cmd, shift, etc
+      ############################################################
       {
         'description' => '-- Nav layer --',
         'manipulators' => [
@@ -58,6 +59,7 @@ def main
           # generate_keymap_for_layer('nav', '/', 'end') # TODO: end (cmd + right_arrow)
         ].flatten
       },
+      ############################################################
       {
         'description' => '-- Mouse layer --',
         'manipulators' => [
@@ -66,6 +68,7 @@ def main
           ##########
         ].flatten
       },
+      ############################################################
       {
         'description' => '-- Media layer --',
         'manipulators' => [
@@ -73,20 +76,19 @@ def main
           generate_layer_switch_button('media', 'keypad_1', 'escape'),
           ##########
           #
-          # left side
-          #
-          # row-2
-          generate_keymap_for_layer('media', 'a', 'left_command'),
-          generate_keymap_for_layer('media', 's', 'left_option'),
-          generate_keymap_for_layer('media', 'd', 'left_control'),
-          generate_keymap_for_layer('media', 'f', 'left_shift')
-          #
           # right side
           #
-          # row-1
-          # generate_keymap_for_layer('media', 'j', 'left_arrow'),
+          # row-2
+          generate_keymap_for_layer('media', 'j', 'rewind'),
+          generate_keymap_for_layer('media', 'k', 'volume_decrement'),
+          generate_keymap_for_layer('media', 'l', 'volume_increment'),
+          generate_keymap_for_layer('media', 'quote', 'fast_forward'), # TODO: fix -> not working
+          # row-4
+          generate_keymap_for_layer('media', 'keypad_5', 'play_or_pause'),
+          generate_keymap_for_layer('media', 'keypad_6', 'mute')
         ].flatten
       },
+      ############################################################
       {
         'description' => '-- Num layer --',
         'manipulators' => [
@@ -95,6 +97,7 @@ def main
           ##########
         ].flatten
       },
+      ############################################################
       {
         'description' => '-- Sym layer --',
         'manipulators' => [
@@ -103,6 +106,7 @@ def main
           ##########
         ].flatten
       },
+      ############################################################
       {
         'description' => '-- Fun layer --',
         'manipulators' => [
@@ -111,6 +115,7 @@ def main
           ##########
         ].flatten
       }
+      ############################################################
     ]
   }
 

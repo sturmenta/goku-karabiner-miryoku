@@ -655,7 +655,7 @@
                 ]
               },
               {
-                "description": "if (media-layer & a) -> left_command",
+                "description": "if (media-layer & j) -> rewind",
                 "type": "basic",
                 "conditions": [
                   {
@@ -665,14 +665,14 @@
                   }
                 ],
                 "from": {
-                  "key_code": "a"
+                  "key_code": "j"
                 },
                 "to": {
-                  "key_code": "left_command"
+                  "key_code": "rewind"
                 }
               },
               {
-                "description": "if (media-layer & s) -> left_option",
+                "description": "if (media-layer & k) -> volume_decrement",
                 "type": "basic",
                 "conditions": [
                   {
@@ -682,14 +682,14 @@
                   }
                 ],
                 "from": {
-                  "key_code": "s"
+                  "key_code": "k"
                 },
                 "to": {
-                  "key_code": "left_option"
+                  "key_code": "volume_decrement"
                 }
               },
               {
-                "description": "if (media-layer & d) -> left_control",
+                "description": "if (media-layer & l) -> volume_increment",
                 "type": "basic",
                 "conditions": [
                   {
@@ -699,14 +699,14 @@
                   }
                 ],
                 "from": {
-                  "key_code": "d"
+                  "key_code": "l"
                 },
                 "to": {
-                  "key_code": "left_control"
+                  "key_code": "volume_increment"
                 }
               },
               {
-                "description": "if (media-layer & f) -> left_shift",
+                "description": "if (media-layer & quote) -> fast_forward",
                 "type": "basic",
                 "conditions": [
                   {
@@ -716,10 +716,44 @@
                   }
                 ],
                 "from": {
-                  "key_code": "f"
+                  "key_code": "quote"
                 },
                 "to": {
-                  "key_code": "left_shift"
+                  "key_code": "fast_forward"
+                }
+              },
+              {
+                "description": "if (media-layer & keypad_5) -> play_or_pause",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-media",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "keypad_5"
+                },
+                "to": {
+                  "key_code": "play_or_pause"
+                }
+              },
+              {
+                "description": "if (media-layer & keypad_6) -> mute",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-media",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "keypad_6"
+                },
+                "to": {
+                  "key_code": "mute"
                 }
               }
             ]
@@ -1166,6 +1200,26 @@
         },
         {
           "from": {
+            "key_code": "c"
+          },
+          "to": [
+            {
+              "key_code": "keypad_2"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "comma"
+          },
+          "to": [
+            {
+              "key_code": "keypad_5"
+            }
+          ]
+        },
+        {
+          "from": {
             "key_code": "d"
           },
           "to": [
@@ -1266,6 +1320,16 @@
         },
         {
           "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "key_code": "keypad_4"
+            }
+          ]
+        },
+        {
+          "from": {
             "key_code": "o"
           },
           "to": [
@@ -1291,6 +1355,16 @@
           "to": [
             {
               "key_code": "l"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "period"
+          },
+          "to": [
+            {
+              "key_code": "keypad_6"
             }
           ]
         },
@@ -1366,6 +1440,16 @@
         },
         {
           "from": {
+            "key_code": "v"
+          },
+          "to": [
+            {
+              "key_code": "keypad_3"
+            }
+          ]
+        },
+        {
+          "from": {
             "key_code": "w"
           },
           "to": [
@@ -1381,56 +1465,6 @@
           "to": [
             {
               "key_code": "keypad_1"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "c"
-          },
-          "to": [
-            {
-              "key_code": "keypad_2"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "v"
-          },
-          "to": [
-            {
-              "key_code": "keypad_3"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "m"
-          },
-          "to": [
-            {
-              "key_code": "keypad_4"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "comma"
-          },
-          "to": [
-            {
-              "key_code": "keypad_5"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "period"
-          },
-          "to": [
-            {
-              "key_code": "keypad_6"
             }
           ]
         }
