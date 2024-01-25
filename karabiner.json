@@ -399,7 +399,7 @@
             "description": "-- Nav layer --",
             "manipulators": [
               {
-                "description": "if (nav-button pressed) -> nav-layer = true",
+                "description": "if (nav-button keep pressed) -> nav-layer = true -- else if (nav-button pressed alone) -> spacebar",
                 "type": "basic",
                 "from": {
                   "key_code": "keypad_2"
@@ -407,6 +407,14 @@
                 "parameters": {
                   "basic.to_if_held_down_threshold_milliseconds": 0
                 },
+                "to_if_held_down": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-nav",
+                      "value": 1
+                    }
+                  }
+                ],
                 "to_after_key_up": [
                   {
                     "set_variable": {
@@ -415,12 +423,9 @@
                     }
                   }
                 ],
-                "to_if_held_down": [
+                "to_if_alone": [
                   {
-                    "set_variable": {
-                      "name": "current-layer-is-nav",
-                      "value": 1
-                    }
+                    "key_code": "spacebar"
                   }
                 ]
               },
