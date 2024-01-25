@@ -1,73 +1,41 @@
 {;;
  ;; only map for external-keyboard Keychron K2 v2
- :devices {:external-keyboard [{:product_id 591 :vendor_id 1452}]}
+ :devices {:only-keychron [{:product_id 591 :vendor_id 1452}]}
 
- :simlayers {;;
-             :nav-mode {:key :c}}
+ :simlayers {:layer-1 {:key :x}
+             :layer-2 {:key :c}}
 
  :main [;;
 
         ;; TODO: make work layers with custom mapping
 
-        ;;
+        ;; ─────────────────────────────────────────────────────────────────────────────
         {:des "map all keys on keychron k2 v2" :rules
-         [:external-keyboard
+         [:only-keychron
           ;;
           ;; left side
           ;;
-          [:1 :q]
-          [:2 :w]
-          [:3 :e]
-          [:4 :r]
-          [:5 :t]
-          ;;
-          [:q :a]
-          [:w :s]
-          [:e :d]
-          [:r :f]
-          [:t :g]
-          ;;
-          [:a :z]
-          [:s :x]
-          [:d :c]
-          [:f :v]
-          [:g :b]
-          ;;
-          [:x :keypad_1]
-          [:c :keypad_2]
-          [:v :keypad_3]
+          ;;[:x :keypad_1] ; layer-1
+          [:c :keypad_2] ; layer-2
           ;;
           ;; right side
           ;;
-          [:8 :y]
+          ;;[:8 :y]
           [:9 :u]
-          [:0 :i]
-          [:hyphen :o]
-          [:equal_sign :p]
-          ;;
-          [:u :h]
-          [:i :j]
-          [:o :k]
-          [:p :l]
-          [:open_bracket :quote]
-          ;;
-          [:j :n]
-          [:k :m]
-          [:l :comma]
-          [:semicolon :period]
-          [:quote :slash]
-          ;;
-          [:m :keypad_4]
-          [:comma :keypad_5]
-          [:period :keypad_6]
           ;;
           ]}
-        ;;
-
-        ;;
-        {:des "test basic nav layer"
-         :rules [:nav-mode
-                 ;; u -> !Sopen_bracket
-                 [:##u :!Sopen_bracket]]}
-        ;;
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        {:des "test layer 1"
+         :rules [:layer-1
+                 [:##8 :1] ; x+8 -> 1 ; work
+                 [:##9 :2] ; x+9 -> 2 ; work
+                 ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        {:des "test layer 2"
+         :rules [:layer-2
+                 [:##8 :3] ; c+8 -> 3 ; not work
+                 [:##9 :4] ; c+9 -> 4 ; not work
+                 ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
         ]}
+
