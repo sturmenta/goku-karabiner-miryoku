@@ -93,8 +93,33 @@ def main
         'description' => '-- Num layer --',
         'manipulators' => [
           ##########
-          generate_layer_switch_button('num', 'keypad_5', 'delete_or_backspace')
+          generate_layer_switch_button('num', 'keypad_5', 'delete_or_backspace'),
           ##########
+          #
+          # left side
+          #
+          # row-1
+          generate_keymap_for_layer('num', 'q', 'open_bracket'),
+          generate_keymap_for_layer('num', 'w', '7'),
+          generate_keymap_for_layer('num', 'e', '8'),
+          generate_keymap_for_layer('num', 'r', '9'),
+          generate_keymap_for_layer('num', 't', 'close_bracket'),
+          # row-2
+          generate_keymap_for_layer('num', 'a', 'semicolon'),
+          generate_keymap_for_layer('num', 's', '4'),
+          generate_keymap_for_layer('num', 'd', '5'),
+          generate_keymap_for_layer('num', 'f', '6'),
+          generate_keymap_for_layer('num', 'g', 'equal_sign'),
+          # row-3
+          generate_keymap_for_layer('num', 'z', 'grave_accent_and_tilde'),
+          generate_keymap_for_layer('num', 'x', '1'),
+          generate_keymap_for_layer('num', 'c', '2'),
+          generate_keymap_for_layer('num', 'v', '3'),
+          generate_keymap_for_layer('num', 'b', 'backslash'),
+          # row-4
+          generate_keymap_for_layer('num', 'keypad_1', 'period'), # TODO: fix -> not working
+          generate_keymap_for_layer('num', 'keypad_2', '0'), # TODO: fix -> not working
+          generate_keymap_for_layer('num', 'keypad_3', 'hyphen') # TODO: fix -> not working
         ].flatten
       },
       ############################################################
