@@ -439,8 +439,12 @@
                     "value": 1
                   }
                 ],
-                "from": { "key_code": "j" },
-                "to": { "key_code": "left_arrow" }
+                "from": {
+                  "key_code": "j"
+                },
+                "to": {
+                  "key_code": "left_arrow"
+                }
               },
               {
                 "description": "if (nav-layer & k) -> down_arrow",
@@ -452,8 +456,12 @@
                     "value": 1
                   }
                 ],
-                "from": { "key_code": "k" },
-                "to": { "key_code": "down_arrow" }
+                "from": {
+                  "key_code": "k"
+                },
+                "to": {
+                  "key_code": "down_arrow"
+                }
               },
               {
                 "description": "if (nav-layer & l) -> up_arrow",
@@ -465,8 +473,12 @@
                     "value": 1
                   }
                 ],
-                "from": { "key_code": "l" },
-                "to": { "key_code": "up_arrow" }
+                "from": {
+                  "key_code": "l"
+                },
+                "to": {
+                  "key_code": "up_arrow"
+                }
               },
               {
                 "description": "if (nav-layer & quote) -> right_arrow",
@@ -478,8 +490,12 @@
                     "value": 1
                   }
                 ],
-                "from": { "key_code": "quote" },
-                "to": { "key_code": "right_arrow" }
+                "from": {
+                  "key_code": "quote"
+                },
+                "to": {
+                  "key_code": "right_arrow"
+                }
               }
             ]
           }
