@@ -1,17 +1,56 @@
-;; main contains multiple manipulators
-;; each manipulator has a description and multiple rules
+{:main [;;
+        ;; ────── simple modifications ─────────────────────────────────────────────────────────────────────
+        ;;
 
-    ;; main                -> {:main [{:des "..." :rules [rule1 rule2 ...]}]}
-    ;; manipulator         -> {:des "..." :rules [rule1 rule2 ...]}
-    ;; manipulator's rules -> [rule1 rule2 ...]
-    {:main [{:des "a to 1, b to 2, c to insert 1 2 3"
-             :rules [[:a :1] [:b :2] [:c [:1 :2 :3]]]}]}
+        ;;
+        ;; left side
+        ;;
+        {:des "1 to q" :rules [[:1 :q]]}
+        {:des "2 to w" :rules [[:2 :w]]}
+        {:des "3 to e" :rules [[:3 :e]]}
+        {:des "4 to r" :rules [[:4 :r]]}
+        {:des "5 to t" :rules [[:5 :t]]}
 
-    ;; or we can separate them into three manipulators
-    {:main [{:des "a to 1" :rules [[:a :1]]}
-            {:des "b to 2" :rules [[:b :2]]}
-            {:des "c to insert 123" :rules [[:c [:1 :2 :3]]]}]}
+        {:des "q to a" :rules [[:q :a]]}
+        {:des "w to s" :rules [[:w :s]]}
+        {:des "e to d" :rules [[:e :d]]}
+        {:des "r to f" :rules [[:r :f]]}
+        {:des "t to g" :rules [[:t :g]]}
 
-    ;; in rules [:a :1] -- [<from> <to>]
-    ;; it means from key a to key 1
-    ;; these keycode is just original karabiner keycode prefix with colon
+        {:des "a to z" :rules [[:a :z]]}
+        {:des "s to x" :rules [[:s :x]]}
+        {:des "d to c" :rules [[:d :c]]}
+        {:des "f to v" :rules [[:f :v]]}
+        {:des "g to b" :rules [[:g :b]]}
+
+        {:des "x to keypad_1" :rules [[:x :keypad_1]]}
+        {:des "c to keypad_2" :rules [[:c :keypad_2]]}
+        {:des "v to keypad_3" :rules [[:v :keypad_3]]}
+
+        ;;
+        ;; right side
+        ;;
+        {:des "8 to y" :rules [[:8 :y]]}
+        {:des "9 to u" :rules [[:9 :u]]}
+        {:des "0 to i" :rules [[:0 :i]]}
+        {:des "hyphen to o" :rules [[:hyphen :o]]}
+        {:des "equal_sign to p" :rules [[:equal_sign :p]]}
+
+        {:des "u to h" :rules [[:u :h]]}
+        {:des "i to j" :rules [[:i :j]]}
+        {:des "o to k" :rules [[:o :k]]}
+        {:des "p to l" :rules [[:p :l]]}
+        {:des "open_bracket to quote" :rules [[:open_bracket :quote]]}
+
+        {:des "j to n" :rules [[:j :n]]}
+        {:des "k to m" :rules [[:k :m]]}
+        {:des "l to comma" :rules [[:l :comma]]}
+        {:des "semicolon to period" :rules [[:semicolon :period]]}
+        {:des "quote to slash" :rules [[:quote :slash]]}
+
+        {:des "m to keypad_4" :rules [[:m :keypad_4]]}
+        {:des "comma to keypad_5" :rules [[:comma :keypad_5]]}
+        {:des "period to keypad_6" :rules [[:period :keypad_6]]}
+
+        ;; ─────────────────────────────────────────────────────────────────────
+        ]}
