@@ -396,7 +396,7 @@
         },
         "rules": [
           {
-            "description": "[Nav layer] - change c to left_option. (Post spacebar if pressed alone)",
+            "description": "Nav layer",
             "manipulators": [
               {
                 "from": {
@@ -415,13 +415,9 @@
                     "key_code": "spacebar"
                   }
                 ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Nav layer",
-            "manipulators": [
+                "type": "basic",
+                "description": "change c to left_option. (Post spacebar if pressed alone)"
+              },
               {
                 "from": {
                   "key_code": "j",
