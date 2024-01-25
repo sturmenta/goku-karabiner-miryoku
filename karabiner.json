@@ -583,6 +583,254 @@
                 }
               }
             ]
+          },
+          {
+            "description": "-- Mouse layer --",
+            "manipulators": [
+              {
+                "description": "if (mouse-button keep pressed) -> mouse-layer = true -- else if (mouse-button pressed alone) -> tab",
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_3"
+                },
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 0
+                },
+                "to_if_held_down": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-mouse",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-mouse",
+                      "value": 0
+                    }
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "tab"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "-- Media layer --",
+            "manipulators": [
+              {
+                "description": "if (media-button keep pressed) -> media-layer = true -- else if (media-button pressed alone) -> escape",
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_1"
+                },
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 0
+                },
+                "to_if_held_down": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-media",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-media",
+                      "value": 0
+                    }
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              },
+              {
+                "description": "if (media-layer & a) -> left_command",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-media",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "a"
+                },
+                "to": {
+                  "key_code": "left_command"
+                }
+              },
+              {
+                "description": "if (media-layer & s) -> left_option",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-media",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "s"
+                },
+                "to": {
+                  "key_code": "left_option"
+                }
+              },
+              {
+                "description": "if (media-layer & d) -> left_control",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-media",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "d"
+                },
+                "to": {
+                  "key_code": "left_control"
+                }
+              },
+              {
+                "description": "if (media-layer & f) -> left_shift",
+                "type": "basic",
+                "conditions": [
+                  {
+                    "name": "current-layer-is-media",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "f"
+                },
+                "to": {
+                  "key_code": "left_shift"
+                }
+              }
+            ]
+          },
+          {
+            "description": "-- Num layer --",
+            "manipulators": [
+              {
+                "description": "if (num-button keep pressed) -> num-layer = true -- else if (num-button pressed alone) -> delete_or_backspace",
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_5"
+                },
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 0
+                },
+                "to_if_held_down": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-num",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-num",
+                      "value": 0
+                    }
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "delete_or_backspace"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "-- Sym layer --",
+            "manipulators": [
+              {
+                "description": "if (sym-button keep pressed) -> sym-layer = true -- else if (sym-button pressed alone) -> return_or_enter",
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_4"
+                },
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 0
+                },
+                "to_if_held_down": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-sym",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-sym",
+                      "value": 0
+                    }
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "return_or_enter"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "-- Fun layer --",
+            "manipulators": [
+              {
+                "description": "if (fun-button keep pressed) -> fun-layer = true -- else if (fun-button pressed alone) -> delete_forward",
+                "type": "basic",
+                "from": {
+                  "key_code": "keypad_6"
+                },
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 0
+                },
+                "to_if_held_down": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-fun",
+                      "value": 1
+                    }
+                  }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "current-layer-is-fun",
+                      "value": 0
+                    }
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "delete_forward"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },

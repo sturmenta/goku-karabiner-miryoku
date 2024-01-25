@@ -20,6 +20,7 @@ require 'json'
 def main
   data = {
     'rules' => [
+      # TODO: add keep pressed buttons on base layer -> comands like cmd, shift, etc
       {
         'description' => '-- Nav layer --',
         'manipulators' => [
@@ -55,6 +56,59 @@ def main
           # generate_keymap_for_layer('nav', ',', 'page_down'), # TODO: page_down (cmd + down_arrow)
           # generate_keymap_for_layer('nav', '.', 'page_up'), # TODO: page_up (cmd + up_arrow)
           # generate_keymap_for_layer('nav', '/', 'end') # TODO: end (cmd + right_arrow)
+        ].flatten
+      },
+      {
+        'description' => '-- Mouse layer --',
+        'manipulators' => [
+          ##########
+          generate_layer_switch_button('mouse', 'keypad_3', 'tab')
+          ##########
+        ].flatten
+      },
+      {
+        'description' => '-- Media layer --',
+        'manipulators' => [
+          ##########
+          generate_layer_switch_button('media', 'keypad_1', 'escape'),
+          ##########
+          #
+          # left side
+          #
+          # row-2
+          generate_keymap_for_layer('media', 'a', 'left_command'),
+          generate_keymap_for_layer('media', 's', 'left_option'),
+          generate_keymap_for_layer('media', 'd', 'left_control'),
+          generate_keymap_for_layer('media', 'f', 'left_shift')
+          #
+          # right side
+          #
+          # row-1
+          # generate_keymap_for_layer('media', 'j', 'left_arrow'),
+        ].flatten
+      },
+      {
+        'description' => '-- Num layer --',
+        'manipulators' => [
+          ##########
+          generate_layer_switch_button('num', 'keypad_5', 'delete_or_backspace')
+          ##########
+        ].flatten
+      },
+      {
+        'description' => '-- Sym layer --',
+        'manipulators' => [
+          ##########
+          generate_layer_switch_button('sym', 'keypad_4', 'return_or_enter')
+          ##########
+        ].flatten
+      },
+      {
+        'description' => '-- Fun layer --',
+        'manipulators' => [
+          ##########
+          generate_layer_switch_button('fun', 'keypad_6', 'delete_forward')
+          ##########
         ].flatten
       }
     ]
