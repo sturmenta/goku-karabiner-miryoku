@@ -3,8 +3,7 @@
  :devices {:external-keyboard [{:product_id 591 :vendor_id 1452}]}
 
  :simlayers {;;
-             :f-mode {:key :f}    ; delimeters    ( ) [ ] { } and other symbols ~ $ &
-             }
+             :nav-mode {:key :c}}
 
  :main [;;
 
@@ -66,18 +65,9 @@
         ;;
 
         ;;
-        {:des "f-mode for delimeters and ! ? $"
-         :rules [:f-mode
-                 ;; u i j k m comma -> !Sopen_bracket !Sclose_bracket !S9 !S0 open_bracket close_bracket
-                 [:##u :!Sopen_bracket]
-                 [:##i :!Sclose_bracket]
-                 [:##j :!S9]
-                 [:##k :!S0]
-                 [:##m :open_bracket]
-                 [:##comma :close_bracket]
-                 ;; o l period -> !S1 !Sslash !S4
-                 [:##o :!S1]
-                 [:##l :!Sslash]
-                 [:##period :!S4]]}
+        {:des "test basic nav layer"
+         :rules [:nav-mode
+                 ;; u -> !Sopen_bracket
+                 [:##u :!Sopen_bracket]]}
         ;;
         ]}
