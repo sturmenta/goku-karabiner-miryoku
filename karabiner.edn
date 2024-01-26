@@ -49,10 +49,10 @@
                  [:##equal_sign          :vk_none] ;                  esc -> p              rgb value
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
                  [:##u                   :vk_none] ;                  esc -> h              external power toggle (combine with shift for ep-tog-off)
-                 [:##i                   :rewind] ;                   esc -> j              previous
-                 [:##o                   :volume_decrement] ;         esc -> k              - volume
-                 [:##p                   :volume_increment] ;         esc -> l              + volume
-                 [:##open_bracket        :fast_forward] ;             esc -> '              next
+                 [:##i                   :vk_consumer_previous] ;     esc -> j              previous
+                 [:##o                   :volume_down] ;              esc -> k              - volume
+                 [:##p                   :volume_up] ;                esc -> l              + volume
+                 [:##open_bracket        :vk_consumer_next] ;         esc -> '              next
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
                  [:##j                   :vk_none] ;                  esc -> n              output toggle (combine with shift for output-usb)
                  [:##k                   :vk_none] ;                  esc -> m              bt 0
@@ -61,7 +61,7 @@
                  [:##quote               :vk_none] ;                  esc -> /              bt 3
                  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
                  [:##m                   :vk_none] ;                  esc -> layer-4        stop
-                 [:##comma               :play_or_pause] ;            esc -> layer-5        play/pause
+                 [:##comma               :vk_consumer_play] ;         esc -> layer-5        play/pause
                  [:##period              :mute] ;                     esc -> layer-6        mute
                  ; ────────────────────────────────────────────────────────────────────────────────────────────
                  ]}
