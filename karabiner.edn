@@ -203,53 +203,53 @@
                  ;  left side
                  ;
                  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##1                   :vk_none];            return -> q              {
-                 [:##2                   :vk_none];            return -> w              &
-                 [:##3                   :vk_none];            return -> e              *
-                 [:##4                   :vk_none];            return -> r              (
-                 [:##5                   :vk_none];            return -> t              }
+                 [:##1                   :!Sopen_bracket];              return -> q              {
+                 [:##2                   :!S7];                         return -> w              &
+                 [:##3                   :!S8];                         return -> e              *
+                 [:##4                   :!S9];                         return -> r              (
+                 [:##5                   :!Sclose_bracket];             return -> t              }
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##q                   :vk_none];            return -> a              :
-                 [:##w                   :vk_none];            return -> s              $
-                 [:##e                   :vk_none];            return -> d              %
-                 [:##r                   :vk_none];            return -> f              ^
-                 [:##t                   :vk_none];            return -> g              +
+                 [:##q                   :!Ssemicolon];                 return -> a              :
+                 [:##w                   :!S4];                         return -> s              $
+                 [:##e                   :!S5];                         return -> d              %
+                 [:##r                   :!S6];                         return -> f              ^
+                 [:##t                   :!Sequal_sign];                return -> g              +
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##a                   :vk_none];            return -> z              ~
-                 [:##s                   :vk_none];            return -> x              !
-                 [:##d                   :vk_none];            return -> c              @
-                 [:##f                   :vk_none];            return -> v              #
-                 [:##g                   :vk_none];            return -> b              |
+                 [:##a                   :!Sgrave_accent_and_tilde];    return -> z              ~
+                 [:##s                   :!S1];                         return -> x              !
+                 [:##d                   :!S2];                         return -> c              @
+                 [:##f                   :!S3];                         return -> v              #
+                 [:##g                   :!Sbackslash];                 return -> b              |
                  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##x                   :vk_none];            return -> layer-1        (
-                 [:##c                   :vk_none];            return -> layer-2        )
-                 [:##v                   :vk_none];            return -> layer-3        _
+                 [:##x                   :!S9];                         return -> layer-1        (
+                 [:##c                   :!S0];                         return -> layer-2        )
+                 [:##v                   :!Shyphen];                    return -> layer-3        _
                  ; ────────────────────────────────────────────────────────────────────────────────────
                  ;
                  ;  right side
                  ;
                  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##8                   :vk_none];            return -> y              ---------
-                 [:##9                   :vk_none];            return -> u              ---------
-                 [:##0                   :vk_none];            return -> i              ---------
-                 [:##hyphen              :vk_none];            return -> o              ---------
-                 [:##equal_sign          :vk_none];            return -> p              ---------
+                 [:##8                   :vk_none];                     return -> y              ---------
+                 [:##9                   :vk_none];                     return -> u              ---------
+                 [:##0                   :vk_none];                     return -> i              ---------
+                 [:##hyphen              :vk_none];                     return -> o              ---------
+                 [:##equal_sign          :vk_none];                     return -> p              ---------
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##u                   :vk_none];            return -> h              ---------
-                 [:##i                   :vk_none];            return -> j              right_shift
-                 [:##o                   :vk_none];            return -> k              right_control
-                 [:##p                   :vk_none];            return -> l              right_option
-                 [:##open_bracket        :vk_none];            return -> '              right_command
+                 [:##u                   :vk_none];                     return -> h              ---------
+                 [:##i                   :right_shift];                 return -> j              right_shift
+                 [:##o                   :right_control];               return -> k              right_control
+                 [:##p                   :right_option];                return -> l              right_option
+                 [:##open_bracket        :right_command];               return -> '              right_command
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##j                   :vk_none];            return -> n              ---------
-                 [:##k                   :vk_none];            return -> m              ---------
-                 [:##l                   :vk_none];            return -> ,              ---------
-                 [:##semicolon           :vk_none];            return -> .              ---------
-                 [:##quote               :vk_none];            return -> /              ---------
+                 [:##j                   :vk_none];                     return -> n              ---------
+                 [:##k                   :vk_none];                     return -> m              ---------
+                 [:##l                   :vk_none];                     return -> ,              ---------
+                 [:##semicolon           :vk_none];                     return -> .              ---------
+                 [:##quote               :vk_none];                     return -> /              ---------
                  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                ;[:##m                   :vk_none];            return -> layer-4        ---------
-                 [:##comma               :vk_none];            return -> layer-5        ---------
-                 [:##period              :vk_none];            return -> layer-6        ---------
+                ;[:##m                   :vk_none];                     return -> layer-4        ---------
+                 [:##comma               :vk_none];                     return -> layer-5        ---------
+                 [:##period              :vk_none];                     return -> layer-6        ---------
                  ; ────────────────────────────────────────────────────────────────────────────────────────────
                  ]}
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
