@@ -24,20 +24,47 @@
 
  :main [;;
         ;; ─────────────────────────────────────────────────────────────────────────────
+        {:des "Layer 1"
+         :rules [:only-keychron
+                 ;
+                 ; turn on layer-1 when keep pressed x -- if alone = escape
+                 [:x ["layer-1" 1] nil {:afterup ["layer-1" 0] :alone :escape}]
+                 ;;
+                 :layer-1
+                 ;
+                 [:##8 :a] ; rgb toggle (combine with shift for rgb-off)
+                 [:##9 :a] ; rgb mode
+                 [:##0 :a] ; rgb hue
+                 [:##hyphen :a] ; rgb saturation
+                 [:##equal_sign :a] ; rgb value
+                 ;
+                 [:##u :a] ; external power toggle (combine with shift for ep-tog-off)
+                 [:##i :a] ; previous
+                 [:##o :a] ; - volume
+                 [:##p :a] ; + volume
+                 [:##open_bracket :a] ; next
+                 ;
+                 [:##j :a] ; output toggle (combine with shift for output-usb)
+                 [:##k :a] ; bt 0
+                 [:##l :a] ; bt 1
+                 [:##semicolon :a] ; bt 2
+                 [:##quote :a] ; bt 3
+                 ;
+                 [:##m :a] ; stop
+                 [:##comma :a] ; play/pause
+                 [:##period :a] ; mute
+                 ;
+                 ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
         {:des "Layer 2"
          :rules [:only-keychron
                  ;
                  ; turn on layer-2 when keep pressed c -- if alone = spacebar
                  [:c ["layer-2" 1] nil {:afterup ["layer-2" 0] :alone :spacebar}]
-                 ;
-                 ;;  [:condi :layer-2 :!fn_ctrl :!fn_optn :!fn_cmnd]
-                 ;;         [:left_control ["fn_ctrl" 1] nil {:afterup ["fn_ctrl" 0]}]
-                 ;;         [:left_option  ["fn_optn" 1] nil {:afterup ["fn_optn" 0]}]
-                 ;;         [:left_command ["fn_cmnd" 1] nil {:afterup ["fn_cmnd" 0]}]
                  ;;
                  :layer-2
-                 [:##8 :1] ; x+8 -> 1 ; work
-                 [:##9 :2] ; x+9 -> 2 ; work
+                 [:##8 :1] ;    c -> y          1
+                 [:##9 :2] ;    c -> u          2
                  ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
         {:des "map all basic keys on keychron k2 v2" :rules
