@@ -203,27 +203,27 @@
                  ;  left side
                  ;
                  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##1                   :vk_none] ;            return -> q              ---------
-                 [:##2                   :vk_none] ;            return -> w              ---------
-                 [:##3                   :vk_none] ;            return -> e              ---------
-                 [:##4                   :vk_none] ;            return -> r              ---------
-                 [:##5                   :vk_none] ;            return -> t              ---------
+                 [:##1                   :vk_none] ;            return -> q              {
+                 [:##2                   :vk_none] ;            return -> w              &
+                 [:##3                   :vk_none] ;            return -> e              *
+                 [:##4                   :vk_none] ;            return -> r              (
+                 [:##5                   :vk_none] ;            return -> t              }
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##q                   :vk_none] ;            return -> a              ---------
-                 [:##w                   :vk_none] ;            return -> s              ---------
-                 [:##e                   :vk_none] ;            return -> d              ---------
-                 [:##r                   :vk_none] ;            return -> f              ---------
-                 [:##t                   :vk_none] ;            return -> g              ---------
+                 [:##q                   :vk_none] ;            return -> a              :
+                 [:##w                   :vk_none] ;            return -> s              $
+                 [:##e                   :vk_none] ;            return -> d              %
+                 [:##r                   :vk_none] ;            return -> f              ^
+                 [:##t                   :vk_none] ;            return -> g              +
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##a                   :vk_none] ;            return -> z              ---------
-                 [:##s                   :vk_none] ;            return -> x              ---------
-                 [:##d                   :vk_none] ;            return -> c              ---------
-                 [:##f                   :vk_none] ;            return -> v              ---------
-                 [:##g                   :vk_none] ;            return -> b              ---------
+                 [:##a                   :vk_none] ;            return -> z              ~
+                 [:##s                   :vk_none] ;            return -> x              !
+                 [:##d                   :vk_none] ;            return -> c              @
+                 [:##f                   :vk_none] ;            return -> v              #
+                 [:##g                   :vk_none] ;            return -> b              |
                  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##x                   :vk_none] ;            return -> layer-1        ---------
-                 [:##c                   :vk_none] ;            return -> layer-2        ---------
-                 [:##v                   :vk_none] ;            return -> layer-3        ---------
+                 [:##x                   :vk_none] ;            return -> layer-1        (
+                 [:##c                   :vk_none] ;            return -> layer-2        )
+                 [:##v                   :vk_none] ;            return -> layer-3        _
                  ; ────────────────────────────────────────────────────────────────────────────────────
                  ;
                  ;  right side
@@ -236,10 +236,10 @@
                  [:##equal_sign          :vk_none] ;            return -> p              ---------
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
                  [:##u                   :vk_none] ;            return -> h              ---------
-                 [:##i                   :vk_none] ;            return -> j              ---------
-                 [:##o                   :vk_none] ;            return -> k              ---------
-                 [:##p                   :vk_none] ;            return -> l              ---------
-                 [:##open_bracket        :vk_none] ;            return -> '              ---------
+                 [:##i                   :vk_none] ;            return -> j              right_shift
+                 [:##o                   :vk_none] ;            return -> k              right_control
+                 [:##p                   :vk_none] ;            return -> l              right_option
+                 [:##open_bracket        :vk_none] ;            return -> '              right_command
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
                  [:##j                   :vk_none] ;            return -> n              ---------
                  [:##k                   :vk_none] ;            return -> m              ---------
@@ -264,27 +264,27 @@
                  ;  left side
                  ;
                  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##1                   :vk_none] ;            backspace -> q              ---------
-                 [:##2                   :vk_none] ;            backspace -> w              ---------
-                 [:##3                   :vk_none] ;            backspace -> e              ---------
-                 [:##4                   :vk_none] ;            backspace -> r              ---------
-                 [:##5                   :vk_none] ;            backspace -> t              ---------
+                 [:##1                   :vk_none] ;            backspace -> q              [
+                 [:##2                   :vk_none] ;            backspace -> w              7
+                 [:##3                   :vk_none] ;            backspace -> e              8
+                 [:##4                   :vk_none] ;            backspace -> r              9
+                 [:##5                   :vk_none] ;            backspace -> t              ]
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##q                   :vk_none] ;            backspace -> a              ---------
-                 [:##w                   :vk_none] ;            backspace -> s              ---------
-                 [:##e                   :vk_none] ;            backspace -> d              ---------
-                 [:##r                   :vk_none] ;            backspace -> f              ---------
-                 [:##t                   :vk_none] ;            backspace -> g              ---------
+                 [:##q                   :vk_none] ;            backspace -> a              ;
+                 [:##w                   :vk_none] ;            backspace -> s              4
+                 [:##e                   :vk_none] ;            backspace -> d              5
+                 [:##r                   :vk_none] ;            backspace -> f              6
+                 [:##t                   :vk_none] ;            backspace -> g              =
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##a                   :vk_none] ;            backspace -> z              ---------
-                 [:##s                   :vk_none] ;            backspace -> x              ---------
-                 [:##d                   :vk_none] ;            backspace -> c              ---------
-                 [:##f                   :vk_none] ;            backspace -> v              ---------
-                 [:##g                   :vk_none] ;            backspace -> b              ---------
+                 [:##a                   :vk_none] ;            backspace -> z              `
+                 [:##s                   :vk_none] ;            backspace -> x              1
+                 [:##d                   :vk_none] ;            backspace -> c              2
+                 [:##f                   :vk_none] ;            backspace -> v              3
+                 [:##g                   :vk_none] ;            backspace -> b              \
                  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##x                   :vk_none] ;            backspace -> layer-1        ---------
-                 [:##c                   :vk_none] ;            backspace -> layer-2        ---------
-                 [:##v                   :vk_none] ;            backspace -> layer-3        ---------
+                 [:##x                   :vk_none] ;            backspace -> layer-1        .
+                 [:##c                   :vk_none] ;            backspace -> layer-2        0
+                 [:##v                   :vk_none] ;            backspace -> layer-3        -
                  ; ────────────────────────────────────────────────────────────────────────────────────
                  ;
                  ;  right side
@@ -297,10 +297,10 @@
                  [:##equal_sign          :vk_none] ;            backspace -> p              ---------
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
                  [:##u                   :vk_none] ;            backspace -> h              ---------
-                 [:##i                   :vk_none] ;            backspace -> j              ---------
-                 [:##o                   :vk_none] ;            backspace -> k              ---------
-                 [:##p                   :vk_none] ;            backspace -> l              ---------
-                 [:##open_bracket        :vk_none] ;            backspace -> '              ---------
+                 [:##i                   :vk_none] ;            backspace -> j              right_shift
+                 [:##o                   :vk_none] ;            backspace -> k              right_control
+                 [:##p                   :vk_none] ;            backspace -> l              right_option
+                 [:##open_bracket        :vk_none] ;            backspace -> '              right_command
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
                  [:##j                   :vk_none] ;            backspace -> n              ---------
                  [:##k                   :vk_none] ;            backspace -> m              ---------
