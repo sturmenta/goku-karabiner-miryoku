@@ -22,10 +22,10 @@
                  [:##4                   :vk_none] ;            esc -> r              ---------
                  [:##5                   :vk_none] ;            esc -> t              ---------
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##q                   :command] ;            esc -> a              cmd
-                 [:##w                   :option] ;             esc -> s              option
-                 [:##e                   :control] ;            esc -> d              ctrl
-                 [:##r                   :shift] ;              esc -> f              shift
+                 [:##q                   :left_command] ;       esc -> a              cmd
+                 [:##w                   :left_option] ;        esc -> s              option
+                 [:##e                   :left_control] ;       esc -> d              ctrl
+                 [:##r                   :left_shift] ;         esc -> f              shift
                  [:##t                   :vk_none] ;            esc -> g              ---------
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
                  [:##a                   :vk_none] ;            esc -> z              ---------
