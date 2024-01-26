@@ -264,53 +264,53 @@
                  ;  left side
                  ;
                  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##1                   :vk_none];            backspace -> q              [
-                 [:##2                   :vk_none];            backspace -> w              7
-                 [:##3                   :vk_none];            backspace -> e              8
-                 [:##4                   :vk_none];            backspace -> r              9
-                 [:##5                   :vk_none];            backspace -> t              ]
+                 [:##1                   :open_bracket];                backspace -> q              [
+                 [:##2                   :7];                           backspace -> w              7
+                 [:##3                   :8];                           backspace -> e              8
+                 [:##4                   :9];                           backspace -> r              9
+                 [:##5                   :close_bracket];               backspace -> t              ]
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##q                   :vk_none];            backspace -> a              ;
-                 [:##w                   :vk_none];            backspace -> s              4
-                 [:##e                   :vk_none];            backspace -> d              5
-                 [:##r                   :vk_none];            backspace -> f              6
-                 [:##t                   :vk_none];            backspace -> g              =
+                 [:##q                   :semicolon];                   backspace -> a              ;
+                 [:##w                   :4];                           backspace -> s              4
+                 [:##e                   :5];                           backspace -> d              5
+                 [:##r                   :6];                           backspace -> f              6
+                 [:##t                   :equal_sign];                  backspace -> g              =
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##a                   :vk_none];            backspace -> z              `
-                 [:##s                   :vk_none];            backspace -> x              1
-                 [:##d                   :vk_none];            backspace -> c              2
-                 [:##f                   :vk_none];            backspace -> v              3
-                 [:##g                   :vk_none];            backspace -> b              \
+                 [:##a                   :grave_accent_and_tilde];      backspace -> z              `
+                 [:##s                   :1];                           backspace -> x              1
+                 [:##d                   :2];                           backspace -> c              2
+                 [:##f                   :3];                           backspace -> v              3
+                 [:##g                   :backslash];                   backspace -> b              \
                  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##x                   :vk_none];            backspace -> layer-1        .
-                 [:##c                   :vk_none];            backspace -> layer-2        0
-                 [:##v                   :vk_none];            backspace -> layer-3        -
+                 [:##x                   :period];                      backspace -> layer-1        .
+                 [:##c                   :0];                           backspace -> layer-2        0
+                 [:##v                   :hyphen];                      backspace -> layer-3        -
                  ; ────────────────────────────────────────────────────────────────────────────────────
                  ;
                  ;  right side
                  ;
                  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##8                   :vk_none];            backspace -> y              ---------
-                 [:##9                   :vk_none];            backspace -> u              ---------
-                 [:##0                   :vk_none];            backspace -> i              ---------
-                 [:##hyphen              :vk_none];            backspace -> o              ---------
-                 [:##equal_sign          :vk_none];            backspace -> p              ---------
+                 [:##8                   :vk_none];                     backspace -> y              ---------
+                 [:##9                   :vk_none];                     backspace -> u              ---------
+                 [:##0                   :vk_none];                     backspace -> i              ---------
+                 [:##hyphen              :vk_none];                     backspace -> o              ---------
+                 [:##equal_sign          :vk_none];                     backspace -> p              ---------
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##u                   :vk_none];            backspace -> h              ---------
-                 [:##i                   :vk_none];            backspace -> j              right_shift
-                 [:##o                   :vk_none];            backspace -> k              right_control
-                 [:##p                   :vk_none];            backspace -> l              right_option
-                 [:##open_bracket        :vk_none];            backspace -> '              right_command
+                 [:##u                   :vk_none];                     backspace -> h              ---------
+                 [:##i                   :right_shift];                 backspace -> j              right_shift
+                 [:##o                   :right_control];               backspace -> k              right_control
+                 [:##p                   :right_option];                backspace -> l              right_option
+                 [:##open_bracket        :right_command];               backspace -> '              right_command
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##j                   :vk_none];            backspace -> n              ---------
-                 [:##k                   :vk_none];            backspace -> m              ---------
-                 [:##l                   :vk_none];            backspace -> ,              ---------
-                 [:##semicolon           :vk_none];            backspace -> .              ---------
-                 [:##quote               :vk_none];            backspace -> /              ---------
+                 [:##j                   :vk_none];                     backspace -> n              ---------
+                 [:##k                   :vk_none];                     backspace -> m              ---------
+                 [:##l                   :vk_none];                     backspace -> ,              ---------
+                 [:##semicolon           :vk_none];                     backspace -> .              ---------
+                 [:##quote               :vk_none];                     backspace -> /              ---------
                  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##m                   :vk_none];            backspace -> layer-4        ---------
-                ;[:##comma               :vk_none];            backspace -> layer-5        ---------
-                 [:##period              :vk_none];            backspace -> layer-6        ---------
+                 [:##m                   :vk_none];                     backspace -> layer-4        ---------
+                ;[:##comma               :vk_none];                     backspace -> layer-5        ---------
+                 [:##period              :vk_none];                     backspace -> layer-6        ---------
                  ; ────────────────────────────────────────────────────────────────────────────────────────────
                  ]}
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
