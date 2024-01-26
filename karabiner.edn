@@ -463,65 +463,20 @@
           ;;
           ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
-        ;; {:des   "Press caps_lock twice to turn karabiner_on, press caps_lock once to turn off"
-        ;;                :rules [
-        ;;                         [:caps_lock ["karabiner_on" 1] ["caps_lock_pressed_once" 1]]
-        ;;                         [:caps_lock
-        ;;                                 [:caps_lock ["caps_lock_pressed_once" 1]]
-        ;;                                 ["karabiner_on" 0]
-        ;;                                 {:delayed {
-        ;;                                         :invoked ["caps_lock_pressed_once" 0]
-        ;;                                         :canceled ["caps_lock_pressed_once" 0]}}]
-        ;;                         :karabiner_on
-        ;;                         [:caps_lock ["karabiner_on" 0]]
-        ;;                         [:a "say 'karabiner on'"]]}
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        ;; source -> https://github.com/yqrashawn/GokuRakuJoudo/blob/c404d6a26775648d27716f916e7baf152cfc7132/examples.org#command-q-twice-to-quit-application
-        {:des   "karabiner-on-off by pressing caps_lock twice"
-        :rules [;
+        {:des "karabiner-on-off by pressing caps_lock twice"
+         :rules [
+          [:condi :caps_lock_pressed :!karabiner_on] ; order matters
+           [:##caps_lock [["karabiner_on" 1] [:noti :on-off "ON"]] nil {:delayed {:invoked [:noti :on-off]} :params {:delay 2000}}]
 
-                [
-                ;; <from> second caps_lock (when variable "caps_lock_pressed" is 1)
-                :##caps_lock ; means optional-any caps_lock
-                ;; <to>, 3 to action
-                ;; 1. call caps_lock
-                ;; 2. set variable "caps_lock_pressed" to 0
-                ;; 3. cleanup the :noti-id--karabiner-on-off notification (omit the thrid item to cleanup notification)
-                [:##caps_lock ["caps_lock_pressed" 0] ["karabiner_on" 1] [:noti :noti-id--karabiner-on-off "Karabiner is ON!"]]
-                ;; <condition> when variable "caps_lock_pressed" is 1
-                ["caps_lock_pressed" 1]]
+          [:condi :caps_lock_pressed :karabiner_on] ; order matters
+           [:##caps_lock [["karabiner_on" 0] [:noti :on-off "OFF"]] nil {:delayed {:invoked [:noti :on-off]} :params {:delay 2000}}]
 
-                :!karabiner_on
-                [
-                ;; <from> first caps_lock (when variable "caps_lock_pressed" is 0)
-                :##caps_lock ; means optional-any caps_lock
-
-                ;; <to>, 2 to action
-                ;; 1. show notification with :id :noti-id--karabiner-on-off, :text "Press Again to turn on-off"
-                ;; 2. set variable "caps_lock_pressed" to 1 (for the second press)
-                [[:noti :noti-id--karabiner-on-off "Press Again to turn on-off"] ["caps_lock_pressed" 1]]
-
-                ;; <condition> nil means no required condition
-                nil
-
-                ;; <additional-option>
-                {
-                ;; to_delayed_action documentation
-                ;; https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to-delayed-action/
-                :delayed {
-                        ;; run 2 actions when no other key presses after basic.to_delayed_action_delay_milliseconds
-                        ;; 1. set variable "caps_lock_pressed" to 0
-                        ;; 2. cleanup notification :id :noti-id--karabiner-on-off
-                        :invoked  [["caps_lock_pressed" 0] [:noti :noti-id--karabiner-on-off]]
-
-                        ;; run 2 actions when another key presses within basic.to_delayed_action_delay_milliseconds
-                        ;; 1. set variable "caps_lock_pressed" to 0
-                        ;; 2. cleanup notification :id :noti-id--karabiner-on-off
-                        :canceled [["caps_lock_pressed" 0] [:noti :noti-id--karabiner-on-off]]}}]
-
-                ; if press caps_lock once and already on, then turn off
-                :karabiner_on
-                [:##caps_lock [["karabiner_on" 0] [:noti :noti-id--karabiner-on-off "Karabiner is OFF!"]]]]}
+          [:condi :!caps_lock_pressed]
+           [:##caps_lock ["caps_lock_pressed" 1] nil
+            {:delayed {
+              :invoked ["caps_lock_pressed" 0]
+              :canceled ["caps_lock_pressed" 0]}}]
+        ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
         ]}
 ;;
@@ -534,7 +489,13 @@
 ;;
 ;;  how to make logs:
 ;;
-;;      console.log("ctrl") -> [:noti :layers "ctrl"]
+;;      console.log("ctrl") -> [:noti :noti-id "ctrl"] (use [:noti :noti-id] to clear after use)
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;; rule [:period ["media-mode" 1] nil {:afterup ["media-mode" 0] :alone :period}]
+;;       |_____| |_______________| |_| |_________________________________________|
+;;        <from>    <to>      <conditions>         <other options>
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
