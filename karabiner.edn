@@ -42,27 +42,27 @@
                  ;  right side
                  ;
                  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##8                   :a] ;                  esc -> y              rgb toggle (combine with shift for rgb-off)
-                 [:##9                   :a] ;                  esc -> u              rgb mode
-                 [:##0                   :a] ;                  esc -> i              rgb hue
-                 [:##hyphen              :a] ;                  esc -> o              rgb saturation
-                 [:##equal_sign          :a] ;                  esc -> p              rgb value
+                 [:##8                   :vk_none] ;                  esc -> y              rgb toggle (combine with shift for rgb-off)
+                 [:##9                   :vk_none] ;                  esc -> u              rgb mode
+                 [:##0                   :vk_none] ;                  esc -> i              rgb hue
+                 [:##hyphen              :vk_none] ;                  esc -> o              rgb saturation
+                 [:##equal_sign          :vk_none] ;                  esc -> p              rgb value
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##u                   :a] ;                  esc -> h              external power toggle (combine with shift for ep-tog-off)
-                 [:##i                   :a] ;                  esc -> j              previous
-                 [:##o                   :a] ;                  esc -> k              - volume
-                 [:##p                   :a] ;                  esc -> l              + volume
-                 [:##open_bracket        :a] ;                  esc -> '              next
+                 [:##u                   :vk_none] ;                  esc -> h              external power toggle (combine with shift for ep-tog-off)
+                 [:##i                   :rewind] ;                   esc -> j              previous
+                 [:##o                   :volume_decrement] ;         esc -> k              - volume
+                 [:##p                   :volume_increment] ;         esc -> l              + volume
+                 [:##open_bracket        :fast_forward] ;             esc -> '              next
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##j                   :a] ;                  esc -> n              output toggle (combine with shift for output-usb)
-                 [:##k                   :a] ;                  esc -> m              bt 0
-                 [:##l                   :a] ;                  esc -> ,              bt 1
-                 [:##semicolon           :a] ;                  esc -> .              bt 2
-                 [:##quote               :a] ;                  esc -> /              bt 3
+                 [:##j                   :vk_none] ;                  esc -> n              output toggle (combine with shift for output-usb)
+                 [:##k                   :vk_none] ;                  esc -> m              bt 0
+                 [:##l                   :vk_none] ;                  esc -> ,              bt 1
+                 [:##semicolon           :vk_none] ;                  esc -> .              bt 2
+                 [:##quote               :vk_none] ;                  esc -> /              bt 3
                  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##m                   :a] ;                  esc -> layer-4        stop
-                 [:##comma               :a] ;                  esc -> layer-5        play/pause
-                 [:##period              :a] ;                  esc -> layer-6        mute
+                 [:##m                   :vk_none] ;                  esc -> layer-4        stop
+                 [:##comma               :play_or_pause] ;            esc -> layer-5        play/pause
+                 [:##period              :mute] ;                     esc -> layer-6        mute
                  ; ────────────────────────────────────────────────────────────────────────────────────────────
                  ]}
                  ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
