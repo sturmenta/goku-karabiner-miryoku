@@ -87,10 +87,10 @@
                  [:##4                   :vk_none] ;            space -> r              ---------
                  [:##5                   :vk_none] ;            space -> t              ---------
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##q                   :vk_none] ;            space -> a              ---------
-                 [:##w                   :vk_none] ;            space -> s              ---------
-                 [:##e                   :vk_none] ;            space -> d              ---------
-                 [:##r                   :vk_none] ;            space -> f              ---------
+                 [:##q                   :left_command] ;       space -> a              cmd
+                 [:##w                   :left_option] ;        space -> s              option
+                 [:##e                   :left_control] ;       space -> d              ctrl
+                 [:##r                   :left_shift] ;         space -> f              shift
                  [:##t                   :vk_none] ;            space -> g              ---------
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
                  [:##a                   :vk_none] ;            space -> z              ---------
@@ -107,27 +107,27 @@
                  ;  right side
                  ;
                  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##8                   :vk_none] ;            space -> y              ---------
-                 [:##9                   :vk_none] ;            space -> u              ---------
-                 [:##0                   :vk_none] ;            space -> i              ---------
-                 [:##hyphen              :vk_none] ;            space -> o              ---------
-                 [:##equal_sign          :vk_none] ;            space -> p              ---------
+                 [:##8                   :vk_none] ;            space -> y              redo
+                 [:##9                   :vk_none] ;            space -> u              paste
+                 [:##0                   :vk_none] ;            space -> i              copy
+                 [:##hyphen              :vk_none] ;            space -> o              cut
+                 [:##equal_sign          :vk_none] ;            space -> p              undo
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##u                   :vk_none] ;            space -> h              ---------
-                 [:##i                   :vk_none] ;            space -> j              ---------
-                 [:##o                   :vk_none] ;            space -> k              ---------
-                 [:##p                   :vk_none] ;            space -> l              ---------
-                 [:##open_bracket        :vk_none] ;            space -> '              ---------
+                 [:##u                   :vk_none] ;            space -> h              caps_lock
+                 [:##i                   :vk_none] ;            space -> j              left
+                 [:##o                   :vk_none] ;            space -> k              down
+                 [:##p                   :vk_none] ;            space -> l              up
+                 [:##open_bracket        :vk_none] ;            space -> '              right
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##j                   :vk_none] ;            space -> n              ---------
-                 [:##k                   :vk_none] ;            space -> m              ---------
-                 [:##l                   :vk_none] ;            space -> ,              ---------
-                 [:##semicolon           :vk_none] ;            space -> .              ---------
-                 [:##quote               :vk_none] ;            space -> /              ---------
+                 [:##j                   :vk_none] ;            space -> n              ---- insert
+                 [:##k                   :vk_none] ;            space -> m              home
+                 [:##l                   :vk_none] ;            space -> ,              page_down
+                 [:##semicolon           :vk_none] ;            space -> .              page_up
+                 [:##quote               :vk_none] ;            space -> /              end
                  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##m                   :vk_none] ;            space -> layer-4        ---------
-                 [:##comma               :vk_none] ;            space -> layer-5        ---------
-                 [:##period              :vk_none] ;            space -> layer-6        ---------
+                 [:##m                   :vk_none] ;            space -> layer-4        enter
+                 [:##comma               :vk_none] ;            space -> layer-5        backspace
+                 [:##period              :vk_none] ;            space -> layer-6        supr
                  ; ────────────────────────────────────────────────────────────────────────────────────────────
                  ]}
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
