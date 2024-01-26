@@ -32,6 +32,32 @@
                  ;;
                  :layer-1
                  ;
+                 ; left side
+                 ;
+                 [:##1 :vk_none] ;
+                 [:##2 :vk_none] ;
+                 [:##3 :vk_none] ;
+                 [:##4 :vk_none] ;
+                 [:##5 :vk_none] ;
+                 ;
+                 [:##q :a] ; super
+                 [:##w :a] ; alt
+                 [:##e :a] ; ctrl
+                 [:##r :a] ; shift
+                 [:##t :vk_none] ;
+                 ;
+                 [:##a :vk_none] ;
+                 [:##s :vk_none] ;
+                 [:##d :vk_none] ;
+                 [:##f :vk_none] ;
+                 [:##g :vk_none] ;
+                 ;
+                 ;;[:##x :vk_none] ;
+                 [:##c :vk_none] ;
+                 [:##v :vk_none] ;
+                 ;
+                 ; right side
+                 ;
                  [:##8 :a] ; rgb toggle (combine with shift for rgb-off)
                  [:##9 :a] ; rgb mode
                  [:##0 :a] ; rgb hue
