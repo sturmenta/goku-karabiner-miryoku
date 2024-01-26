@@ -1,4 +1,4 @@
-# karabiner-config
+# karabiner-config for Miryoku-keymaps
 
 <!-- [original gist](https://gist.github.com/sturmenta/908c86ebe3533a1fd48c9edabb80efb2) -->
 
