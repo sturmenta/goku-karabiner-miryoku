@@ -1,97 +1,72 @@
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;      original keymap
-;;
-;;      1       2       3       4       5               8       9       0       hyphen          equal_sign
-;;      q       w       e       r       t               u       i       o       p               open_bracket
-;;      a       s       d       f       g               j       k       l       semicolon       quote
-;;                      x       c       v               m       comma   period
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-
-;;  x -> layer-1
-;;  c -> layer-2
-;;  v -> layer-3
-;;  m -> layer-4
-;;  , -> layer-5
-;;  . -> layer-6
-
-;; ─────────────────────────────────────────────────────────────────────────────
-
 {;;
  ;; only map for external-keyboard Keychron K2 v2
  :devices {:only-keychron [{:product_id 591 :vendor_id 1452}]}
 
  :main [;;
-        ;; ─────────────────────────────────────────────────────────────────────────────
+        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
         {:des "Layer 1"
          :rules [:only-keychron
                  ;
                  ; turn on layer-1 when keep pressed x -- if alone = escape
                  [:x ["layer-1" 1] nil {:afterup ["layer-1" 0] :alone :escape}]
-                 ;;
-                 :layer-1
+                 :layer-1 ; only allow below commands to work if this is true
                  ;
-                 ; left side
+                 ;────────────────────────────────────────────────────────────────────────────────────────────
                  ;
-                 [:##1 :vk_none] ;
-                 [:##2 :vk_none] ;
-                 [:##3 :vk_none] ;
-                 [:##4 :vk_none] ;
-                 [:##5 :vk_none] ;
+                 ;  left side
                  ;
-                 [:##q :a] ; super
-                 [:##w :a] ; alt
-                 [:##e :a] ; ctrl
-                 [:##r :a] ; shift
-                 [:##t :vk_none] ;
+                 ; ── row 1 ───────────────────────────────────────
+                 [:##1                   :vk_none] ;            x -> q              vk_none
+                 [:##2                   :vk_none] ;            x -> w              vk_none
+                 [:##3                   :vk_none] ;            x -> e              vk_none
+                 [:##4                   :vk_none] ;            x -> r              vk_none
+                 [:##5                   :vk_none] ;            x -> t              vk_none
+                 ; ── row 2 ───────────────────────────────────────
+                 [:##q                   :a] ;                  x -> a              cmd
+                 [:##w                   :a] ;                  x -> s              option
+                 [:##e                   :a] ;                  x -> d              ctrl
+                 [:##r                   :a] ;                  x -> f              shift
+                 [:##t                   :vk_none] ;            x -> g              vk_none
+                 ; ── row 3 ───────────────────────────────────────
+                 [:##a                   :vk_none] ;            x -> z              vk_none
+                 [:##s                   :vk_none] ;            x -> x              vk_none
+                 [:##d                   :vk_none] ;            x -> c              vk_none
+                 [:##f                   :vk_none] ;            x -> v              vk_none
+                 [:##g                   :vk_none] ;            x -> b              vk_none
+                 ; ── row 4 ───────────────────────────────────────
+                 [:##x                   :vk_none] ;            x -> layer-1        vk_none
+                 [:##c                   :vk_none] ;            x -> layer-2        vk_none
+                 [:##v                   :vk_none] ;            x -> layer-3        vk_none
+                 ; ────────────────────────────────────────────────
                  ;
-                 [:##a :vk_none] ;
-                 [:##s :vk_none] ;
-                 [:##d :vk_none] ;
-                 [:##f :vk_none] ;
-                 [:##g :vk_none] ;
+                 ;  right side
                  ;
-                 ;;[:##x :vk_none] ;
-                 [:##c :vk_none] ;
-                 [:##v :vk_none] ;
-                 ;
-                 ; right side
-                 ;
-                 [:##8 :a] ; rgb toggle (combine with shift for rgb-off)
-                 [:##9 :a] ; rgb mode
-                 [:##0 :a] ; rgb hue
-                 [:##hyphen :a] ; rgb saturation
-                 [:##equal_sign :a] ; rgb value
-                 ;
-                 [:##u :a] ; external power toggle (combine with shift for ep-tog-off)
-                 [:##i :a] ; previous
-                 [:##o :a] ; - volume
-                 [:##p :a] ; + volume
-                 [:##open_bracket :a] ; next
-                 ;
-                 [:##j :a] ; output toggle (combine with shift for output-usb)
-                 [:##k :a] ; bt 0
-                 [:##l :a] ; bt 1
-                 [:##semicolon :a] ; bt 2
-                 [:##quote :a] ; bt 3
-                 ;
-                 [:##m :a] ; stop
-                 [:##comma :a] ; play/pause
-                 [:##period :a] ; mute
-                 ;
+                 ; ── row 1 ───────────────────────────────────────
+                 [:##8                   :a] ;                  x -> y              rgb toggle (combine with shift for rgb-off)
+                 [:##9                   :a] ;                  x -> u              rgb mode
+                 [:##0                   :a] ;                  x -> i              rgb hue
+                 [:##hyphen              :a] ;                  x -> o              rgb saturation
+                 [:##equal_sign          :a] ;                  x -> p              rgb value
+                 ; ── row 2 ───────────────────────────────────────
+                 [:##u                   :a] ;                  x -> h              external power toggle (combine with shift for ep-tog-off)
+                 [:##i                   :a] ;                  x -> j              previous
+                 [:##o                   :a] ;                  x -> k              - volume
+                 [:##p                   :a] ;                  x -> l              + volume
+                 [:##open_bracket        :a] ;                  x -> '              next
+                 ; ── row 3 ───────────────────────────────────────
+                 [:##j                   :a] ;                  x -> n              output toggle (combine with shift for output-usb)
+                 [:##k                   :a] ;                  x -> m              bt 0
+                 [:##l                   :a] ;                  x -> ,              bt 1
+                 [:##semicolon           :a] ;                  x -> .              bt 2
+                 [:##quote               :a] ;                  x -> /              bt 3
+                 ; ── row 4 ───────────────────────────────────────
+                 [:##m                   :a] ;                  x -> layer-4        stop
+                 [:##comma               :a] ;                  x -> layer-5        play/pause
+                 [:##period              :a] ;                  x -> layer-6        mute
+                 ; ────────────────────────────────────────────────────────────────────────────────────────────
                  ]}
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "Layer 2"
-         :rules [:only-keychron
-                 ;
-                 ; turn on layer-2 when keep pressed c -- if alone = spacebar
-                 [:c ["layer-2" 1] nil {:afterup ["layer-2" 0] :alone :spacebar}]
-                 ;;
-                 :layer-2
-                 [:##8 :1] ;    c -> y          1
-                 [:##9 :2] ;    c -> u          2
-                 ]}
+        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
         ;; ─────────────────────────────────────────────────────────────────────────────
         {:des "map all basic keys on keychron k2 v2" :rules
          [:only-keychron
