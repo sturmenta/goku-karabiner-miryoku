@@ -1,5 +1,5 @@
-{;;
- :main [;;
+{;
+ :main [;
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
         {:des "Layer 1 (x - esc - media)"
          :rules [:karabiner_on
@@ -359,59 +359,59 @@
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
         ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "map all keys on keychron k2 v2" :rules
+        {:des "Base layer" :rules
          [:karabiner_on
           ;; ───────────────────────────────
           ;;
           ;; left side
           ;;
-          [:##1                                 :q]
-          [:##2                                 :w]
-          [:##3                                 :e]
-          [:##4                                 :r]
-          [:##5                                 :t]
+          [:##1                                                                 :q]
+          [:##2                                                                 :w]
+          [:##3                                                                 :e]
+          [:##4                                                                 :r]
+          [:##5                                                                 :t]
           ;; ───────────────────────────────
           ;
-          [:##q         :left_command   nil     {:alone :a}]
-          [:##w         :left_option    nil     {:alone :s}]
-          [:##e         :left_control   nil     {:alone :d}]
-          [:##r         :left_shift     nil     {:alone :f}]
-          [:##t                                 :g]
+          [:##q         :left_command   nil     {:alone                         :a}]
+          [:##w         :left_option    nil     {:alone                         :s}]
+          [:##e         :left_control   nil     {:alone                         :d}]
+          [:##r         :left_shift     nil     {:alone                         :f}]
+          [:##t                                                                 :g]
           ;; ───────────────────────────────
-          [:##a                                 :z]
-          [:##s                                 :x]
-          [:##d                                 :c]
-          [:##f                                 :v]
-          [:##g                                 :b]
+          [:##a                                                                 :z]
+          [:##s                                                                 :x]
+          [:##d                                                                 :c]
+          [:##f                                                                 :v]
+          [:##g                                                                 :b]
           ;;  ───────────────────────────────
-          [:##x ["layer-1" 1] nil {:afterup ["layer-1" 0] :alone :escape}]
-          [:##c ["layer-2" 1] nil {:afterup ["layer-2" 0] :alone :spacebar}]
-          [:##v ["layer-3" 1] nil {:afterup ["layer-3" 0] :alone :tab}]
+          [:##x         ["layer-1" 1] nil {:afterup ["layer-1" 0] :alone        :escape}]
+          [:##c         ["layer-2" 1] nil {:afterup ["layer-2" 0] :alone        :spacebar}]
+          [:##v         ["layer-3" 1] nil {:afterup ["layer-3" 0] :alone        :tab}]
           ;;  ───────────────────────────────
           ;;
           ;; right side
           ;;
-          [:##8                                 :y]
-          [:##9                                 :u]
-          [:##0                                 :i]
-          [:##hyphen                            :o]
-          [:##equal_sign                        :p]
+          [:##8                                                                 :y]
+          [:##9                                                                 :u]
+          [:##0                                                                 :i]
+          [:##hyphen                                                            :o]
+          [:##equal_sign                                                        :p]
           ;; ───────────────────────────────
-          [:##u                                 :h]
-          [:##i                                 :j]
-          [:##o                                 :k]
-          [:##p                                 :l]
-          [:##open_bracket        :quote]
+          [:##u                                                                 :h]
+          [:##i                 :right_shift    nil     {:alone                 :j}]
+          [:##o                 :right_control  nil     {:alone                 :k}]
+          [:##p                 :right_option   nil     {:alone                 :l}]
+          [:##open_bracket      :right_command  nil     {:alone                 :quote}]
           ;; ───────────────────────────────
-          [:##j                                 :n]
-          [:##k                                 :m]
-          [:##l                                 :comma]
-          [:##semicolon                         :period]
-          [:##quote                             :slash]
+          [:##j                                                                 :n]
+          [:##k                                                                 :m]
+          [:##l                                                                 :comma]
+          [:##semicolon                                                         :period]
+          [:##quote                                                             :slash]
           ;; ───────────────────────────────
-          [:##m         ["layer-4" 1] nil {:afterup ["layer-4" 0] :alone :return_or_enter}]
-          [:##comma     ["layer-5" 1] nil {:afterup ["layer-5" 0] :alone :delete_or_backspace}]
-          [:##period    ["layer-6" 1] nil {:afterup ["layer-6" 0] :alone :delete_forward}]
+          [:##m         ["layer-4" 1] nil {:afterup ["layer-4" 0] :alone        :return_or_enter}]
+          [:##comma     ["layer-5" 1] nil {:afterup ["layer-5" 0] :alone        :delete_or_backspace}]
+          [:##period    ["layer-6" 1] nil {:afterup ["layer-6" 0] :alone        :delete_forward}]
           ;; ───────────────────────────────
           ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
