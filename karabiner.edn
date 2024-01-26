@@ -1,14 +1,13 @@
 {;;
- ;; only map for external-keyboard Keychron K2 v2
- :devices {:only-with-this-devices [
-  {:product_id 833 :vendor_id 1452} ; apple keyboard
-  {:product_id 591 :vendor_id 1452} ; keychron
-  ]}
+ :devices {
+        :only-with--apple-built-in-keyboard [{:product_id 833 :vendor_id 1452}]
+        :only-with--keychron-k2-v2 [{:product_id 591 :vendor_id 1452}]
+  }
 
  :main [;;
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
         {:des "Layer 1 (x - esc - media)"
-         :rules [:only-with-this-devices
+         :rules [:karabiner_on
                  ;
                  :layer-1 ; only allow below commands to work if this is true
                  ;
@@ -68,7 +67,7 @@
                  ]}
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
         {:des "Layer 2 (c - space - navigation)"
-         :rules [:only-with-this-devices
+         :rules [:karabiner_on
                  ;
                  :layer-2 ; only allow below commands to work if this is true
                  ;
@@ -128,7 +127,7 @@
                  ]}
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
         {:des "Layer 3 (v - tab - mouse)"
-         :rules [:only-with-this-devices
+         :rules [:karabiner_on
                  ;
                  :layer-3 ; only allow below commands to work if this is true
                  ;────────────────────────────────────────────────────────────────────────────────────────────
@@ -187,7 +186,7 @@
                  ]}
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
         {:des "Layer 4 (m - return - symbols)"
-         :rules [:only-with-this-devices
+         :rules [:karabiner_on
                  ;
                  :layer-4 ; only allow below commands to work if this is true
                  ;────────────────────────────────────────────────────────────────────────────────────────────
@@ -246,7 +245,7 @@
                  ]}
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
         {:des "Layer 5 (, - backspace - numbers)"
-         :rules [:only-with-this-devices
+         :rules [:karabiner_on
                  ;
                  :layer-5 ; only allow below commands to work if this is true
                  ;────────────────────────────────────────────────────────────────────────────────────────────
@@ -305,7 +304,7 @@
                  ]}
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
         {:des "Layer 6 (. - supr - functions)"
-         :rules [:only-with-this-devices
+         :rules [:karabiner_on
                  ;
                  :layer-6 ; only allow below commands to work if this is true
                  ;────────────────────────────────────────────────────────────────────────────────────────────
@@ -366,29 +365,29 @@
 
         ;; ─────────────────────────────────────────────────────────────────────────────
         {:des "map all keys on keychron k2 v2" :rules
-         [:only-with-this-devices
+         [:karabiner_on
           ;; ───────────────────────────────
           ;;
           ;; left side
           ;;
-          [:##1                   :q]
-          [:##2                   :w]
-          [:##3                   :e]
-          [:##4                   :r]
-          [:##5                   :t]
+          [:##1                                 :q]
+          [:##2                                 :w]
+          [:##3                                 :e]
+          [:##4                                 :r]
+          [:##5                                 :t]
           ;; ───────────────────────────────
           ;
-          [:##q :left_command nil {:alone :a}]
-          [:##w :left_option nil {:alone :s}]
-          [:##e :left_control nil {:alone :d}]
-          [:##r :left_shift nil {:alone :f}]
-          [:##t                   :g]
+          [:##q         :left_command   nil     {:alone :a}]
+          [:##w         :left_option    nil     {:alone :s}]
+          [:##e         :left_control   nil     {:alone :d}]
+          [:##r         :left_shift     nil     {:alone :f}]
+          [:##t                                 :g]
           ;; ───────────────────────────────
-          [:##a                   :z]
-          [:##s                   :x]
-          [:##d                   :c]
-          [:##f                   :v]
-          [:##g                   :b]
+          [:##a                                 :z]
+          [:##s                                 :x]
+          [:##d                                 :c]
+          [:##f                                 :v]
+          [:##g                                 :b]
           ;;  ───────────────────────────────
           [:##x ["layer-1" 1] nil {:afterup ["layer-1" 0] :alone :escape}]
           [:##c ["layer-2" 1] nil {:afterup ["layer-2" 0] :alone :spacebar}]
@@ -397,23 +396,23 @@
           ;;
           ;; right side
           ;;
-          [:##8                   :y]
-          [:##9                   :u]
-          [:##0                   :i]
-          [:##hyphen              :o]
-          [:##equal_sign          :p]
+          [:##8                                 :y]
+          [:##9                                 :u]
+          [:##0                                 :i]
+          [:##hyphen                            :o]
+          [:##equal_sign                        :p]
           ;; ───────────────────────────────
-          [:##u                   :h]
-          [:##i                   :j]
-          [:##o                   :k]
-          [:##p                   :l]
+          [:##u                                 :h]
+          [:##i                                 :j]
+          [:##o                                 :k]
+          [:##p                                 :l]
           [:##open_bracket        :quote]
           ;; ───────────────────────────────
-          [:##j                   :n]
-          [:##k                   :m]
-          [:##l                   :comma]
-          [:##semicolon           :period]
-          [:##quote               :slash]
+          [:##j                                 :n]
+          [:##k                                 :m]
+          [:##l                                 :comma]
+          [:##semicolon                         :period]
+          [:##quote                             :slash]
           ;; ───────────────────────────────
           [:##m         ["layer-4" 1] nil {:afterup ["layer-4" 0] :alone :return_or_enter}]
           [:##comma     ["layer-5" 1] nil {:afterup ["layer-5" 0] :alone :delete_or_backspace}]
@@ -422,14 +421,14 @@
           ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
         {:des "disable all unused keys" :rules
-         [:only-with-this-devices
+         [:karabiner_on
           ;;
           ;; left side
           ;;
           [:escape                      :vk_none]
           [:##grave_accent_and_tilde    :vk_none]
           [:tab                         :vk_none]
-          [:caps_lock                   :vk_none]
+         ;[:caps_lock                   :vk_none]
           [:left_shift                  :vk_none]
           [:fn                          :vk_none]
           [:left_control                :vk_none]
@@ -463,6 +462,66 @@
           [:delete_or_backspace         :vk_none]
           ;;
           ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        ;; {:des   "Press caps_lock twice to turn karabiner_on, press caps_lock once to turn off"
+        ;;                :rules [
+        ;;                         [:caps_lock ["karabiner_on" 1] ["caps_lock_pressed_once" 1]]
+        ;;                         [:caps_lock
+        ;;                                 [:caps_lock ["caps_lock_pressed_once" 1]]
+        ;;                                 ["karabiner_on" 0]
+        ;;                                 {:delayed {
+        ;;                                         :invoked ["caps_lock_pressed_once" 0]
+        ;;                                         :canceled ["caps_lock_pressed_once" 0]}}]
+        ;;                         :karabiner_on
+        ;;                         [:caps_lock ["karabiner_on" 0]]
+        ;;                         [:a "say 'karabiner on'"]]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        ;; source -> https://github.com/yqrashawn/GokuRakuJoudo/blob/c404d6a26775648d27716f916e7baf152cfc7132/examples.org#command-q-twice-to-quit-application
+        {:des   "karabiner-on-off by pressing caps_lock twice"
+        :rules [;
+
+                [
+                ;; <from> second caps_lock (when variable "caps_lock_pressed" is 1)
+                :##caps_lock ; means optional-any caps_lock
+                ;; <to>, 3 to action
+                ;; 1. call caps_lock
+                ;; 2. set variable "caps_lock_pressed" to 0
+                ;; 3. cleanup the :noti-id--karabiner-on-off notification (omit the thrid item to cleanup notification)
+                [:##caps_lock ["caps_lock_pressed" 0] ["karabiner_on" 1] [:noti :noti-id--karabiner-on-off "Karabiner is ON!"]]
+                ;; <condition> when variable "caps_lock_pressed" is 1
+                ["caps_lock_pressed" 1]]
+
+                :!karabiner_on
+                [
+                ;; <from> first caps_lock (when variable "caps_lock_pressed" is 0)
+                :##caps_lock ; means optional-any caps_lock
+
+                ;; <to>, 2 to action
+                ;; 1. show notification with :id :noti-id--karabiner-on-off, :text "Press Again to turn on-off"
+                ;; 2. set variable "caps_lock_pressed" to 1 (for the second press)
+                [[:noti :noti-id--karabiner-on-off "Press Again to turn on-off"] ["caps_lock_pressed" 1]]
+
+                ;; <condition> nil means no required condition
+                nil
+
+                ;; <additional-option>
+                {
+                ;; to_delayed_action documentation
+                ;; https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to-delayed-action/
+                :delayed {
+                        ;; run 2 actions when no other key presses after basic.to_delayed_action_delay_milliseconds
+                        ;; 1. set variable "caps_lock_pressed" to 0
+                        ;; 2. cleanup notification :id :noti-id--karabiner-on-off
+                        :invoked  [["caps_lock_pressed" 0] [:noti :noti-id--karabiner-on-off]]
+
+                        ;; run 2 actions when another key presses within basic.to_delayed_action_delay_milliseconds
+                        ;; 1. set variable "caps_lock_pressed" to 0
+                        ;; 2. cleanup notification :id :noti-id--karabiner-on-off
+                        :canceled [["caps_lock_pressed" 0] [:noti :noti-id--karabiner-on-off]]}}]
+
+                ; if press caps_lock once and already on, then turn off
+                :karabiner_on
+                [:##caps_lock [["karabiner_on" 0] [:noti :noti-id--karabiner-on-off "Karabiner is OFF!"]]]]}
         ;; ─────────────────────────────────────────────────────────────────────────────
         ]}
 ;;
