@@ -4,7 +4,7 @@
 
  :main [;;
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-        {:des "Layer 1"
+        {:des "Layer 1 (x - esc - media)"
          :rules [:only-keychron
                  ;
                  ; turn on layer-1 when keep pressed x -- if alone = escape
@@ -16,53 +16,115 @@
                  ;  left side
                  ;
                  ; ── row 1 ───────────────────────────────────────
-                 [:##1                   :vk_none] ;            x -> q              vk_none
-                 [:##2                   :vk_none] ;            x -> w              vk_none
-                 [:##3                   :vk_none] ;            x -> e              vk_none
-                 [:##4                   :vk_none] ;            x -> r              vk_none
-                 [:##5                   :vk_none] ;            x -> t              vk_none
+                 [:##1                   :vk_none] ;            esc -> q              vk_none
+                 [:##2                   :vk_none] ;            esc -> w              vk_none
+                 [:##3                   :vk_none] ;            esc -> e              vk_none
+                 [:##4                   :vk_none] ;            esc -> r              vk_none
+                 [:##5                   :vk_none] ;            esc -> t              vk_none
                  ; ── row 2 ───────────────────────────────────────
-                 [:##q                   :a] ;                  x -> a              cmd
-                 [:##w                   :a] ;                  x -> s              option
-                 [:##e                   :a] ;                  x -> d              ctrl
-                 [:##r                   :a] ;                  x -> f              shift
-                 [:##t                   :vk_none] ;            x -> g              vk_none
+                 [:##q                   :a] ;                  esc -> a              cmd
+                 [:##w                   :a] ;                  esc -> s              option
+                 [:##e                   :a] ;                  esc -> d              ctrl
+                 [:##r                   :a] ;                  esc -> f              shift
+                 [:##t                   :vk_none] ;            esc -> g              vk_none
                  ; ── row 3 ───────────────────────────────────────
-                 [:##a                   :vk_none] ;            x -> z              vk_none
-                 [:##s                   :vk_none] ;            x -> x              vk_none
-                 [:##d                   :vk_none] ;            x -> c              vk_none
-                 [:##f                   :vk_none] ;            x -> v              vk_none
-                 [:##g                   :vk_none] ;            x -> b              vk_none
+                 [:##a                   :vk_none] ;            esc -> z              vk_none
+                 [:##s                   :vk_none] ;            esc -> x              vk_none
+                 [:##d                   :vk_none] ;            esc -> c              vk_none
+                 [:##f                   :vk_none] ;            esc -> v              vk_none
+                 [:##g                   :vk_none] ;            esc -> b              vk_none
                  ; ── row 4 ───────────────────────────────────────
-                 [:##x                   :vk_none] ;            x -> layer-1        vk_none
-                 [:##c                   :vk_none] ;            x -> layer-2        vk_none
-                 [:##v                   :vk_none] ;            x -> layer-3        vk_none
+               ;;[:##x                   :vk_none] ;            esc -> layer-1        vk_none
+                 [:##c                   :vk_none] ;            esc -> layer-2        vk_none
+                 [:##v                   :vk_none] ;            esc -> layer-3        vk_none
                  ; ────────────────────────────────────────────────
                  ;
                  ;  right side
                  ;
                  ; ── row 1 ───────────────────────────────────────
-                 [:##8                   :a] ;                  x -> y              rgb toggle (combine with shift for rgb-off)
-                 [:##9                   :a] ;                  x -> u              rgb mode
-                 [:##0                   :a] ;                  x -> i              rgb hue
-                 [:##hyphen              :a] ;                  x -> o              rgb saturation
-                 [:##equal_sign          :a] ;                  x -> p              rgb value
+                 [:##8                   :a] ;                  esc -> y              rgb toggle (combine with shift for rgb-off)
+                 [:##9                   :a] ;                  esc -> u              rgb mode
+                 [:##0                   :a] ;                  esc -> i              rgb hue
+                 [:##hyphen              :a] ;                  esc -> o              rgb saturation
+                 [:##equal_sign          :a] ;                  esc -> p              rgb value
                  ; ── row 2 ───────────────────────────────────────
-                 [:##u                   :a] ;                  x -> h              external power toggle (combine with shift for ep-tog-off)
-                 [:##i                   :a] ;                  x -> j              previous
-                 [:##o                   :a] ;                  x -> k              - volume
-                 [:##p                   :a] ;                  x -> l              + volume
-                 [:##open_bracket        :a] ;                  x -> '              next
+                 [:##u                   :a] ;                  esc -> h              external power toggle (combine with shift for ep-tog-off)
+                 [:##i                   :a] ;                  esc -> j              previous
+                 [:##o                   :a] ;                  esc -> k              - volume
+                 [:##p                   :a] ;                  esc -> l              + volume
+                 [:##open_bracket        :a] ;                  esc -> '              next
                  ; ── row 3 ───────────────────────────────────────
-                 [:##j                   :a] ;                  x -> n              output toggle (combine with shift for output-usb)
-                 [:##k                   :a] ;                  x -> m              bt 0
-                 [:##l                   :a] ;                  x -> ,              bt 1
-                 [:##semicolon           :a] ;                  x -> .              bt 2
-                 [:##quote               :a] ;                  x -> /              bt 3
+                 [:##j                   :a] ;                  esc -> n              output toggle (combine with shift for output-usb)
+                 [:##k                   :a] ;                  esc -> m              bt 0
+                 [:##l                   :a] ;                  esc -> ,              bt 1
+                 [:##semicolon           :a] ;                  esc -> .              bt 2
+                 [:##quote               :a] ;                  esc -> /              bt 3
                  ; ── row 4 ───────────────────────────────────────
-                 [:##m                   :a] ;                  x -> layer-4        stop
-                 [:##comma               :a] ;                  x -> layer-5        play/pause
-                 [:##period              :a] ;                  x -> layer-6        mute
+                 [:##m                   :a] ;                  esc -> layer-4        stop
+                 [:##comma               :a] ;                  esc -> layer-5        play/pause
+                 [:##period              :a] ;                  esc -> layer-6        mute
+                 ; ────────────────────────────────────────────────────────────────────────────────────────────
+                 ]}
+                 ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+        {:des "Layer 2 (c - space - navigation)"
+         :rules [:only-keychron
+                 ;
+                 ; turn on layer-2 when keep pressed c -- if alone = spacebar
+                 [:c ["layer-2" 1] nil {:afterup ["layer-2" 0] :alone :spacebar}]
+                 :layer-2 ; only allow below commands to work if this is true
+                 ;
+                 ;────────────────────────────────────────────────────────────────────────────────────────────
+                 ;
+                 ;  left side
+                 ;
+                 ; ── row 1 ───────────────────────────────────────
+                 [:##1                   :vk_none] ;            space -> q              vk_none
+                 [:##2                   :vk_none] ;            space -> w              vk_none
+                 [:##3                   :vk_none] ;            space -> e              vk_none
+                 [:##4                   :vk_none] ;            space -> r              vk_none
+                 [:##5                   :vk_none] ;            space -> t              vk_none
+                 ; ── row 2 ───────────────────────────────────────
+                 [:##q                   :vk_none] ;            space -> a              vk_none
+                 [:##w                   :vk_none] ;            space -> s              vk_none
+                 [:##e                   :vk_none] ;            space -> d              vk_none
+                 [:##r                   :vk_none] ;            space -> f              vk_none
+                 [:##t                   :vk_none] ;            space -> g              vk_none
+                 ; ── row 3 ───────────────────────────────────────
+                 [:##a                   :vk_none] ;            space -> z              vk_none
+                 [:##s                   :vk_none] ;            space -> x              vk_none
+                 [:##d                   :vk_none] ;            space -> c              vk_none
+                 [:##f                   :vk_none] ;            space -> v              vk_none
+                 [:##g                   :vk_none] ;            space -> b              vk_none
+                 ; ── row 4 ───────────────────────────────────────
+                 [:##x                   :vk_none] ;            space -> layer-1        vk_none
+               ;;[:##c                   :vk_none] ;            space -> layer-2        vk_none
+                 [:##v                   :vk_none] ;            space -> layer-3        vk_none
+                 ; ────────────────────────────────────────────────
+                 ;
+                 ;  right side
+                 ;
+                 ; ── row 1 ───────────────────────────────────────
+                 [:##8                   :vk_none] ;            space -> y              vk_none
+                 [:##9                   :vk_none] ;            space -> u              vk_none
+                 [:##0                   :vk_none] ;            space -> i              vk_none
+                 [:##hyphen              :vk_none] ;            space -> o              vk_none
+                 [:##equal_sign          :vk_none] ;            space -> p              vk_none
+                 ; ── row 2 ───────────────────────────────────────
+                 [:##u                   :vk_none] ;            space -> h              vk_none
+                 [:##i                   :vk_none] ;            space -> j              vk_none
+                 [:##o                   :vk_none] ;            space -> k              vk_none
+                 [:##p                   :vk_none] ;            space -> l              vk_none
+                 [:##open_bracket        :vk_none] ;            space -> '              vk_none
+                 ; ── row 3 ───────────────────────────────────────
+                 [:##j                   :vk_none] ;            space -> n              vk_none
+                 [:##k                   :vk_none] ;            space -> m              vk_none
+                 [:##l                   :vk_none] ;            space -> ,              vk_none
+                 [:##semicolon           :vk_none] ;            space -> .              vk_none
+                 [:##quote               :vk_none] ;            space -> /              vk_none
+                 ; ── row 4 ───────────────────────────────────────
+                 [:##m                   :vk_none] ;            space -> layer-4        vk_none
+                 [:##comma               :vk_none] ;            space -> layer-5        vk_none
+                 [:##period              :vk_none] ;            space -> layer-6        vk_none
                  ; ────────────────────────────────────────────────────────────────────────────────────────────
                  ]}
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
