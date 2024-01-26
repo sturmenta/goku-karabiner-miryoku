@@ -1,6 +1,9 @@
 {;;
  ;; only map for external-keyboard Keychron K2 v2
- :devices {:only-keychron [{:product_id 591 :vendor_id 1452}]}
+ :devices {:only-keychron [{
+  :product_id 833 :vendor_id 1452 ; apple keyboard
+  ;; :product_id 591 :vendor_id 1452 ; keychron
+  }]}
 
  :main [;;
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -42,25 +45,25 @@
                  ;  right side
                  ;
                  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##8                   :vk_none] ;                  esc -> y              rgb toggle (combine with shift for rgb-off)
-                 [:##9                   :vk_none] ;                  esc -> u              rgb mode
-                 [:##0                   :vk_none] ;                  esc -> i              rgb hue
-                 [:##hyphen              :vk_none] ;                  esc -> o              rgb saturation
-                 [:##equal_sign          :vk_none] ;                  esc -> p              rgb value
+                 [:##8                   :vk_none] ;                  esc -> y              ---- rgb toggle (combine with shift for rgb-off)
+                 [:##9                   :vk_none] ;                  esc -> u              ---- rgb mode
+                 [:##0                   :vk_none] ;                  esc -> i              ---- rgb hue
+                 [:##hyphen              :vk_none] ;                  esc -> o              ---- rgb saturation
+                 [:##equal_sign          :vk_none] ;                  esc -> p              ---- rgb value
                  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##u                   :vk_none] ;                  esc -> h              external power toggle (combine with shift for ep-tog-off)
+                 [:##u                   :vk_none] ;                  esc -> h              ---- external power toggle (combine with shift for ep-tog-off)
                  [:##i                   :vk_consumer_previous] ;     esc -> j              previous
                  [:##o                   :volume_down] ;              esc -> k              - volume
                  [:##p                   :volume_up] ;                esc -> l              + volume
                  [:##open_bracket        :vk_consumer_next] ;         esc -> '              next
                  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##j                   :vk_none] ;                  esc -> n              output toggle (combine with shift for output-usb)
-                 [:##k                   :vk_none] ;                  esc -> m              bt 0
-                 [:##l                   :vk_none] ;                  esc -> ,              bt 1
-                 [:##semicolon           :vk_none] ;                  esc -> .              bt 2
-                 [:##quote               :vk_none] ;                  esc -> /              bt 3
+                 [:##j                   :vk_none] ;                  esc -> n              ---- output toggle (combine with shift for output-usb)
+                 [:##k                   :vk_none] ;                  esc -> m              ---- bt 0
+                 [:##l                   :vk_none] ;                  esc -> ,              ---- bt 1
+                 [:##semicolon           :vk_none] ;                  esc -> .              ---- bt 2
+                 [:##quote               :vk_none] ;                  esc -> /              ---- bt 3
                  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##m                   :vk_none] ;                  esc -> layer-4        stop
+                 [:##m                   :vk_none] ;                  esc -> layer-4        ---- stop
                  [:##comma               :vk_consumer_play] ;         esc -> layer-5        play/pause
                  [:##period              :mute] ;                     esc -> layer-6        mute
                  ; ────────────────────────────────────────────────────────────────────────────────────────────
