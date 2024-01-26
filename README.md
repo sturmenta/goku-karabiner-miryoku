@@ -14,5 +14,5 @@
 
 - [tutorial](https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md)
 - [layers with examples](https://gist.github.com/gsinclair/f4ab34da53034374eb6164698a0a8ace)
-- [large example with a lot of config](https://raw.githubusercontent.com/kiinoda/goku/master/karabiner.edn)
+- [large example with a lot of config](https://raw.githubusercontent.com/kiinoda/goku/master/karabiner.edn) (also en examples folder)
 - [definitions of commands](https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md#command-a-to-control-1)

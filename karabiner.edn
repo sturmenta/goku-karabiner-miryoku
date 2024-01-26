@@ -1,41 +1,127 @@
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      original keymap
+;;
+;;      1       2       3       4       5               8       9       0       hyphen          equal_sign
+;;      q       w       e       r       t               u       i       o       p               open_bracket
+;;      a       s       d       f       g               j       k       l       semicolon       quote
+;;                      x       c       v               m       comma   period
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+
+;;  x -> layer-1
+;;  c -> layer-2
+;;  v -> layer-3
+;;  m -> layer-4
+;;  , -> layer-5
+;;  . -> layer-6
+
+;; ─────────────────────────────────────────────────────────────────────────────
+
 {;;
  ;; only map for external-keyboard Keychron K2 v2
  :devices {:only-keychron [{:product_id 591 :vendor_id 1452}]}
 
- :simlayers {:layer-1 {:key :x}
-             :layer-2 {:key :c}}
-
  :main [;;
-
-        ;; TODO: make work layers with custom mapping
-
         ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "map all keys on keychron k2 v2" :rules
-         [:only-keychron
-          ;;
-          ;; left side
-          ;;
-          ;;[:x :keypad_1] ; layer-1
-          [:c :keypad_2] ; layer-2
-          ;;
-          ;; right side
-          ;;
-          ;;[:8 :y]
-          [:9 :u]
-          ;;
-          ]}
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "test layer 1"
-         :rules [:layer-1
+        {:des "Layer 2"
+         :rules [:only-keychron
+                 ;
+                 ; turn on layer-2 when keep pressed c -- if alone = spacebar
+                 [:c ["layer-2" 1] nil {:afterup ["layer-2" 0] :alone :spacebar}]
+                 ;
+                 ;;  [:condi :layer-2 :!fn_ctrl :!fn_optn :!fn_cmnd]
+                 ;;         [:left_control ["fn_ctrl" 1] nil {:afterup ["fn_ctrl" 0]}]
+                 ;;         [:left_option  ["fn_optn" 1] nil {:afterup ["fn_optn" 0]}]
+                 ;;         [:left_command ["fn_cmnd" 1] nil {:afterup ["fn_cmnd" 0]}]
+                 ;;
+                 :layer-2
                  [:##8 :1] ; x+8 -> 1 ; work
                  [:##9 :2] ; x+9 -> 2 ; work
                  ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "test layer 2"
-         :rules [:layer-2
-                 [:##8 :3] ; c+8 -> 3 ; not work
-                 [:##9 :4] ; c+9 -> 4 ; not work
-                 ]}
+        {:des "map all basic keys on keychron k2 v2" :rules
+         [:only-keychron
+          ;;
+          ;; left side
+          ;;
+          [:1 :q]
+          [:2 :w]
+          [:3 :e]
+          [:4 :r]
+          [:5 :t]
+          ;;
+          [:q :a]
+          [:w :s]
+          [:e :d]
+          [:r :f]
+          [:t :g]
+          ;;
+          [:a :z]
+          [:s :x]
+          [:d :c]
+          [:f :v]
+          [:g :b]
+          ;;
+          ;; right side
+          ;;
+          [:8 :y]
+          [:9 :u]
+          [:0 :i]
+          [:hyphen :o]
+          [:equal_sign :p]
+          ;;
+          [:u :h]
+          [:i :j]
+          [:o :k]
+          [:p :l]
+          [:open_bracket :quote]
+          ;;
+          [:j :n]
+          [:k :m]
+          [:l :comma]
+          [:semicolon :period]
+          [:quote :slash]
+          ;;
+          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
         ]}
-
+;;
+;;
+;;
+;;
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;  logs:
+;;
+;;      console.log("ctrl") -> [:noti :layers "ctrl"]
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;  commands:
+;;
+;;      !  | means mandatory
+;;      #  | means optional
+;;      C  | left_command
+;;      T  | left_control
+;;      O  | left_option
+;;      S  | left_shift
+;;      F  | fn
+;;      Q  | right_command
+;;      W  | right_control
+;;      E  | right_option
+;;      R  | right_shift
+;;      P  | caps_lock
+;;      !! | mandatory command + control + optional + shift (hyper)
+;;      ## | optional any
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;  all keycodes:
+;;
+;;      https://github.com/yqrashawn/GokuRakuJoudo/blob/master/src/karabiner_configurator/keys_info.clj
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;; ─────────────────────────────────────────────────────────────────────────────

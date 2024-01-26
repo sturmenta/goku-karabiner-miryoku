@@ -1,0 +1,38 @@
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      original keymap (keychron k2 v2 - config used by me)
+;;
+;;      1   2   3   4   5       8   9   0   -   =
+;;      q   w   e   r   t       u   i   o   p   [
+;;      a   s   d   f   g       j   k   l   ;   '
+;;              x   c   v       m   ,   .
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      mapped keymap
+;;
+;;      q   w   e   r   t       y   u   i   o   p
+;;      a   s   d   f   g       h   j   k   l   '
+;;      z   x   c   v   b       n   m   ,   .   /
+;;              esc spc tab     rtn del supr
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      original keymap (correct words for karabiner)
+;;
+;;      1       2       3       4       5               8       9       0       hyphen          equal_sign
+;;      q       w       e       r       t               u       i       o       p               open_bracket
+;;      a       s       d       f       g               j       k       l       semicolon       quote
+;;                      x       c       v               m       comma   period
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      mapped keymap (correct words for karabiner)
+;;
+;;      q       w       e       r               t               y               u                       i               o       p
+;;      a       s       d       f               g               h               j                       k               l       quote
+;;      z       x       c       v               b               n               m                       comma           period  slash
+;;                      escape  spacebar        tab             return_or_enter delete_or_backspace     delete_forward
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
