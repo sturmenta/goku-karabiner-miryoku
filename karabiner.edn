@@ -1,8 +1,8 @@
 {;;
  ;; only map for external-keyboard Keychron K2 v2
  :devices {:only-keychron [{
-  :product_id 833 :vendor_id 1452 ; apple keyboard
-  ;; :product_id 591 :vendor_id 1452 ; keychron
+  ;:product_id 833 :vendor_id 1452 ; apple keyboard
+  :product_id 591 :vendor_id 1452 ; keychron
   }]}
 
  :main [;;
@@ -10,8 +10,6 @@
         {:des "Layer 1 (x - esc - media)"
          :rules [:only-keychron
                  ;
-                 ; turn on layer-1 when keep pressed x -- if alone = escape
-                 [:##x ["layer-1" 1] nil {:afterup ["layer-1" 0] :alone :escape}]
                  :layer-1 ; only allow below commands to work if this is true
                  ;
                  ;────────────────────────────────────────────────────────────────────────────────────────────
@@ -72,8 +70,6 @@
         {:des "Layer 2 (c - space - navigation)"
          :rules [:only-keychron
                  ;
-                 ; turn on layer-2 when keep pressed c -- if alone = spacebar
-                 [:##c ["layer-2" 1] nil {:afterup ["layer-2" 0] :alone :spacebar}]
                  :layer-2 ; only allow below commands to work if this is true
                  ;
                  ;────────────────────────────────────────────────────────────────────────────────────────────
@@ -134,8 +130,6 @@
         {:des "Layer 3 (v - tab - mouse)"
          :rules [:only-keychron
                  ;
-                 ; turn on layer-3 when keep pressed v -- if alone = tab
-                 [:##v ["layer-3" 1] nil {:afterup ["layer-3" 0] :alone :tab}]
                  :layer-3 ; only allow below commands to work if this is true
                  ;────────────────────────────────────────────────────────────────────────────────────────────
                  ;
@@ -195,8 +189,6 @@
         {:des "Layer 4 (m - return - symbols)"
          :rules [:only-keychron
                  ;
-                 ; turn on layer-4 when keep pressed m -- if alone = return_or_enter
-                 [:##m ["layer-4" 1] nil {:afterup ["layer-4" 0] :alone :return_or_enter}]
                  :layer-4 ; only allow below commands to work if this is true
                  ;────────────────────────────────────────────────────────────────────────────────────────────
                  ;
@@ -256,8 +248,6 @@
         {:des "Layer 5 (, - backspace - numbers)"
          :rules [:only-keychron
                  ;
-                 ; turn on layer-5 when keep pressed comma -- if alone = delete_or_backspace
-                 [:##comma ["layer-5" 1] nil {:afterup ["layer-5" 0] :alone :delete_or_backspace}]
                  :layer-5 ; only allow below commands to work if this is true
                  ;────────────────────────────────────────────────────────────────────────────────────────────
                  ;
@@ -317,8 +307,6 @@
         {:des "Layer 6 (. - supr - functions)"
          :rules [:only-keychron
                  ;
-                 ; turn on layer-6 when keep pressed period -- if alone = delete_forward
-                 [:##period ["layer-6" 1] nil {:afterup ["layer-6" 0] :alone :delete_forward}]
                  :layer-6 ; only allow below commands to work if this is true
                  ;────────────────────────────────────────────────────────────────────────────────────────────
                  ;
@@ -377,50 +365,59 @@
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
         ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "map all basic keys on keychron k2 v2" :rules
+        {:des "map all keys on keychron k2 v2" :rules
          [:only-keychron
           ;; ───────────────────────────────
           ;;
           ;; left side
           ;;
-          [:1                   :q]
-          [:2                   :w]
-          [:3                   :e]
-          [:4                   :r]
-          [:5                   :t]
+          [:##1                   :q]
+          [:##2                   :w]
+          [:##3                   :e]
+          [:##4                   :r]
+          [:##5                   :t]
           ;; ───────────────────────────────
-          [:q                   :a]
-          [:w                   :s]
-          [:e                   :d]
-          [:r                   :f]
-          [:t                   :g]
+          ;
+          [:##q :left_command nil {:alone :a}]
+          [:##w :left_option nil {:alone :s}]
+          [:##e :left_control nil {:alone :d}]
+          [:##r :left_shift nil {:alone :f}]
+          [:##t                   :g]
           ;; ───────────────────────────────
-          [:a                   :z]
-          [:s                   :x]
-          [:d                   :c]
-          [:f                   :v]
-          [:g                   :b]
+          [:##a                   :z]
+          [:##s                   :x]
+          [:##d                   :c]
+          [:##f                   :v]
+          [:##g                   :b]
+          ;;  ───────────────────────────────
+          [:##x ["layer-1" 1] nil {:afterup ["layer-1" 0] :alone :escape}]
+          [:##c ["layer-2" 1] nil {:afterup ["layer-2" 0] :alone :spacebar}]
+          [:##v ["layer-3" 1] nil {:afterup ["layer-3" 0] :alone :tab}]
           ;;  ───────────────────────────────
           ;;
           ;; right side
           ;;
-          [:8                   :y]
-          [:9                   :u]
-          [:0                   :i]
-          [:hyphen              :o]
-          [:equal_sign          :p]
+          [:##8                   :y]
+          [:##9                   :u]
+          [:##0                   :i]
+          [:##hyphen              :o]
+          [:##equal_sign          :p]
           ;; ───────────────────────────────
-          [:u                   :h]
-          [:i                   :j]
-          [:o                   :k]
-          [:p                   :l]
-          [:open_bracket        :quote]
+          [:##u                   :h]
+          [:##i                   :j]
+          [:##o                   :k]
+          [:##p                   :l]
+          [:##open_bracket        :quote]
           ;; ───────────────────────────────
-          [:j                   :n]
-          [:k                   :m]
-          [:l                   :comma]
-          [:semicolon           :period]
-          [:quote               :slash]
+          [:##j                   :n]
+          [:##k                   :m]
+          [:##l                   :comma]
+          [:##semicolon           :period]
+          [:##quote               :slash]
+          ;; ───────────────────────────────
+          [:##m         ["layer-4" 1] nil {:afterup ["layer-4" 0] :alone :return_or_enter}]
+          [:##comma     ["layer-5" 1] nil {:afterup ["layer-5" 0] :alone :delete_or_backspace}]
+          [:##period    ["layer-6" 1] nil {:afterup ["layer-6" 0] :alone :delete_forward}]
           ;; ───────────────────────────────
           ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
