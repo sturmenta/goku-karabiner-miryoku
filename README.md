@@ -21,3 +21,4 @@
 
 ## TODO:
 - [ ] make base layer modifier keys work only with the contrary side of the keyboard
+- [ ] make all layers work only with the contrary side of the keyboard and the modifier keys of their own side
