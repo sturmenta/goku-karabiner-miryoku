@@ -388,7 +388,7 @@
           [:##w                 ["l_opt" 1] nil {:afterup ["l_opt" 0] :alone            :s}]
           [:##e                 ["l_ctrl" 1] nil {:afterup ["l_ctrl" 0] :alone          :d}]
           [:##r                 ["l_shft" 1] nil {:afterup ["l_shft" 0] :alone          :f}]
-          [:##                  :g]
+          [:##t                 :g]
           ;; ───────────────────────────────
           [:##a                 :z]
           [:##s                 :x]
