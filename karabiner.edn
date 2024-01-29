@@ -103,13 +103,37 @@
           ;; left side
           ;;
 
-           ;ls-mode (f)
+           ;l_cmd (a)
+           [:-a nil
+            [:!l_option :!l_ctrl :!l_shift :!l_cmd :!r_option :!r_ctrl :!r_shift :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
+            :a :halt true} :delayed {:canceled {:key
+            :a }} :held {:set [
+            "l_cmd" 1] :repeat false} :afterup {:set [
+            "l_cmd" 0]}}]
+
+           ;l_option (s)
+           [:-s nil
+            [:!l_cmd :!l_ctrl :!l_shift :!l_cmd :!r_option :!r_ctrl :!r_shift :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
+            :s :halt true} :delayed {:canceled {:key
+            :s }} :held {:set [
+            "l_option" 1] :repeat false} :afterup {:set [
+            "l_option" 0]}}]
+
+           ;l_ctrl (d)
+           [:-d nil
+            [:!l_cmd :!l_option :!l_shift :!l_cmd :!r_option :!r_ctrl :!r_shift :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
+            :d :halt true} :delayed {:canceled {:key
+            :d }} :held {:set [
+            "l_ctrl" 1] :repeat false} :afterup {:set [
+            "l_ctrl" 0]}}]
+
+           ;l_shift (f)
            [:-f nil
-            [:!rs-mode] {:alone {:key
+            [:!l_cmd :!l_option :!l_ctrl :!l_cmd :!r_option :!r_ctrl :!r_shift :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
             :f :halt true} :delayed {:canceled {:key
             :f }} :held {:set [
-            "ls-mode" 1] :repeat false} :afterup {:set [
-            "ls-mode" 0]}}]
+            "l_shift" 1] :repeat false} :afterup {:set [
+            "l_shift" 0]}}]
 
           ;; ─────────────────────────────────────────────────────────────
 
@@ -117,13 +141,92 @@
           ;; right side
           ;;
 
-           ;rs-mode (j)
+           ;r_shift (j)
            [:-j nil
-            [:!ls-mode] {:alone {:key
+            [:!l_cmd :!l_option :!l_ctrl :!l_shift :!l_cmd :!r_option :!r_ctrl :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
             :j :halt true} :delayed {:canceled {:key
             :j}} :held {:set [
-            "rs-mode" 1] :repeat false} :afterup {:set [
-            "rs-mode" 0]}}]
+            "r_shift" 1] :repeat false} :afterup {:set [
+            "r_shift" 0]}}]
+
+           ;r_ctrl (k)
+           [:-k nil
+            [:!l_cmd :!l_option :!l_ctrl :!l_shift :!l_cmd :!r_option :!r_shift :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
+            :k :halt true} :delayed {:canceled {:key
+            :k}} :held {:set [
+            "r_ctrl" 1] :repeat false} :afterup {:set [
+            "r_ctrl" 0]}}]
+
+           ;r_option (l)
+           [:-l nil
+            [:!l_cmd :!l_option :!l_ctrl :!l_shift :!l_cmd :!r_ctrl :!r_shift :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
+            :l :halt true} :delayed {:canceled {:key
+            :l}} :held {:set [
+            "r_option" 1] :repeat false} :afterup {:set [
+            "r_option" 0]}}]
+
+           ;r_cmd (quote)
+           [:-quote nil
+            [:!l_cmd :!l_option :!l_ctrl :!l_shift :!r_option :!r_ctrl :!r_shift :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
+            :quote :halt true} :delayed {:canceled {:key
+            :quote}} :held {:set [
+            "r_cmd" 1] :repeat false} :afterup {:set [
+            "r_cmd" 0]}}]
+
+          ; ─────────────────────────────────────────────────────────────
+
+          ;;
+          ;; layers
+          ;;
+
+          ;layer_1 (media layer) (escape)
+           [:-escape nil
+            [:!l_cmd :!l_option :!l_ctrl :!l_shift :!l_cmd :!r_option :!r_ctrl :!r_shift :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
+            :escape :halt true} :delayed {:canceled {:key
+            :escape}} :held {:set [
+            "layer_1" 1] :repeat false} :afterup {:set [
+            "layer_1" 0]}}]
+
+          ;layer_2 (navigation layer) (spacebar)
+           [:-spacebar nil
+            [:!l_cmd :!l_option :!l_ctrl :!l_shift :!l_cmd :!r_option :!r_ctrl :!r_shift :!layer_1 :!layer_3 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
+            :spacebar :halt true} :delayed {:canceled {:key
+            :spacebar}} :held {:set [
+            "layer_2" 1] :repeat false} :afterup {:set [
+            "layer_2" 0]}}]
+
+          ;layer_3 (mouse layer) (tab)
+           [:-tab nil
+            [:!l_cmd :!l_option :!l_ctrl :!l_shift :!l_cmd :!r_option :!r_ctrl :!r_shift :!layer_1 :!layer_2 :!layer_4 :!layer_5 :!layer_6] {:alone {:key
+            :tab :halt true} :delayed {:canceled {:key
+            :tab}} :held {:set [
+            "layer_3" 1] :repeat false} :afterup {:set [
+            "layer_3" 0]}}]
+
+          ;layer_4 (symbols layer) (return_or_enter)
+           [:-return_or_enter nil
+            [:!l_cmd :!l_option :!l_ctrl :!l_shift :!l_cmd :!r_option :!r_ctrl :!r_shift :!layer_1 :!layer_2 :!layer_3 :!layer_5 :!layer_6] {:alone {:key
+            :return_or_enter :halt true} :delayed {:canceled {:key
+            :return_or_enter}} :held {:set [
+            "layer_4" 1] :repeat false} :afterup {:set [
+            "layer_4" 0]}}]
+
+          ;layer_5 (numbers layer) (delete_or_backspace)
+           [:-delete_or_backspace nil
+            [:!l_cmd :!l_option :!l_ctrl :!l_shift :!l_cmd :!r_option :!r_ctrl :!r_shift :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_6] {:alone {:key
+            :delete_or_backspace :halt true} :delayed {:canceled {:key
+            :delete_or_backspace}} :held {:set [
+            "layer_5" 1] :repeat false} :afterup {:set [
+            "layer_5" 0]}}]
+
+          ;layer_6 (functions layer) (delete_forward)
+           [:-delete_forward nil
+            [:!l_cmd :!l_option :!l_ctrl :!l_shift :!l_cmd :!r_option :!r_ctrl :!r_shift :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5] {:alone {:key
+            :delete_forward :halt true} :delayed {:canceled {:key
+            :delete_forward}} :held {:set [
+            "layer_6" 1] :repeat false} :afterup {:set [
+            "layer_6" 0]}}]
+
           ]
 
           ;; ─────────────────────────────────────────────────────────────
@@ -131,9 +234,9 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
 
         ;; ─────────────────────────────────────────────────────────────────────────────
-        { :des "ls-mode" :rules
+        { :des "l_shift" :rules
          [
-          [:condi :ls-mode :karabiner_on]
+          [:condi :l_shift :karabiner_on]
 
           ; first row
           [:-y [:!Sy]]
@@ -172,9 +275,9 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
 
         ;; ─────────────────────────────────────────────────────────────────────────────
-        { :des "rs-mode" :rules
+        { :des "r_shift" :rules
          [;
-          [:condi :rs-mode :karabiner_on]
+          [:condi :r_shift :karabiner_on]
 
           ; first row
           [:-q [:!Rq]]
@@ -248,7 +351,7 @@
          [;
           ; use the mappings from "froms" to map all keys
           ;
-          [:condi :karabiner_on :!ls-mode :!rs-mode]
+          [:condi :karabiner_on :!l_shift :!r_shift]
           ;
           ;; ───────────────────────────────
           ;;
@@ -261,10 +364,10 @@
           [:-r                          :r]
           [:-t                          :t]
           ;; ───────────────────────────────
-          [:-a                          :a]
-          [:-s                          :s]
-          [:-d                          :d]
-         ;[:-f                          :f] (this mapping was already done in ls_mode)
+          ;[:-a                          :a] (this mapping was already done in ls_mode)
+          ;[:-s                          :s] (this mapping was already done in ls_mode)
+          ;[:-d                          :d] (this mapping was already done in ls_mode)
+          ;[:-f                          :f] (this mapping was already done in ls_mode)
           [:-g                          :g]
           ;; ───────────────────────────────
           [:-z                          :z]
@@ -273,9 +376,9 @@
           [:-v                          :v]
           [:-b                          :b]
           ;;  ───────────────────────────────
-          [:-escape                     :escape]
-          [:-spacebar                   :spacebar]
-          [:-tab                        :tab]
+          ;[:-escape                     :escape] (this mapping was already done in ls_mode)
+          ;[:-spacebar                   :spacebar] (this mapping was already done in ls_mode)
+          ;[:-tab                        :tab] (this mapping was already done in ls_mode)
 
           ;;  ───────────────────────────────
           ;;
@@ -289,10 +392,10 @@
           [:-p                          :p]
           ;; ───────────────────────────────
           [:-h                          :h]
-          [:-j                          :j]
-          [:-k                          :k]
-          [:-l                          :l]
-          [:-quote                      :quote]
+          ;[:-j                          :j] (this mapping was already done in ls_mode)
+          ;[:-k                          :k] (this mapping was already done in ls_mode)
+          ;[:-l                          :l] (this mapping was already done in ls_mode)
+          ;[:-quote                      :quote] (this mapping was already done in ls_mode)
           ;; ───────────────────────────────
           [:-n                          :n]
           [:-m                          :m]
@@ -300,9 +403,9 @@
           [:-period                     :period]
           [:-slash                      :slash]
           ;; ───────────────────────────────
-          [:-return_or_enter            :return_or_enter]
-          [:-delete_or_backspace        :delete_or_backspace]
-          [:-delete_forward             :delete_forward]
+          ;[:-return_or_enter            :return_or_enter] (this mapping was already done in ls_mode)
+          ;[:-delete_or_backspace        :delete_or_backspace] (this mapping was already done in ls_mode)
+          ;[:-delete_forward             :delete_forward] (this mapping was already done in ls_mode)
 
 
           ; ignore another keys
