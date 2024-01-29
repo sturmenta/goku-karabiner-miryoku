@@ -28,41 +28,171 @@
  :main [
 
         ;NOTE: When adding a new layer, if you want it to be able to cross with an old one, you must add the name negated (:!new_name) to all other mod-tap layer conditions
-        {
-         :des "mod-tap layers"
-         :rules [
-                 ;ls-mode (r)
-                 [:r nil
-                  [:!rs-mode] {:alone {:key
-                  :r :halt true} :delayed {:canceled {:key
-                  :r }} :held {:set [
-                  "ls-mode" 1] :repeat false} :afterup {:set [
-                  "ls-mode" 0]}}]
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "modifier layers" :rules [
+          [:condi :karabiner_on]
+          ;; ─────────────────────────────────────────────────────────────
 
-                 ;rs-mode (i)
-                 [:i nil
-                  [:!ls-mode] {:alone {:key
-                  :i :halt true} :delayed {:canceled {:key
-                  :i}} :held {:set [
-                  "rs-mode" 1] :repeat false} :afterup {:set [
-                  "rs-mode" 0]}}]
-                ]
-        }
+          ;;
+          ;; left side
+          ;;
 
-        {
-         :des "ls-mode"
-         :rules [
-                 :ls-mode
-                 [:i [:!Si]]
-                ]
-        }
+           ;ls-mode (r) -> (f || left_shift)
+           [:r nil
+            [:!rs-mode] {:alone {:key
+            :f :halt true} :delayed {:canceled {:key
+            :f }} :held {:set [
+            "ls-mode" 1] :repeat false} :afterup {:set [
+            "ls-mode" 0]}}]
 
-        {
-         :des "rs-mode"
+          ;; ─────────────────────────────────────────────────────────────
+
+          ;;
+          ;; right side
+          ;;
+
+           ;rs-mode (i) -> (j || right_shift)
+           [:i nil
+            [:!ls-mode] {:alone {:key
+            :j :halt true} :delayed {:canceled {:key
+            :j}} :held {:set [
+            "rs-mode" 1] :repeat false} :afterup {:set [
+            "rs-mode" 0]}}]
+          ]
+
+          ;; ─────────────────────────────────────────────────────────────
+         }
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "ls-mode" :rules
+         [
+          [:condi :ls-mode :karabiner_on]
+
+          ; first row
+          [:8 [:!Sy]]
+          [:9 [:!Su]]
+          [:0 [:!Si]]
+          [:hyphen [:!So]]
+          [:equal_sign [:!Sp]]
+
+          ; second row
+          [:u [:!Sh]]
+          [:i [:!Sj]]
+          [:o [:!Sk]]
+          [:p [:!Sl]]
+          [:open_bracket [:!Squote]]
+
+          ; third row
+          [:j [:!Sn]]
+          [:k [:!Sm]]
+          [:l [:!Scomma]]
+          [:semicolon [:!Speriod]]
+          [:quote [:!Sslash]]
+
+          ; modifiers left row
+          [:x [:!Sescape]]
+          [:c [:!Sspacebar]]
+          [:v [:!Stab]]
+
+          ; modifiers right row
+          [:m [:!Sreturn_or_enter]]
+          [:comma [:!Sdelete_or_backspace]]
+          [:period [:!Sdelete_forward]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "rs-mode" :rules
+         [;
+          [:condi :rs-mode :karabiner_on]
+          [:r [:!Sr]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        {:des "Base characters" :rules
+         [;
+          ;
+          [:condi :karabiner_on :!ls-mode :!rs-mode]
+          ;
+          ;; ───────────────────────────────
+          ;;
+          ;; left side
+          ;;
+          ;;
+          [:##1                 :q]
+          [:##2                 :w]
+          [:##3                 :e]
+          [:##4                 :r]
+          [:##5                 :t]
+          ;; ───────────────────────────────
+          [:##q                 :a]
+          [:##w                 :s]
+          [:##e                 :d]
+         ;[:##r                 :f] (this mapping was already done in ls_mode)
+          [:##t                 :g]
+          ;; ───────────────────────────────
+          [:##a                 :z]
+          [:##s                 :x]
+          [:##d                 :c]
+          [:##f                 :v]
+          [:##g                 :b]
+          ;;  ───────────────────────────────
+          ;;
+          ;; right side
+          ;;
+          ;;
+          [:##8                 :y]
+          [:##9                 :u]
+          [:##0                 :i]
+          [:##hyphen            :o]
+          [:##equal_sign        :p]
+          ;; ───────────────────────────────
+          [:##u                 :h]
+          [:##i                 :j]
+          [:##o                 :k]
+          [:##p                 :l]
+          [:##open_bracket      :quote]
+          ;; ───────────────────────────────
+          [:##j                 :n]
+          [:##k                 :m]
+          [:##l                 :comma]
+          [:##semicolon         :period]
+          [:##quote             :slash]
+          ;; ───────────────────────────────
+          ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        {:des "karabiner-on-off by pressing caps_lock twice"
          :rules [
-                 :rs-mode
-                 [:r [:!Sr]]
-                ]
-        }
+
+          ; second time caps_lock_pressed & karabiner_off
+          [:condi :caps_lock_pressed :!karabiner_on] ; order matters
+           [:##caps_lock ; from
+            [:##caps_lock ["karabiner_on" 1] [:noti :on-off "ON"]] ; to
+            nil ; conditions
+            {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
+           ]
+
+          ; second time caps_lock_pressed & karabiner_on
+          [:condi :caps_lock_pressed :karabiner_on] ; order matters
+           [:##caps_lock ; from
+            [:##caps_lock ["karabiner_on" 0] [:noti :on-off "OFF"]] ; to
+            nil ; conditions
+            {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
+           ]
+
+          ; first time caps_lock_pressed
+          [:condi :!caps_lock_pressed]
+           [:##caps_lock ; from
+            [:##caps_lock ["caps_lock_pressed" 1]] ; to
+            nil ; conditions
+            {:delayed { :invoked ["caps_lock_pressed" 0] :canceled ["caps_lock_pressed" 0]}} ; other options ; (set caps_lock_pressed to 0 after some time or if caps_lock is pressed again)
+           ]
+
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
        ]
  }
