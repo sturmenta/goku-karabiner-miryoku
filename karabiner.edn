@@ -1,5 +1,27 @@
 ;Mod-Tap Layers example ;https://github.com/gabriel-gardner/modtap-karabiner/blob/main/modtap_example.edn
 
+; TODO:
+; - [ ] left_cmd layer
+; - [ ] left_option layer
+; - [ ] left_ctrl layer
+; - [x] left_shift layer
+
+; - [x] right_shift layer
+; - [ ] right_ctrl layer
+; - [ ] right_option layer
+; - [ ] right_cmd layer
+
+; - [ ] media layer
+; - [ ] nav layer
+; - [ ] mouse layer
+
+; - [ ] sym layer
+; - [ ] num layer
+; - [ ] fun layer
+
+; - [ ] check multiple combinations of keys (example: cmd + shift + t = reopen closed tab)
+
+
 {
  :profiles {
   :goku {
