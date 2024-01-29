@@ -2,28 +2,32 @@
 
 {
  :profiles {
-            :goku {
-                      :default true
+  :goku {
+   :default true
 
-                      ; simultaneous_threshold_milliseconds (def: 50)
-                      ; different from simlayers, this is for cases like [:a :b]
-                      :sim     50
+   ; simultaneous_threshold_milliseconds (def: 50)
+   ; different from simlayers, this is for cases like [:a :b]
+   :sim     50
 
-                      ; to_delayed_action_delay_milliseconds
-                      ; NOTE: this should be equal to :held for mod-tap layers
-                      :delay   210
+   ; to_delayed_action_delay_milliseconds
+   ; NOTE: this should be equal to :held for mod-tap layers
+   :delay   210
 
-                      ; to_if_held_down_threshold_milliseconds (def: 500)
-                      ; NOTE: this should be equal to :delay for mod-tap layers
-                      :held    210
+   ; to_if_held_down_threshold_milliseconds (def: 500)
+   ; NOTE: this should be equal to :delay for mod-tap layers
+   :held    210
 
-                      ; to_if_alone_timeout_milliseconds (def: 1000)
-                      ; NOTE: (i think) this must be just less than the delay / held value to avoid bug where mod-tap layer stays 1
-                      :alone   209
+   ; to_if_alone_timeout_milliseconds (def: 1000)
+   ; NOTE: (i think) this must be just less than the delay / held value to avoid bug where mod-tap layer stays 1
+   :alone   209
 
-                      ;you can set these delays individually in mod-tap layer definitions if you want separate default values here
-                      }
-            }
+   ;you can set these delays individually in mod-tap layer definitions if you want separate default values here
+  }
+ }
+
+ :froms {
+  :any_key {:any :key_code}
+ }
 
  :main [
 
@@ -99,6 +103,9 @@
           [:m [:!Sreturn_or_enter]]
           [:comma [:!Sdelete_or_backspace]]
           [:period [:!Sdelete_forward]]
+
+          ; ignore another keys
+          [:any_key [:vk_none]]
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
 
@@ -107,6 +114,37 @@
          [;
           [:condi :rs-mode :karabiner_on]
           [:r [:!Sr]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        {:des "karabiner-on-off by pressing caps_lock twice"
+         :rules [
+
+          ; second time caps_lock_pressed & karabiner_off
+          [:condi :caps_lock_pressed :!karabiner_on] ; order matters
+           [:##caps_lock ; from
+            [:##caps_lock ["karabiner_on" 1] [:noti :on-off "ON"]] ; to
+            nil ; conditions
+            {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
+           ]
+
+          ; second time caps_lock_pressed & karabiner_on
+          [:condi :caps_lock_pressed :karabiner_on] ; order matters
+           [:##caps_lock ; from
+            [:##caps_lock ["karabiner_on" 0] [:noti :on-off "OFF"]] ; to
+            nil ; conditions
+            {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
+           ]
+
+          ; first time caps_lock_pressed
+          [:condi :!caps_lock_pressed]
+           [:##caps_lock ; from
+            [:##caps_lock ["caps_lock_pressed" 1]] ; to
+            nil ; conditions
+            {:delayed { :invoked ["caps_lock_pressed" 0] :canceled ["caps_lock_pressed" 0]}} ; other options ; (set caps_lock_pressed to 0 after some time or if caps_lock is pressed again)
+           ]
+
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
 
@@ -139,6 +177,11 @@
           [:##f                 :v]
           [:##g                 :b]
           ;;  ───────────────────────────────
+          [:##x                 :escape]
+          [:##c                 :spacebar]
+          [:##v                 :tab]
+
+          ;;  ───────────────────────────────
           ;;
           ;; right side
           ;;
@@ -161,38 +204,14 @@
           [:##semicolon         :period]
           [:##quote             :slash]
           ;; ───────────────────────────────
+          [:##m                 :return_or_enter]
+          [:##comma             :delete_or_backspace]
+          [:##period            :delete_forward]
+
+
+          ; ignore another keys
+          [:any_key [:vk_none]]
           ]}
-        ;; ─────────────────────────────────────────────────────────────────────────────
-
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "karabiner-on-off by pressing caps_lock twice"
-         :rules [
-
-          ; second time caps_lock_pressed & karabiner_off
-          [:condi :caps_lock_pressed :!karabiner_on] ; order matters
-           [:##caps_lock ; from
-            [:##caps_lock ["karabiner_on" 1] [:noti :on-off "ON"]] ; to
-            nil ; conditions
-            {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
-           ]
-
-          ; second time caps_lock_pressed & karabiner_on
-          [:condi :caps_lock_pressed :karabiner_on] ; order matters
-           [:##caps_lock ; from
-            [:##caps_lock ["karabiner_on" 0] [:noti :on-off "OFF"]] ; to
-            nil ; conditions
-            {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
-           ]
-
-          ; first time caps_lock_pressed
-          [:condi :!caps_lock_pressed]
-           [:##caps_lock ; from
-            [:##caps_lock ["caps_lock_pressed" 1]] ; to
-            nil ; conditions
-            {:delayed { :invoked ["caps_lock_pressed" 0] :canceled ["caps_lock_pressed" 0]}} ; other options ; (set caps_lock_pressed to 0 after some time or if caps_lock is pressed again)
-           ]
-
-         ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
        ]
  }
