@@ -256,6 +256,129 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
 
         ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "l_cmd" :rules
+         [
+          [:condi :l_cmd :karabiner_on]
+
+          ; first row
+          [:-y [:!Cy]]
+          [:-u [:!Cu]]
+          [:-i [:!Ci]]
+          [:-o [:!Co]]
+          [:-p [:!Cp]]
+
+          ; second row
+          [:-h [:!Ch]]
+          [:-j [:!Cj]]
+          [:-k [:!Ck]]
+          [:-l [:!Cl]]
+          [:-quote [:!Cquote]]
+
+          ; third row
+          [:-n [:!Cn]]
+          [:-m [:!Cm]]
+          [:-comma [:!Ccomma]]
+          [:-period [:!Cperiod]]
+          [:-slash [:!Cslash]]
+
+          ; modifiers left row
+          [:-escape [:!Cescape]]
+          [:-spacebar [:!Cspacebar]]
+          [:-tab [:!Ctab]]
+
+          ; modifiers right row
+          [:-return_or_enter [:!Creturn_or_enter]]
+          [:-delete_or_backspace [:!Cdelete_or_backspace]]
+          [:-delete_forward [:!Cdelete_forward]]
+
+          ; ignore another keys
+          [:any_key [:vk_none]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "l_option" :rules
+         [
+          [:condi :l_option :karabiner_on]
+
+          ; first row
+          [:-y [:!Oy]]
+          [:-u [:!Ou]]
+          [:-i [:!Oi]]
+          [:-o [:!Oo]]
+          [:-p [:!Op]]
+
+          ; second row
+          [:-h [:!Oh]]
+          [:-j [:!Oj]]
+          [:-k [:!Ok]]
+          [:-l [:!Ol]]
+          [:-quote [:!Oquote]]
+
+          ; third row
+          [:-n [:!On]]
+          [:-m [:!Om]]
+          [:-comma [:!Ocomma]]
+          [:-period [:!Operiod]]
+          [:-slash [:!Oslash]]
+
+          ; modifiers left row
+          [:-escape [:!Oescape]]
+          [:-spacebar [:!Ospacebar]]
+          [:-tab [:!Otab]]
+
+          ; modifiers right row
+          [:-return_or_enter [:!Oreturn_or_enter]]
+          [:-delete_or_backspace [:!Odelete_or_backspace]]
+          [:-delete_forward [:!Odelete_forward]]
+
+          ; ignore another keys
+          [:any_key [:vk_none]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "l_ctrl" :rules
+         [
+          [:condi :l_ctrl :karabiner_on]
+
+          ; first row
+          [:-y [:!Ty]]
+          [:-u [:!Tu]]
+          [:-i [:!Ti]]
+          [:-o [:!To]]
+          [:-p [:!Tp]]
+
+          ; second row
+          [:-h [:!Th]]
+          [:-j [:!Tj]]
+          [:-k [:!Tk]]
+          [:-l [:!Tl]]
+          [:-quote [:!Tquote]]
+
+          ; third row
+          [:-n [:!Tn]]
+          [:-m [:!Tm]]
+          [:-comma [:!Tcomma]]
+          [:-period [:!Tperiod]]
+          [:-slash [:!Tslash]]
+
+          ; modifiers left row
+          [:-escape [:!Tescape]]
+          [:-spacebar [:!Tspacebar]]
+          [:-tab [:!Ttab]]
+
+          ; modifiers right row
+          [:-return_or_enter [:!Treturn_or_enter]]
+          [:-delete_or_backspace [:!Tdelete_or_backspace]]
+          [:-delete_forward [:!Tdelete_forward]]
+
+          ; ignore another keys
+          [:any_key [:vk_none]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "l_shift" :rules
          [
           [:condi :l_shift :karabiner_on]
@@ -331,6 +454,129 @@
           [:-return_or_enter [:!Rreturn_or_enter]]
           [:-delete_or_backspace [:!Rdelete_or_backspace]]
           [:-delete_forward [:!Rdelete_forward]]
+
+          ; ignore another keys
+          [:any_key [:vk_none]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "r_ctrl" :rules
+         [;
+          [:condi :r_ctrl :karabiner_on]
+
+          ; first row
+          [:-q [:!Wq]]
+          [:-w [:!Ww]]
+          [:-e [:!We]]
+          [:-r [:!Wr]]
+          [:-t [:!Wt]]
+
+          ; second row
+          [:-a [:!Wa]]
+          [:-s [:!Ws]]
+          [:-d [:!Wd]]
+          [:-f [:!Wf]]
+          [:-g [:!Wg]]
+
+          ; third row
+          [:-z [:!Wz]]
+          [:-x [:!Wx]]
+          [:-c [:!Wc]]
+          [:-v [:!Wv]]
+          [:-b [:!Wb]]
+
+          ; modifiers left row
+          [:-escape [:!Wescape]]
+          [:-spacebar [:!Wspacebar]]
+          [:-tab [:!Wtab]]
+
+          ; modifiers right row
+          [:-return_or_enter [:!Wreturn_or_enter]]
+          [:-delete_or_backspace [:!Wdelete_or_backspace]]
+          [:-delete_forward [:!Wdelete_forward]]
+
+          ; ignore another keys
+          [:any_key [:vk_none]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "r_option" :rules
+         [;
+          [:condi :r_option :karabiner_on]
+
+          ; first row
+          [:-q [:!Eq]]
+          [:-w [:!Ew]]
+          [:-e [:!Ee]]
+          [:-r [:!Er]]
+          [:-t [:!Et]]
+
+          ; second row
+          [:-a [:!Ea]]
+          [:-s [:!Es]]
+          [:-d [:!Ed]]
+          [:-f [:!Ef]]
+          [:-g [:!Eg]]
+
+          ; third row
+          [:-z [:!Ez]]
+          [:-x [:!Ex]]
+          [:-c [:!Ec]]
+          [:-v [:!Ev]]
+          [:-b [:!Eb]]
+
+          ; modifiers left row
+          [:-escape [:!Eescape]]
+          [:-spacebar [:!Espacebar]]
+          [:-tab [:!Etab]]
+
+          ; modifiers right row
+          [:-return_or_enter [:!Ereturn_or_enter]]
+          [:-delete_or_backspace [:!Edelete_or_backspace]]
+          [:-delete_forward [:!Edelete_forward]]
+
+          ; ignore another keys
+          [:any_key [:vk_none]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "r_cmd" :rules
+         [;
+          [:condi :r_cmd :karabiner_on]
+
+          ; first row
+          [:-q [:!Qq]]
+          [:-w [:!Qw]]
+          [:-e [:!Qe]]
+          [:-r [:!Qr]]
+          [:-t [:!Qt]]
+
+          ; second row
+          [:-a [:!Qa]]
+          [:-s [:!Qs]]
+          [:-d [:!Qd]]
+          [:-f [:!Qf]]
+          [:-g [:!Qg]]
+
+          ; third row
+          [:-z [:!Qz]]
+          [:-x [:!Qx]]
+          [:-c [:!Qc]]
+          [:-v [:!Qv]]
+          [:-b [:!Qb]]
+
+          ; modifiers left row
+          [:-escape [:!Qescape]]
+          [:-spacebar [:!Qspacebar]]
+          [:-tab [:!Qtab]]
+
+          ; modifiers right row
+          [:-return_or_enter [:!Qreturn_or_enter]]
+          [:-delete_or_backspace [:!Qdelete_or_backspace]]
+          [:-delete_forward [:!Qdelete_forward]]
 
           ; ignore another keys
           [:any_key [:vk_none]]
