@@ -25,8 +25,69 @@
   }
  }
 
+ ; keyboard all keys mapping for "from" section
  :froms {
   :any_key {:any :key_code}
+
+  ;;
+  ;; left side
+  ;;
+
+  ; first row
+  :-q {:key :##1}
+  :-w {:key :##2}
+  :-e {:key :##3}
+  :-r {:key :##4}
+  :-t {:key :##5}
+
+  ; second row
+  :-a {:key :##q}
+  :-s {:key :##w}
+  :-d {:key :##e}
+  :-f {:key :##r}
+  :-g {:key :##t}
+
+  ; third row
+  :-z {:key :##a}
+  :-x {:key :##s}
+  :-c {:key :##d}
+  :-v {:key :##f}
+  :-b {:key :##g}
+
+  ; modifiers
+  :-escape {:key :##x}
+  :-spacebar {:key :##c}
+  :-tab {:key :##v}
+
+  ;;
+  ;; right side
+  ;;
+
+  ; first row
+  :-y {:key :##8}
+  :-u {:key :##9}
+  :-i {:key :##0}
+  :-o {:key :##hyphen}
+  :-p {:key :##equal_sign}
+
+  ; second row
+  :-h {:key :##u}
+  :-j {:key :##i}
+  :-k {:key :##o}
+  :-l {:key :##p}
+  :-quote {:key :##open_bracket}
+
+  ; third row
+  :-n {:key :##j}
+  :-m {:key :##k}
+  :-comma {:key :##l}
+  :-period {:key :##semicolon}
+  :-slash {:key :##quote}
+
+  ; modifiers
+  :-return_or_enter {:key :##m}
+  :-delete_or_backspace {:key :##comma}
+  :-delete_forward {:key :##period}
  }
 
  :main [
@@ -35,14 +96,15 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "modifier layers" :rules [
           [:condi :karabiner_on]
+
           ;; ─────────────────────────────────────────────────────────────
 
           ;;
           ;; left side
           ;;
 
-           ;ls-mode (r) -> (f || left_shift)
-           [:r nil
+           ;ls-mode (f)
+           [:-f nil
             [:!rs-mode] {:alone {:key
             :f :halt true} :delayed {:canceled {:key
             :f }} :held {:set [
@@ -55,8 +117,8 @@
           ;; right side
           ;;
 
-           ;rs-mode (i) -> (j || right_shift)
-           [:i nil
+           ;rs-mode (j)
+           [:-j nil
             [:!ls-mode] {:alone {:key
             :j :halt true} :delayed {:canceled {:key
             :j}} :held {:set [
@@ -74,35 +136,35 @@
           [:condi :ls-mode :karabiner_on]
 
           ; first row
-          [:8 [:!Sy]]
-          [:9 [:!Su]]
-          [:0 [:!Si]]
-          [:hyphen [:!So]]
-          [:equal_sign [:!Sp]]
+          [:-y [:!Sy]]
+          [:-u [:!Su]]
+          [:-i [:!Si]]
+          [:-o [:!So]]
+          [:-p [:!Sp]]
 
           ; second row
-          [:u [:!Sh]]
-          [:i [:!Sj]]
-          [:o [:!Sk]]
-          [:p [:!Sl]]
-          [:open_bracket [:!Squote]]
+          [:-h [:!Sh]]
+          [:-j [:!Sj]]
+          [:-k [:!Sk]]
+          [:-l [:!Sl]]
+          [:-quote [:!Squote]]
 
           ; third row
-          [:j [:!Sn]]
-          [:k [:!Sm]]
-          [:l [:!Scomma]]
-          [:semicolon [:!Speriod]]
-          [:quote [:!Sslash]]
+          [:-n [:!Sn]]
+          [:-m [:!Sm]]
+          [:-comma [:!Scomma]]
+          [:-period [:!Speriod]]
+          [:-slash [:!Sslash]]
 
           ; modifiers left row
-          [:x [:!Sescape]]
-          [:c [:!Sspacebar]]
-          [:v [:!Stab]]
+          [:-escape [:!Sescape]]
+          [:-spacebar [:!Sspacebar]]
+          [:-tab [:!Stab]]
 
           ; modifiers right row
-          [:m [:!Sreturn_or_enter]]
-          [:comma [:!Sdelete_or_backspace]]
-          [:period [:!Sdelete_forward]]
+          [:-return_or_enter [:!Sreturn_or_enter]]
+          [:-delete_or_backspace [:!Sdelete_or_backspace]]
+          [:-delete_forward [:!Sdelete_forward]]
 
           ; ignore another keys
           [:any_key [:vk_none]]
@@ -113,7 +175,40 @@
         { :des "rs-mode" :rules
          [;
           [:condi :rs-mode :karabiner_on]
-          [:r [:!Sr]]
+
+          ; first row
+          [:-q [:!Rq]]
+          [:-w [:!Rw]]
+          [:-e [:!Re]]
+          [:-r [:!Rr]]
+          [:-t [:!Rt]]
+
+          ; second row
+          [:-a [:!Ra]]
+          [:-s [:!Rs]]
+          [:-d [:!Rd]]
+          [:-f [:!Rf]]
+          [:-g [:!Rg]]
+
+          ; third row
+          [:-z [:!Rz]]
+          [:-x [:!Rx]]
+          [:-c [:!Rc]]
+          [:-v [:!Rv]]
+          [:-b [:!Rb]]
+
+          ; modifiers left row
+          [:-escape [:!Rescape]]
+          [:-spacebar [:!Rspacebar]]
+          [:-tab [:!Rtab]]
+
+          ; modifiers right row
+          [:-return_or_enter [:!Rreturn_or_enter]]
+          [:-delete_or_backspace [:!Rdelete_or_backspace]]
+          [:-delete_forward [:!Rdelete_forward]]
+
+          ; ignore another keys
+          [:any_key [:vk_none]]
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
 
@@ -151,6 +246,7 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
         {:des "Base characters" :rules
          [;
+          ; use the mappings from "froms" to map all keys
           ;
           [:condi :karabiner_on :!ls-mode :!rs-mode]
           ;
@@ -159,54 +255,54 @@
           ;; left side
           ;;
           ;;
-          [:##1                 :q]
-          [:##2                 :w]
-          [:##3                 :e]
-          [:##4                 :r]
-          [:##5                 :t]
+          [:-q                          :q]
+          [:-w                          :w]
+          [:-e                          :e]
+          [:-r                          :r]
+          [:-t                          :t]
           ;; ───────────────────────────────
-          [:##q                 :a]
-          [:##w                 :s]
-          [:##e                 :d]
-         ;[:##r                 :f] (this mapping was already done in ls_mode)
-          [:##t                 :g]
+          [:-a                          :a]
+          [:-s                          :s]
+          [:-d                          :d]
+         ;[:-f                          :f] (this mapping was already done in ls_mode)
+          [:-g                          :g]
           ;; ───────────────────────────────
-          [:##a                 :z]
-          [:##s                 :x]
-          [:##d                 :c]
-          [:##f                 :v]
-          [:##g                 :b]
+          [:-z                          :z]
+          [:-x                          :x]
+          [:-c                          :c]
+          [:-v                          :v]
+          [:-b                          :b]
           ;;  ───────────────────────────────
-          [:##x                 :escape]
-          [:##c                 :spacebar]
-          [:##v                 :tab]
+          [:-escape                     :escape]
+          [:-spacebar                   :spacebar]
+          [:-tab                        :tab]
 
           ;;  ───────────────────────────────
           ;;
           ;; right side
           ;;
           ;;
-          [:##8                 :y]
-          [:##9                 :u]
-          [:##0                 :i]
-          [:##hyphen            :o]
-          [:##equal_sign        :p]
+          [:-y                          :y]
+          [:-u                          :u]
+          [:-i                          :i]
+          [:-o                          :o]
+          [:-p                          :p]
           ;; ───────────────────────────────
-          [:##u                 :h]
-          [:##i                 :j]
-          [:##o                 :k]
-          [:##p                 :l]
-          [:##open_bracket      :quote]
+          [:-h                          :h]
+          [:-j                          :j]
+          [:-k                          :k]
+          [:-l                          :l]
+          [:-quote                      :quote]
           ;; ───────────────────────────────
-          [:##j                 :n]
-          [:##k                 :m]
-          [:##l                 :comma]
-          [:##semicolon         :period]
-          [:##quote             :slash]
+          [:-n                          :n]
+          [:-m                          :m]
+          [:-comma                      :comma]
+          [:-period                     :period]
+          [:-slash                      :slash]
           ;; ───────────────────────────────
-          [:##m                 :return_or_enter]
-          [:##comma             :delete_or_backspace]
-          [:##period            :delete_forward]
+          [:-return_or_enter            :return_or_enter]
+          [:-delete_or_backspace        :delete_or_backspace]
+          [:-delete_forward             :delete_forward]
 
 
           ; ignore another keys
@@ -215,3 +311,42 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
        ]
  }
+;;
+;;
+;;
+;;
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;  how to make logs:
+;;
+;;      console.log("ctrl") -> [:noti :noti-id "ctrl"] (use [:noti :noti-id] to clear after use)
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;; rule [:period ["media-mode" 1] nil {:afterup ["media-mode" 0] :alone :period}]
+;;       |_____| |_______________| |_| |_________________________________________|
+;;        <from>    <to>      <conditions>         <other options>
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;  commands:
+;;
+;;      !  | means mandatory
+;;      #  | means optional
+;;      C  | left_command
+;;      T  | left_control
+;;      O  | left_option
+;;      S  | left_shift
+;;      F  | fn
+;;      Q  | right_command
+;;      W  | right_control
+;;      E  | right_option
+;;      R  | right_shift
+;;      P  | caps_lock
+;;      !! | mandatory command + control + optional + shift (hyper)
+;;      ## | optional any
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;; ─────────────────────────────────────────────────────────────────────────────
