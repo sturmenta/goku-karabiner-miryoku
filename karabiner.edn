@@ -505,7 +505,7 @@
           [:-l                          :up_arrow];            space -> l              up
           [:-quote                      :right_arrow];         space -> '              right
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          ;[:-n                          :!Sn];                space -> n              ---- insert
+         ;[:-n                          :!Sn];                 space -> n              ---- insert
           [:-m                          :home];                space -> m              home
           [:-comma                      :page_down];           space -> ,              page_down
           [:-period                     :page_up];             space -> .              page_up
@@ -778,6 +778,82 @@
           [:-escape                     :!S9];                         return -> layer_1        (
           [:-spacebar                   :!S0];                         return -> layer_2        )
           [:-tab                        :!Shyphen];                    return -> layer_3        _
+
+          ; ────────────────────────────────────────────────────────────────────────────────────
+          ; ignore another keys
+          [:any_key [:vk_none]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "layer_5 - backspace - numbers" :rules
+         [
+          [:condi :layer_5 :karabiner_on]
+
+          ;────────────────────────────────────────────────────────────────────────────────────────────
+          ;
+          ;  left side
+          ;
+          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
+          [:-q                          :open_bracket];                backspace -> q              [
+          [:-w                          :7];                           backspace -> w              7
+          [:-e                          :8];                           backspace -> e              8
+          [:-r                          :9];                           backspace -> r              9
+          [:-t                          :close_bracket];               backspace -> t              ]
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          [:-a                          :semicolon];                   backspace -> a              ;
+          [:-s                          :4];                           backspace -> s              4
+          [:-d                          :5];                           backspace -> d              5
+          [:-f                          :6];                           backspace -> f              6
+          [:-g                          :equal_sign];                  backspace -> g              =
+          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
+          [:-z                          :grave_accent_and_tilde];      backspace -> z              `
+          [:-x                          :1];                           backspace -> x              1
+          [:-c                          :2];                           backspace -> c              2
+          [:-v                          :3];                           backspace -> v              3
+          [:-b                          :backslash];                   backspace -> b              \
+          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
+          [:-escape                     :period];                      backspace -> layer_1        .
+          [:-spacebar                   :0];                           backspace -> layer_2        0
+          [:-tab                        :hyphen];                      backspace -> layer_3        -
+
+          ; ────────────────────────────────────────────────────────────────────────────────────
+          ; ignore another keys
+          [:any_key [:vk_none]]
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "layer_6 - supr - functions" :rules
+         [
+          [:condi :layer_6 :karabiner_on]
+
+          ;────────────────────────────────────────────────────────────────────────────────────────────
+          ;
+          ;  left side
+          ;
+          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
+         ;[:-q                          :vk_none];                             supr -> q              ---------
+         ;[:-w                          :vk_none];                             supr -> w              ---------
+         ;[:-e                          :vk_none];                             supr -> e              ---------
+         ;[:-r                          :vk_none];                             supr -> r              ---------
+         ;[:-t                          :vk_none];                             supr -> t              ---------
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+         ;[:-a                          :vk_none];                             supr -> a              ---------
+         ;[:-s                          :vk_none];                             supr -> s              ---------
+         ;[:-d                          :vk_none];                             supr -> d              ---------
+         ;[:-f                          :vk_none];                             supr -> f              ---------
+         ;[:-g                          :vk_none];                             supr -> g              ---------
+          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
+         ;[:-z                          :vk_none];                             supr -> z              ---------
+          [:-x                          :display_brightness_decrement];        supr -> x              f1
+          [:-c                          :display_brightness_increment];        supr -> c              f2
+         ;[:-v                          :vk_none];                             supr -> v              ---------
+         ;[:-b                          :vk_none];                             supr -> b              ---------
+          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
+         ;[:-escape                     :vk_none];                             supr -> layer_1        ---------
+         ;[:-spacebar                   :vk_none];                             supr -> layer_2        ---------
+         ;[:-tab                        :vk_none];                             supr -> layer_3        ---------
 
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys
