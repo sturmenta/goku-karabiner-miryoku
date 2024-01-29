@@ -1,419 +1,68 @@
-; TODO: make a way to activate karabiner by default on keychron keyboard (not allowed to activate from keyboard itself)
-; TODO: change layers to "layer": 1, 2, 3 instead of "layer_1", "layer_2", "layer_3"
+;Mod-Tap Layers example ;https://github.com/gabriel-gardner/modtap-karabiner/blob/main/modtap_example.edn
 
-{;
-
+{
  :profiles {
-  :Default {
-   :default true
-   :sim      200 ; keys need to be pressed within this threshold to be considered simultaneous
-   :simlayer-threshold 250 ; ???????
-   :alone    250 ; hold for 495ms and single tap registered; hold for 505ms and seen as modifier
-   :delay    300 ; time after which the key press is count delayed
-   :held     450 ; key is fired twice when 1000 ms is elapsed (otherwise seen as a hold command)
-  }
- }
+            :goku {
+                      :default true
 
- :main [;
+                      ; simultaneous_threshold_milliseconds (def: 50)
+                      ; different from simlayers, this is for cases like [:a :b]
+                      :sim     50
 
-        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-        {:des "Layer 1 (x - esc - media)"
+                      ; to_delayed_action_delay_milliseconds
+                      ; NOTE: this should be equal to :held for mod-tap layers
+                      :delay   210
+
+                      ; to_if_held_down_threshold_milliseconds (def: 500)
+                      ; NOTE: this should be equal to :delay for mod-tap layers
+                      :held    210
+
+                      ; to_if_alone_timeout_milliseconds (def: 1000)
+                      ; NOTE: (i think) this must be just less than the delay / held value to avoid bug where mod-tap layer stays 1
+                      :alone   209
+
+                      ;you can set these delays individually in mod-tap layer definitions if you want separate default values here
+                      }
+            }
+
+ :main [
+
+        ;NOTE: When adding a new layer, if you want it to be able to cross with an old one, you must add the name negated (:!new_name) to all other mod-tap layer conditions
+        {
+         :des "mod-tap layers"
          :rules [
-                 ;
-                 [:condi :karabiner_on :layer_1] ; layer-1
-                 ;
-                 ;────────────────────────────────────────────────────────────────────────────────────────────
-                 ;
-                 ;  right side
-                 ;
-                 ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##8                   :vk_none];                  esc -> y              ---- rgb toggle (combine with shift for rgb-off)
-                 [:##9                   :vk_none];                  esc -> u              ---- rgb mode
-                 [:##0                   :vk_none];                  esc -> i              ---- rgb hue
-                 [:##hyphen              :vk_none];                  esc -> o              ---- rgb saturation
-                 [:##equal_sign          :vk_none];                  esc -> p              ---- rgb value
-                 ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##u                   :vk_none];                  esc -> h              ---- external power toggle (combine with shift for ep-tog-off)
-                 [:##i                   :vk_consumer_previous];     esc -> j              previous
-                 [:##o                   :volume_down];              esc -> k              - volume
-                 [:##p                   :volume_up];                esc -> l              + volume
-                 [:##open_bracket        :vk_consumer_next];         esc -> '              next
-                 ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##j                   :vk_none];                  esc -> n              ---- output toggle (combine with shift for output-usb)
-                 [:##k                   :vk_none];                  esc -> m              ---- bt 0
-                 [:##l                   :vk_none];                  esc -> ,              ---- bt 1
-                 [:##semicolon           :vk_none];                  esc -> .              ---- bt 2
-                 [:##quote               :vk_none];                  esc -> /              ---- bt 3
-                 ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##m                   :vk_none];                  esc -> layer_4        ---- stop
-                 [:##comma               :vk_consumer_play];         esc -> layer_5        play/pause
-                 [:##period              :mute];                     esc -> layer_6        mute
-                 ; ────────────────────────────────────────────────────────────────────────────────────────────
-                 ]}
-        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-        {:des "Layer 2 (c - space - navigation)"
-         :rules [:karabiner_on
-                 ;
-                 :layer_2 ; only allow below commands to work if this is true
-                 ;
-                 ;────────────────────────────────────────────────────────────────────────────────────────────
-                 ;
-                 ;  right side
-                 ;
-                 ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##8                   :!Ty];                 space -> y              redo (ctrl + y)
-                 [:##9                   :!Cv];                 space -> u              paste (cmd + v)
-                 [:##0                   :!Cc];                 space -> i              copy (cmd + c)
-                 [:##hyphen              :!Cx];                 space -> o              cut (cmd + x)
-                 [:##equal_sign          :!Cz];                 space -> p              undo (cmd + z)
-                 ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##u                   :caps_lock];           space -> h              caps_lock
-                 [:##i                   :left_arrow];          space -> j              left
-                 [:##o                   :down_arrow];          space -> k              down
-                 [:##p                   :up_arrow];            space -> l              up
-                 [:##open_bracket        :right_arrow];         space -> '              right
-                 ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##j                   :vk_none];             space -> n              ---- insert
-                 [:##k                   :home];                space -> m              home
-                 [:##l                   :page_down];           space -> ,              page_down
-                 [:##semicolon           :page_up];             space -> .              page_up
-                 [:##quote               :end];                 space -> /              end
-                 ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##m                   :return_or_enter];     space -> layer_4        enter
-                 [:##comma               :delete_or_backspace]; space -> layer_5        backspace
-                 [:##period              :delete_forward];      space -> layer_6        supr
-                 ; ────────────────────────────────────────────────────────────────────────────────────────────
-                 ]}
-        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-        {:des "Layer 3 (v - tab - mouse)"
-         :rules [:karabiner_on
-                 ;
-                 :layer_3 ; only allow below commands to work if this is true
-                 ;────────────────────────────────────────────────────────────────────────────────────────────
-                 ;
-                 ;  right side
-                 ;
-                 ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##8                   :vk_none];            tab -> y              ---------
-                 [:##9                   :vk_none];            tab -> u              ---------
-                 [:##0                   :vk_none];            tab -> i              ---------
-                 [:##hyphen              :vk_none];            tab -> o              ---------
-                 [:##equal_sign          :vk_none];            tab -> p              ---------
-                 ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##u                   :vk_none];            tab -> h              ---------
-                 [:##i                   :vk_none];            tab -> j              ---------
-                 [:##o                   :vk_none];            tab -> k              ---------
-                 [:##p                   :vk_none];            tab -> l              ---------
-                 [:##open_bracket        :vk_none];            tab -> '              ---------
-                 ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##j                   :vk_none];            tab -> n              ---------
-                 [:##k                   :vk_none];            tab -> m              ---------
-                 [:##l                   :vk_none];            tab -> ,              ---------
-                 [:##semicolon           :vk_none];            tab -> .              ---------
-                 [:##quote               :vk_none];            tab -> /              ---------
-                 ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##m                   :vk_none];            tab -> layer_4        ---------
-                 [:##comma               :vk_none];            tab -> layer_5        ---------
-                 [:##period              :vk_none];            tab -> layer_6        ---------
-                 ; ────────────────────────────────────────────────────────────────────────────────────────────
-                 ]}
-        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-        {:des "Layer 4 (m - return - symbols)"
-         :rules [:karabiner_on
-                 ;
-                 :layer_4 ; only allow below commands to work if this is true
-                 ;────────────────────────────────────────────────────────────────────────────────────────────
-                 ;
-                 ;  left side
-                 ;
-                 ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##1                   :!Sopen_bracket];              return -> q              {
-                 [:##2                   :!S7];                         return -> w              &
-                 [:##3                   :!S8];                         return -> e              *
-                 [:##4                   :!S9];                         return -> r              (
-                 [:##5                   :!Sclose_bracket];             return -> t              }
-                 ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##q                   :!Ssemicolon];                 return -> a              :
-                 [:##w                   :!S4];                         return -> s              $
-                 [:##e                   :!S5];                         return -> d              %
-                 [:##r                   :!S6];                         return -> f              ^
-                 [:##t                   :!Sequal_sign];                return -> g              +
-                 ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##a                   :!Sgrave_accent_and_tilde];    return -> z              ~
-                 [:##s                   :!S1];                         return -> x              !
-                 [:##d                   :!S2];                         return -> c              @
-                 [:##f                   :!S3];                         return -> v              #
-                 [:##g                   :!Sbackslash];                 return -> b              |
-                 ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##x                   :!S9];                         return -> layer_1        (
-                 [:##c                   :!S0];                         return -> layer_2        )
-                 [:##v                   :!Shyphen];                    return -> layer_3        _
-                 ; ────────────────────────────────────────────────────────────────────────────────────
-                 ]}
-        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-        {:des "Layer 5 (, - backspace - numbers)"
-         :rules [:karabiner_on
-                 ;
-                 :layer_5 ; only allow below commands to work if this is true
-                 ;────────────────────────────────────────────────────────────────────────────────────────────
-                 ;
-                 ;  left side
-                 ;
-                 ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##1                   :open_bracket];                backspace -> q              [
-                 [:##2                   :7];                           backspace -> w              7
-                 [:##3                   :8];                           backspace -> e              8
-                 [:##4                   :9];                           backspace -> r              9
-                 [:##5                   :close_bracket];               backspace -> t              ]
-                 ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##q                   :semicolon];                   backspace -> a              ;
-                 [:##w                   :4];                           backspace -> s              4
-                 [:##e                   :5];                           backspace -> d              5
-                 [:##r                   :6];                           backspace -> f              6
-                 [:##t                   :equal_sign];                  backspace -> g              =
-                 ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##a                   :grave_accent_and_tilde];      backspace -> z              `
-                 [:##s                   :1];                           backspace -> x              1
-                 [:##d                   :2];                           backspace -> c              2
-                 [:##f                   :3];                           backspace -> v              3
-                 [:##g                   :backslash];                   backspace -> b              \
-                 ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##x                   :period];                      backspace -> layer_1        .
-                 [:##c                   :0];                           backspace -> layer_2        0
-                 [:##v                   :hyphen];                      backspace -> layer_3        -
-                 ; ────────────────────────────────────────────────────────────────────────────────────
-                 ]}
-        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-        {:des "Layer 6 (. - supr - functions)"
-         :rules [:karabiner_on
-                 ;
-                 :layer_6 ; only allow below commands to work if this is true
-                 ;────────────────────────────────────────────────────────────────────────────────────────────
-                 ;
-                 ;  left side
-                 ;
-                 ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-                 [:##1                   :vk_none];                             supr -> q              ---------
-                 [:##2                   :vk_none];                             supr -> w              ---------
-                 [:##3                   :vk_none];                             supr -> e              ---------
-                 [:##4                   :vk_none];                             supr -> r              ---------
-                 [:##5                   :vk_none];                             supr -> t              ---------
-                 ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-                 [:##q                   :vk_none];                             supr -> a              ---------
-                 [:##w                   :vk_none];                             supr -> s              ---------
-                 [:##e                   :vk_none];                             supr -> d              ---------
-                 [:##r                   :vk_none];                             supr -> f              ---------
-                 [:##t                   :vk_none];                             supr -> g              ---------
-                 ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-                 [:##a                   :vk_none];                             supr -> z              ---------
-                 [:##s                   :display_brightness_decrement];        supr -> x              f1
-                 [:##d                   :display_brightness_increment];        supr -> c              f2
-                 [:##f                   :vk_none];                             supr -> v              ---------
-                 [:##g                   :vk_none];                             supr -> b              ---------
-                 ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-                 [:##x                   :vk_none];                             supr -> layer_1        ---------
-                 [:##c                   :vk_none];                             supr -> layer_2        ---------
-                 [:##v                   :vk_none];                             supr -> layer_3        ---------
-                 ; ────────────────────────────────────────────────────────────────────────────────────
-                 ]}
-        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+                 ;ls-mode (r)
+                 [:r nil
+                  [:!rs-mode] {:alone {:key
+                  :r :halt true} :delayed {:canceled {:key
+                  :r }} :held {:set [
+                  "ls-mode" 1] :repeat false} :afterup {:set [
+                  "ls-mode" 0]}}]
 
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "Layers activators" :rules
-         [;
-          [:condi :karabiner_on]
-           ;
-           [:##x                 ["layer_1" 1] nil {:afterup ["layer_1" 0] :alone        :escape}]
-           [:##c                 ["layer_2" 1] nil {:afterup ["layer_2" 0] :alone        :spacebar}]
-           [:##v                 ["layer_3" 1] nil {:afterup ["layer_3" 0] :alone        :tab}]
-           ;; ───────────────────────────────
-           [:##m                 ["layer_4" 1] nil {:afterup ["layer_4" 0] :alone        :return_or_enter}]
-           [:##comma             ["layer_5" 1] nil {:afterup ["layer_5" 0] :alone        :delete_or_backspace}]
-           [:##period            ["layer_6" 1] nil {:afterup ["layer_6" 0] :alone        :delete_forward}]
-           ;
-         ]
+                 ;rs-mode (i)
+                 [:i nil
+                  [:!ls-mode] {:alone {:key
+                  :i :halt true} :delayed {:canceled {:key
+                  :i}} :held {:set [
+                  "rs-mode" 1] :repeat false} :afterup {:set [
+                  "rs-mode" 0]}}]
+                ]
         }
 
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "Base modifiers" :rules
-         [;
-          [:condi :karabiner_on :#layer] ;some layer activated
-           ;
-           [:##w                 :left_command]
-           [:##e                 :left_option]
-           [:##r                 :left_control]
-           [:##t                 :left_shift]
-           ;
-           [:##i                 :right_shift]
-           [:##o                 :right_control]
-           [:##p                 :right_option]
-           [:##open_bracket      :right_command]
-          ;
-         ]}
-
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "Base characters" :rules
-         [;
-          ;; ───────────────────────────────
-          ;;
-          ;; left side
-          ;;
-          [:condi :karabiner_on :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6]
-           ;;
-           [:##1                 :q]
-           [:##2                 :w]
-           [:##3                 :e]
-           [:##4                 :r]
-           [:##5                 :t]
-           ;; ───────────────────────────────
-           [:##q                 :a]
-           [:##w                 :s]
-           [:##e                 :d]
-           [:##r                 :f]
-           [:##t                 :g]
-           ;; ───────────────────────────────
-           [:##a                 :z]
-           [:##s                 :x]
-           [:##d                 :c]
-           [:##f                 :v]
-           [:##g                 :b]
-          ;;  ───────────────────────────────
-          ;;
-          ;; right side
-          ;;
-          [:condi :karabiner_on :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6]
-           ;;
-           [:##8                 :y]
-           [:##9                 :u]
-           [:##0                 :i]
-           [:##hyphen            :o]
-           [:##equal_sign        :p]
-           ;; ───────────────────────────────
-           [:##u                 :h]
-           [:##i                 :j]
-           [:##o                 :k]
-           [:##p                 :l]
-           [:##open_bracket      :quote]
-           ;; ───────────────────────────────
-           [:##j                 :n]
-           [:##k                 :m]
-           [:##l                 :comma]
-           [:##semicolon         :period]
-           [:##quote             :slash]
-          ;; ───────────────────────────────
-          ]}
-        ;; ─────────────────────────────────────────────────────────────────────────────
-
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "disable all unused keys" :rules
-         [:karabiner_on
-          ;;
-          ;; left side
-          ;;
-          [:##escape                      :vk_none]
-          [:##grave_accent_and_tilde    :vk_none]
-          [:##tab                         :vk_none]
-         ;[:##caps_lock                   :vk_none] ; (used it in mac keyboard to toggle between karabiner on-off)
-          [:##left_shift                  :vk_none]
-          [:##fn                          :vk_none]
-          [:##left_control                :vk_none]
-          [:##left_option                 :vk_none]
-          [:##left_option                 :vk_none]
-          [:##left_command                :vk_none]
-          ;;
-          ;; center
-          ;;
-          [:##6                           :vk_none]
-          [:##7                           :vk_none]
-          [:##y                           :vk_none]
-          [:##h                           :vk_none]
-          [:##b                           :vk_none]
-          [:##n                           :vk_none]
-          [:##spacebar                    :vk_none]
-          ;;
-          ;; right side
-          ;;
-          [:##right_command               :vk_none]
-          [:##right_option                :vk_none]
-          [:##left_arrow                  :vk_none]
-          [:##up_arrow                    :vk_none]
-          [:##down_arrow                  :vk_none]
-          [:##right_arrow                 :vk_none]
-          [:##right_shift                 :vk_none]
-          [:##slash                       :vk_none]
-          [:##return_or_enter             :vk_none]
-          [:##close_bracket               :vk_none]
-          [:##backslash                   :vk_none]
-          [:##delete_or_backspace         :vk_none]
-          ;;
-          ]}
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        {:des "karabiner-on-off by pressing caps_lock twice"
+        {
+         :des "ls-mode"
          :rules [
+                 :ls-mode
+                 [:i [:!Si]]
+                ]
+        }
 
-          ; second time caps_lock_pressed & karabiner_off
-          [:condi :caps_lock_pressed :!karabiner_on] ; order matters
-           [:##caps_lock ; from
-            [:##caps_lock ["karabiner_on" 1] [:noti :on-off "ON"]] ; to
-            nil ; conditions
-            {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
-           ]
-
-          ; second time caps_lock_pressed & karabiner_on
-          [:condi :caps_lock_pressed :karabiner_on] ; order matters
-           [:##caps_lock ; from
-            [:##caps_lock ["karabiner_on" 0] [:noti :on-off "OFF"]] ; to
-            nil ; conditions
-            {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
-           ]
-
-          ; first time caps_lock_pressed
-          [:condi :!caps_lock_pressed]
-           [:##caps_lock ; from
-            [:##caps_lock ["caps_lock_pressed" 1]] ; to
-            nil ; conditions
-            {:delayed { :invoked ["caps_lock_pressed" 0] :canceled ["caps_lock_pressed" 0]}} ; other options ; (set caps_lock_pressed to 0 after some time or if caps_lock is pressed again)
-           ]
-
-         ]}
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        ]}
-;;
-;;
-;;
-;;
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;  how to make logs:
-;;
-;;      console.log("ctrl") -> [:noti :noti-id "ctrl"] (use [:noti :noti-id] to clear after use)
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;; rule [:period ["media-mode" 1] nil {:afterup ["media-mode" 0] :alone :period}]
-;;       |_____| |_______________| |_| |_________________________________________|
-;;        <from>    <to>      <conditions>         <other options>
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;  commands:
-;;
-;;      !  | means mandatory
-;;      #  | means optional
-;;      C  | left_command
-;;      T  | left_control
-;;      O  | left_option
-;;      S  | left_shift
-;;      F  | fn
-;;      Q  | right_command
-;;      W  | right_control
-;;      E  | right_option
-;;      R  | right_shift
-;;      P  | caps_lock
-;;      !! | mandatory command + control + optional + shift (hyper)
-;;      ## | optional any
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;; ─────────────────────────────────────────────────────────────────────────────
+        {
+         :des "rs-mode"
+         :rules [
+                 :rs-mode
+                 [:r [:!Sr]]
+                ]
+        }
+       ]
+ }
