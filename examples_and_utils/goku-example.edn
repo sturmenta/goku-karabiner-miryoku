@@ -1,4 +1,4 @@
-;; this example -> https://github.com/yqrashawn/GokuRakuJoudo/blob/master/resources/configurations/edn/example.edn
+;https://github.com/yqrashawn/GokuRakuJoudo/blob/master/resources/configurations/edn/example.edn
 
 ;; edn spec https://github.com/edn-format/edn
 {;;;; define things

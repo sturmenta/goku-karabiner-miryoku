@@ -1,6 +1,7 @@
+```edn
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      original keymap (keychron k2 v2 - config used by me)
+;;      from -- original keymap (keychron-k2v2 - config used by me)
 ;;
 ;;      1   2   3   4   5       8   9   0   -   =
 ;;      q   w   e   r   t       u   i   o   p   [
@@ -9,7 +10,7 @@
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      mapped keymap
+;;      to -- mapped keymap
 ;;
 ;;      q   w   e   r   t       y   u   i   o   p
 ;;      a   s   d   f   g       h   j   k   l   '
@@ -19,20 +20,22 @@
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      original keymap (correct words for karabiner)
+;;      correct words for karabiner
 ;;
-;;      1       2       3       4       5               8       9       0       hyphen          equal_sign
-;;      q       w       e       r       t               u       i       o       p               open_bracket
-;;      a       s       d       f       g               j       k       l       semicolon       quote
-;;                      x       c       v               m       comma   period
+;;      - -> hyphen
+;;      = -> equal_sign
+;;      [ -> open_bracket
+;;      ; -> semicolon
+;;      ' -> quote
+;;      , -> comma
+;;      . -> period
+;;      / -> slash
+;;      esc -> escape
+;;      spc -> spacebar
+;;      tab -> tab
+;;      rtn -> return_or_enter
+;;      del -> delete_or_backspace
+;;      supr -> delete_forward
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;      mapped keymap (correct words for karabiner)
-;;
-;;      q       w       e       r               t               y               u                       i               o       p
-;;      a       s       d       f               g               h               j                       k               l       quote
-;;      z       x       c       v               b               n               m                       comma           period  slash
-;;                      escape  spacebar        tab             return_or_enter delete_or_backspace     delete_forward
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
+```

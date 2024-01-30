@@ -1,3 +1,5 @@
+;https://github.com/kiinoda/goku/blob/main/karabiner.edn
+
 {
     :profiles {
         :goku {

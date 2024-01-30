@@ -1,4 +1,4 @@
-;Mod-Tap Layers example ;https://github.com/gabriel-gardner/modtap-karabiner/blob/main/modtap_example.edn
+;https://github.com/gabriel-gardner/modtap-karabiner/blob/main/modtap_example.edn
 
 {
  :profiles {
