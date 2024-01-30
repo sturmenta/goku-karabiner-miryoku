@@ -7,7 +7,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 >
 > Miryoku is an ergonomic, minimal, orthogonal, and universal keyboard layout.
 >
-<img width="694" alt="1" src="https://github.com/sturmenta/karabiner-config/assets/30802967/349bbb12-c8f9-4ca3-8937-43fc12d09e0c">
+<img width="689" alt="1" src="https://github.com/sturmenta/goku-karabiner-miryoku/assets/30802967/f4bbe805-7c40-4c51-aa9d-819bade55e5d">
 
 ## The keyboard i'm using: (Keychron K2 v2)
 >
