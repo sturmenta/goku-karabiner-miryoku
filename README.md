@@ -39,3 +39,9 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;; ───────────────────────────────────────────────────────────────────
 ```
+---
+
+## Thanks to:
+
+- GokuRakuJoudo creator to make a great tool to create Karabiner-Elements config files. ❤️
+- Karabiner-Elements creator to make a great tool to customize keyboards. ❤️
