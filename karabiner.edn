@@ -1,10 +1,7 @@
-;Mod-Tap Layers example ;https://github.com/gabriel-gardner/modtap-karabiner/blob/main/modtap_example.edn
-
-; TODO:
-; - [ ] check multiple combinations of keys (example: cmd + shift + t = reopen closed tab)
-
-
 {
+
+ :devices {:keychron_k2v2 [{:product_id 591 :vendor_id 1452}]}
+
  :profiles {
   :goku {
    :default true
@@ -29,7 +26,7 @@
   }
  }
 
- ; keyboard all keys mapping for "from" section
+ ; mapping of all miryoku layout keys for "from" section
  :froms {
   :any_key {:any :key_code}
 
@@ -95,6 +92,13 @@
  }
 
  :main [
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "check current keyboard and set karabiner_on" :rules [
+          [:condi :!karabiner_on :keychron_k2v2]
+            [:any_key ["karabiner_on" 1]]
+        ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
 
         ;NOTE: When adding a new layer, if you want it to be able to cross with an old one, you must add the name negated (:!new_name) to all other mod-tap layer conditions
         ;; ─────────────────────────────────────────────────────────────────────────────
@@ -994,7 +998,7 @@
           ; second time caps_lock_pressed & karabiner_off
           [:condi :caps_lock_pressed :!karabiner_on] ; order matters
            [:##caps_lock ; from
-            [:##caps_lock ["karabiner_on" 1] [:noti :on-off "ON"]] ; to
+            [:##caps_lock ["karabiner_on" 1] [:noti :on-off "Karabiner On 🟢"]] ; to
             nil ; conditions
             {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
            ]
@@ -1002,7 +1006,7 @@
           ; second time caps_lock_pressed & karabiner_on
           [:condi :caps_lock_pressed :karabiner_on] ; order matters
            [:##caps_lock ; from
-            [:##caps_lock ["karabiner_on" 0] [:noti :on-off "OFF"]] ; to
+            [:##caps_lock ["karabiner_on" 0] [:noti :on-off "Karabiner Off 🔴"]] ; to
             nil ; conditions
             {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
            ]
@@ -1125,3 +1129,5 @@
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;; ─────────────────────────────────────────────────────────────────────────────
+
+; Mod-Tap Layers example ;https://github.com/gabriel-gardner/modtap-karabiner/blob/main/modtap_example.edn
