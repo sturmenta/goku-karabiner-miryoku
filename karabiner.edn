@@ -652,6 +652,11 @@
           ;
           ;  right side
           ;
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          ;[:-j  :!Rright_shift]; (already used by this layer)
+          [:-k  :!Rright_control]
+          [:-l  :!Rright_option]
+          [:-quote  :!Rright_command]
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
           [:-return_or_enter          :!Rreturn_or_enter]
           [:-delete_or_backspace      :!Rdelete_or_backspace]
@@ -699,6 +704,11 @@
           ;
           ;  right side
           ;
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          [:-j  :!Wright_shift]
+          ;[:-k  :!Wright_control]; (already used by this layer)
+          [:-l  :!Wright_option]
+          [:-quote  :!Wright_command]
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
           [:-return_or_enter          :!Wreturn_or_enter]
           [:-delete_or_backspace      :!Wdelete_or_backspace]
@@ -746,6 +756,11 @@
           ;
           ;  right side
           ;
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          [:-j  :!Eright_shift]
+          [:-k  :!Eright_control]
+          ;[:-l  :!Eright_option]; (already used by this layer)
+          [:-quote  :!Eright_command]
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
           [:-return_or_enter          :!Ereturn_or_enter]
           [:-delete_or_backspace      :!Edelete_or_backspace]
@@ -760,16 +775,6 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "r_cmd" :rules
          [;
-
-          ; ── testing ──────────────────────────────────────────────────────────────────────────────────
-          [:condi :r_cmd :karabiner_on]
-           [:-j  ["r_cmd_shift" 1] nil {:afterup ["r_cmd_shift" 0]}]
-
-          [:condi :r_cmd_shift]
-           [:-d                        :!QRd]
-          ; ────────────────────────────────────────────────────────────────────────────────────
-
-
           [:condi :r_cmd :karabiner_on]
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
@@ -803,6 +808,11 @@
           ;
           ;  right side
           ;
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          [:-j  :!Qright_shift]
+          [:-k  :!Qright_control]
+          [:-l  :!Qright_option]
+          ;[:-quote  :!Qright_command]; (already used by this layer)
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
           [:-return_or_enter          :!Qreturn_or_enter]
           [:-delete_or_backspace      :!Qdelete_or_backspace]
@@ -851,7 +861,6 @@
           ;  right side
           ;
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-         ;[:-h                          :vk_none]
           [:-j                          :right_shift]
           [:-k                          :right_control]
           [:-l                          :right_option]
@@ -900,7 +909,6 @@
           ;  right side
           ;
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-         ;[:-h                          :vk_none]
           [:-j                          :right_shift]
           [:-k                          :right_control]
           [:-l                          :right_option]
@@ -949,7 +957,6 @@
           ;  right side
           ;
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-         ;[:-h                          :vk_none]
           [:-j                          :right_shift]
           [:-k                          :right_control]
           [:-l                          :right_option]
