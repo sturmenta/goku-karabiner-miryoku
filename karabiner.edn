@@ -114,7 +114,7 @@
            ;l_shift (z)
            [:-z nil [
               :!l_cmd :!l_option :!l_ctrl ;without :!l_shift
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
+              :!r_shift
               :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
             ] {:alone {:key
             :z :halt true} :delayed {:canceled {:key
@@ -125,7 +125,7 @@
            ;l_ctrl (escape)
            [:-escape nil [
               :!l_cmd :!l_option :!l_shift ;without :!l_ctrl
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
+              :!r_shift
               :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
             ] {:alone {:key
             :escape :halt true} :delayed {:canceled {:key
@@ -136,7 +136,7 @@
            ;l_option (left_option)
            [:-left_option nil [
               :!l_cmd :!l_ctrl :!l_shift ;without :!l_option
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
+              :!r_shift
               :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
             ] {:alone {:key
             :left_option :halt true} :delayed {:canceled {:key
@@ -147,7 +147,7 @@
            ;l_cmd (tab)
            [:-tab nil [
               :!l_option :!l_ctrl :!l_shift ;without :!l_cmd
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
+              :!r_shift
               :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
             ] {:alone {:key
             :tab :halt true} :delayed {:canceled {:key
@@ -161,49 +161,16 @@
           ;; right side
           ;;
 
-           ;r_shift (j)
-           [:-j nil [
+           ;r_shift (slash)
+           [:-slash nil [
               :!l_cmd :!l_option :!l_ctrl :!l_shift
-              :!r_cmd :!r_option :!r_ctrl ;without :!r_shift
+              ;without :!r_shift
               :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
             ] {:alone {:key
-            :j :halt true} :delayed {:canceled {:key
-            :j}} :held {:set [
+            :slash :halt true} :delayed {:canceled {:key
+            :slash}} :held {:set [
             "r_shift" 1] :repeat false} :afterup {:set [
             "r_shift" 0]}}]
-
-           ;r_ctrl (k)
-           [:-k nil [
-              :!l_cmd :!l_option :!l_ctrl :!l_shift
-              :!r_cmd :!r_option :!r_shift ;without :!r_ctrl
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
-            ] {:alone {:key
-            :k :halt true} :delayed {:canceled {:key
-            :k}} :held {:set [
-            "r_ctrl" 1] :repeat false} :afterup {:set [
-            "r_ctrl" 0]}}]
-
-           ;r_option (l)
-           [:-l nil [
-              :!l_cmd :!l_option :!l_ctrl :!l_shift
-              :!r_cmd :!r_ctrl :!r_shift ;without :!r_option
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
-            ] {:alone {:key
-            :l :halt true} :delayed {:canceled {:key
-            :l}} :held {:set [
-            "r_option" 1] :repeat false} :afterup {:set [
-            "r_option" 0]}}]
-
-           ;r_cmd (quote)
-           [:-quote nil [
-              :!l_cmd :!l_option :!l_ctrl :!l_shift
-              :!r_option :!r_ctrl :!r_shift ;without :!r_cmd
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
-            ] {:alone {:key
-            :quote :halt true} :delayed {:canceled {:key
-            :quote}} :held {:set [
-            "r_cmd" 1] :repeat false} :afterup {:set [
-            "r_cmd" 0]}}]
 
           ; ─────────────────────────────────────────────────────────────
 
