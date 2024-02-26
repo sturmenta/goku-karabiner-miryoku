@@ -113,9 +113,9 @@
 
            ;l_shift (z)
            [:-z nil [
-              :!l_cmd :!l_option :!l_ctrl ;without :!l_shift
+              :!l_ctrl :!l_option :!l_cmd ;without :!l_shift
               :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
+              :!layer_1 :!layer_2
             ] {:alone {:key
             :z :halt true} :delayed {:canceled {:key
             :z }} :held {:set [
@@ -124,9 +124,9 @@
 
            ;l_ctrl (escape)
            [:-escape nil [
-              :!l_cmd :!l_option :!l_shift ;without :!l_ctrl
+              :!l_shift :!l_option :!l_cmd ;without :!l_ctrl
               :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
+              :!layer_1 :!layer_2
             ] {:alone {:key
             :escape :halt true} :delayed {:canceled {:key
             :escape }} :held {:set [
@@ -135,9 +135,9 @@
 
            ;l_option (left_option)
            [:-left_option nil [
-              :!l_cmd :!l_ctrl :!l_shift ;without :!l_option
+              :!l_shift :!l_ctrl :!l_cmd ;without :!l_option
               :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
+              :!layer_1 :!layer_2
             ] {:alone {:key
             :left_option :halt true} :delayed {:canceled {:key
             :left_option }} :held {:set [
@@ -146,9 +146,9 @@
 
            ;l_cmd (tab)
            [:-tab nil [
-              :!l_option :!l_ctrl :!l_shift ;without :!l_cmd
+              :!l_shift :!l_ctrl :!l_option ;without :!l_cmd
               :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
+              :!layer_1 :!layer_2
             ] {:alone {:key
             :tab :halt true} :delayed {:canceled {:key
             :tab }} :held {:set [
@@ -163,9 +163,9 @@
 
            ;r_shift (slash)
            [:-slash nil [
-              :!l_cmd :!l_option :!l_ctrl :!l_shift
+              :!l_shift :!l_ctrl :!l_option :!l_cmd
               ;without :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
+              :!layer_1 :!layer_2
             ] {:alone {:key
             :slash :halt true} :delayed {:canceled {:key
             :slash}} :held {:set [
@@ -178,71 +178,27 @@
           ;; layers
           ;;
 
-          ;layer_1 (media layer) (escape)
-           [:-escape nil [
-              :!l_cmd :!l_option :!l_ctrl :!l_shift
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
-              :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_1
-            ] {:alone {:key
-            :escape :halt true} :delayed {:canceled {:key
-            :escape}} :held {:set [
-            "layer_1" 1] :repeat false} :afterup {:set [
-            "layer_1" 0]}}]
-
-          ;layer_2 (navigation layer) (spacebar)
+          ;layer_1 (numbers and symbols) (spacebar)
            [:-spacebar nil [
-              :!l_cmd :!l_option :!l_ctrl :!l_shift
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
-              :!layer_1 :!layer_3 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_2
+              :!l_shift :!l_ctrl :!l_option :!l_cmd
+              :!r_shift
+              :!layer_2 ;without :!layer_1
             ] {:alone {:key
             :spacebar :halt true} :delayed {:canceled {:key
             :spacebar}} :held {:set [
-            "layer_2" 1] :repeat false} :afterup {:set [
-            "layer_2" 0]}}]
+            "layer_1" 1] :repeat false} :afterup {:set [
+            "layer_1" 0]}}]
 
-          ;layer_3 (mouse layer) (tab)
-           [:-tab nil [
-              :!l_cmd :!l_option :!l_ctrl :!l_shift
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
-              :!layer_1 :!layer_2 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_3
-            ] {:alone {:key
-            :tab :halt true} :delayed {:canceled {:key
-            :tab}} :held {:set [
-            "layer_3" 1] :repeat false} :afterup {:set [
-            "layer_3" 0]}}]
-
-          ;layer_4 (symbols layer) (return_or_enter)
-           [:-return_or_enter nil [
-              :!l_cmd :!l_option :!l_ctrl :!l_shift
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_5 :!layer_6 ;without :!layer_4
-            ] {:alone {:key
-            :return_or_enter :halt true} :delayed {:canceled {:key
-            :return_or_enter}} :held {:set [
-            "layer_4" 1] :repeat false} :afterup {:set [
-            "layer_4" 0]}}]
-
-          ;layer_5 (numbers layer) (delete_or_backspace)
+          ;layer_2 (fn layer) (delete_or_backspace)
            [:-delete_or_backspace nil [
-              :!l_cmd :!l_option :!l_ctrl :!l_shift
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_6 ;without :!layer_5
+              :!l_shift :!l_ctrl :!l_option :!l_cmd
+              :!r_shift
+              :!layer_1 ;without :!layer_2
             ] {:alone {:key
             :delete_or_backspace :halt true} :delayed {:canceled {:key
             :delete_or_backspace}} :held {:set [
-            "layer_5" 1] :repeat false} :afterup {:set [
-            "layer_5" 0]}}]
-
-          ;layer_6 (functions layer) (delete_forward)
-           [:-delete_forward nil [
-              :!l_cmd :!l_option :!l_ctrl :!l_shift
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 ;without :!layer_6
-            ] {:alone {:key
-            :delete_forward :halt true} :delayed {:canceled {:key
-            :delete_forward}} :held {:set [
-            "layer_6" 1] :repeat false} :afterup {:set [
-            "layer_6" 0]}}]
+            "layer_2" 1] :repeat false} :afterup {:set [
+            "layer_2" 0]}}]
 
           ]
 
