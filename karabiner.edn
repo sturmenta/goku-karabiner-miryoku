@@ -111,49 +111,49 @@
           ;; left side
           ;;
 
-           ;l_cmd (a)
-           [:-a nil [
-              :!l_option :!l_ctrl :!l_shift ;without :!l_cmd
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
-            ] {:alone {:key
-            :a :halt true} :delayed {:canceled {:key
-            :a }} :held {:set [
-            "l_cmd" 1] :repeat false} :afterup {:set [
-            "l_cmd" 0]}}]
-
-           ;l_option (s)
-           [:-s nil [
-              :!l_cmd :!l_ctrl :!l_shift ;without :!l_option
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
-            ] {:alone {:key
-            :s :halt true} :delayed {:canceled {:key
-            :s }} :held {:set [
-            "l_option" 1] :repeat false} :afterup {:set [
-            "l_option" 0]}}]
-
-           ;l_ctrl (d)
-           [:-d nil [
-              :!l_cmd :!l_option :!l_shift ;without :!l_ctrl
-              :!r_cmd :!r_option :!r_ctrl :!r_shift
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
-            ] {:alone {:key
-            :d :halt true} :delayed {:canceled {:key
-            :d }} :held {:set [
-            "l_ctrl" 1] :repeat false} :afterup {:set [
-            "l_ctrl" 0]}}]
-
-           ;l_shift (f)
-           [:-f nil [
+           ;l_shift (z)
+           [:-z nil [
               :!l_cmd :!l_option :!l_ctrl ;without :!l_shift
               :!r_cmd :!r_option :!r_ctrl :!r_shift
               :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
             ] {:alone {:key
-            :f :halt true} :delayed {:canceled {:key
-            :f }} :held {:set [
+            :z :halt true} :delayed {:canceled {:key
+            :z }} :held {:set [
             "l_shift" 1] :repeat false} :afterup {:set [
             "l_shift" 0]}}]
+
+           ;l_ctrl (escape)
+           [:-escape nil [
+              :!l_cmd :!l_option :!l_shift ;without :!l_ctrl
+              :!r_cmd :!r_option :!r_ctrl :!r_shift
+              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
+            ] {:alone {:key
+            :escape :halt true} :delayed {:canceled {:key
+            :escape }} :held {:set [
+            "l_ctrl" 1] :repeat false} :afterup {:set [
+            "l_ctrl" 0]}}]
+
+           ;l_option (left_option)
+           [:-left_option nil [
+              :!l_cmd :!l_ctrl :!l_shift ;without :!l_option
+              :!r_cmd :!r_option :!r_ctrl :!r_shift
+              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
+            ] {:alone {:key
+            :left_option :halt true} :delayed {:canceled {:key
+            :left_option }} :held {:set [
+            "l_option" 1] :repeat false} :afterup {:set [
+            "l_option" 0]}}]
+
+           ;l_cmd (tab)
+           [:-tab nil [
+              :!l_option :!l_ctrl :!l_shift ;without :!l_cmd
+              :!r_cmd :!r_option :!r_ctrl :!r_shift
+              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6
+            ] {:alone {:key
+            :tab :halt true} :delayed {:canceled {:key
+            :tab }} :held {:set [
+            "l_cmd" 1] :repeat false} :afterup {:set [
+            "l_cmd" 0]}}]
 
           ;; ─────────────────────────────────────────────────────────────
 
