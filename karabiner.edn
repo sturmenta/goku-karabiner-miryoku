@@ -57,7 +57,7 @@
 
   ; modifiers
   :-escape {:key :##x}
-  :-spacebar {:key :##c}
+  :-left_option {:key :##c}
   :-tab {:key :##v}
 
   ;;
@@ -87,8 +87,8 @@
 
   ; modifiers
   :-return_or_enter {:key :##m}
-  :-delete_or_backspace {:key :##comma}
-  :-delete_forward {:key :##period}
+  :-spacebar {:key :##comma}
+  :-delete_or_backspace {:key :##period}
  }
 
  :main [
