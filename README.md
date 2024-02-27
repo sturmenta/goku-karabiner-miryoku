@@ -1,13 +1,8 @@
-# Goku Karabiner config that uses Miryoku layout
+<!-- TO RUN USE: `export GOKU_EDN_CONFIG_FILE=./karabiner.edn && goku` -->
 
-This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to create a config JSON file for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) *"A powerful and stable keyboard customizer for macOS."* using [Miryoku keyboard layout](https://github.com/manna-harbour/miryoku) with QUERTY layout.
+# Goku Karabiner config for custom keyboard layout
 
-## Miryoku layout (all layers):
-
->
-> Miryoku is an ergonomic, minimal, orthogonal, and universal keyboard layout.
->
-<img width="689" alt="1" src="https://github.com/sturmenta/goku-karabiner-miryoku/assets/30802967/f4bbe805-7c40-4c51-aa9d-819bade55e5d">
+This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to create a config JSON file for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) *"A powerful and stable keyboard customizer for macOS."* using a custom keyboard layout.
 
 ## The keyboard i'm using: (Keychron K2 v2)
 >
@@ -19,26 +14,91 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ---
 ## The mapping i'm using:
 ```edn
-;; ───────────────────────────────────────────────────────────────────
 ;;
-;;      from -- original keymap (my selection of keys used)
+;; ☐ = empty key
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      from -- original keymap (keychron-k2v2 - config used by me)
 ;;
 ;;      1   2   3   4   5       8   9   0   -   =
 ;;      q   w   e   r   t       u   i   o   p   [
 ;;      a   s   d   f   g       j   k   l   ;   '
 ;;              x   c   v       m   ,   .
 ;;
-;; ───────────────────────────────────────────────────────────────────
+;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      to -- mapped keymap
+;;      to -- mapped keymap (single touch)
 ;;
 ;;      q   w   e   r   t       y   u   i   o   p
 ;;      a   s   d   f   g       h   j   k   l   '
 ;;      z   x   c   v   b       n   m   ,   .   /
-;;              esc spc tab     rtn del supr
+;;              esc opt tab     rtn spc bsp
 ;;
-;; ───────────────────────────────────────────────────────────────────
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      to -- mapped keymap (hold)
+;;
+;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
+;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
+;;      shf ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   shf
+;;              ctr opt cmd     ☐   l1  l2
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      to -- mapped keymap (with hold l1)
+;;
+;;      1   2   3   4   5       6   7   8   9   0
+;;      `   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   ;
+;;      shf ☐   ☐   ☐   ☐       -   =   [   ]   \
+;;              ctr opt cmd     ☐   ☐   ☐
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      to -- mapped keymap (with hold l1 + shift)
+;;
+;;      !   @   #   $   %       ^   &   *   (   )
+;;      ~   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   :
+;;      ☐   ☐   ☐   ☐   ☐       _   +   {   }   |
+;;              ☐   ☐   ☐       ☐   ☐   ☐
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      to -- mapped keymap (with hold l2)
+;;
+;;      f1  f2  f3  f4  f5      f6  f7  f8  f9  f10
+;;      f11 f12 ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
+;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
+;;              ☐   ☐   ☐       ☐   ☐   ☐
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
 ```
+
+<!--
+
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;      correct words for karabiner
+;;
+;;      - -> hyphen
+;;      = -> equal_sign
+;;      [ -> open_bracket
+;;      ; -> semicolon
+;;      ' -> quote
+;;      , -> comma
+;;      . -> period
+;;      / -> slash
+;;      esc -> escape
+;;      spc -> spacebar
+;;      tab -> tab
+;;      rtn -> return_or_enter
+;;      bsp -> delete_or_backspace
+;;      shf -> right_shift
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+
+-->
+
 ---
 
 ## Thanks to:
