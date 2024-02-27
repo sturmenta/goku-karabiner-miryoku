@@ -13,6 +13,9 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 
 ---
 ## The mapping i'm using:
+
+<img width="802" alt="layers" src="https://github.com/sturmenta/goku-karabiner-miryoku/assets/30802967/4a135105-1f7a-41ff-9cc7-8106267a7a3c">
+
 ```edn
 ;;
 ;; ☐ = empty key
