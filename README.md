@@ -8,8 +8,11 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 >
 > This is the keyboard i'm using, it's a 75% keyboard with a lot of keys, it's a great keyboard, but it's not programmable, so i'm using Goku to create a config for Karabiner-Elements to make it programmable.
 >
-<img width="1148" alt="2" src="https://github.com/sturmenta/karabiner-config/assets/30802967/2f27b325-14e9-4055-8a47-f39f2b1d8166">
-<img width="1059" alt="3" src="https://github.com/sturmenta/karabiner-config/assets/30802967/4a0a328a-ac38-4097-b3c7-1d432867809e">
+![Screenshot 2024-02-27 at 15 57 44](https://github.com/sturmenta/goku-karabiner-my-config/assets/30802967/60f70448-9c91-41e0-95c4-cbf05fcf1c68)
+
+![Screenshot 2024-02-27 at 15 55 14](https://github.com/sturmenta/goku-karabiner-my-config/assets/30802967/698dfe67-6d88-41d2-a6d3-c5043dce22ce)
+
+
 
 ---
 ## The mapping i'm using:
