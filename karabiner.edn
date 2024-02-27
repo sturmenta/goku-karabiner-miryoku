@@ -205,15 +205,15 @@
           [:-f                          :!Sf];                                l_shift -> f              F
           [:-g                          :!Sg];                                l_shift -> g              G
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-z                          :!Sz];                                l_shift -> z              (already used by this layer)
+         ;[:-z                          :!Sleft_shift];                       l_shift -> z              (already used by this layer)
           [:-x                          :!Sx];                                l_shift -> x              X
           [:-c                          :!Sc];                                l_shift -> c              C
           [:-v                          :!Sv];                                l_shift -> v              V
           [:-b                          :!Sb];                                l_shift -> b              B
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-escape                     :!Sescape];                           l_shift -> esc            ---------
-         ;[:-left_option                :!Sleft_option];                      l_shift -> opt            ---------
-         ;[:-tab                        :!Stab];                              l_shift -> tab            ---------
+          [:-escape                     :!Sleft_control];                     l_shift -> esc            ---------
+          [:-left_option                :!Sleft_option];                      l_shift -> opt            ---------
+          [:-tab                        :!Sleft_command];                     l_shift -> tab            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -270,15 +270,15 @@
           [:-f                           :!Tf];                                 l_ctrl -> f              ---------
           [:-g                           :!Tg];                                 l_ctrl -> g              ---------
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-z                           :!Tz];                                 l_ctrl -> z              ---------
+          [:-z                           :!Tleft_shift];                        l_ctrl -> z              ---------
           [:-x                           :!Tx];                                 l_ctrl -> x              ---------
           [:-c                           :!Tc];                                 l_ctrl -> c              ---------
           [:-v                           :!Tv];                                 l_ctrl -> v              ---------
           [:-b                           :!Tb];                                 l_ctrl -> b              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-escape                      :!Tescape];                            l_ctrl -> esc            (already used by this layer)
+         ;[:-escape                      :!Tleft_control];                      l_ctrl -> esc            (already used by this layer)
           [:-left_option                 :!Tleft_option];                       l_ctrl -> opt            ---------
-          [:-tab                         :!Ttab];                               l_ctrl -> tab            ---------
+          [:-tab                         :!Tleft_command];                      l_ctrl -> tab            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -335,15 +335,15 @@
           [:-f                           :!Of];                                 l_option -> f              ---------
           [:-g                           :!Og];                                 l_option -> g              ---------
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-z                           :!Oz];                                 l_option -> z              ---------
+          [:-z                           :!Oleft_shift];                        l_option -> z              ---------
           [:-x                           :!Ox];                                 l_option -> x              ---------
           [:-c                           :!Oc];                                 l_option -> c              ---------
           [:-v                           :!Ov];                                 l_option -> v              ---------
           [:-b                           :!Ob];                                 l_option -> b              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-escape                      :!Oescape];                            l_option -> esc            ---------
+          [:-escape                      :!Oleft_control];                      l_option -> esc            ---------
          ;[:-left_option                 :!Oleft_option];                       l_option -> opt            (already used by this layer)
-          [:-tab                         :!Otab];                               l_option -> tab            ---------
+          [:-tab                         :!Oleft_command];                      l_option -> tab            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -400,15 +400,15 @@
           [:-f                           :!Cf];                                 l_cmd -> f              ---------
           [:-g                           :!Cg];                                 l_cmd -> g              ---------
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-z                           :!Cz];                                 l_cmd -> z              ---------
+          [:-z                           :!Cleft_shift];                        l_cmd -> z              ---------
           [:-x                           :!Cx];                                 l_cmd -> x              ---------
           [:-c                           :!Cc];                                 l_cmd -> c              ---------
           [:-v                           :!Cv];                                 l_cmd -> v              ---------
           [:-b                           :!Cb];                                 l_cmd -> b              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-escape                      :!Cescape];                            l_cmd -> esc            ---------
+          [:-escape                      :!Cleft_control];                      l_cmd -> esc            ---------
           [:-left_option                 :!Cleft_option];                       l_cmd -> opt            ---------
-         ;[:-tab                         :!Ctab];                               l_cmd -> tab            (already used by this layer)
+         ;[:-tab                         :!Cleft_command];                      l_cmd -> tab            (already used by this layer)
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -467,15 +467,15 @@
          ;[:-f                          :vk_none];                              layer_1 -> f              ---------
          ;[:-g                          :vk_none];                              layer_1 -> g              ---------
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-z                          :vk_none];                              layer_1 -> z              ---------
+          [:-z                          :left_shift];                           layer_1 -> z              ---------
          ;[:-x                          :vk_none];                              layer_1 -> x              ---------
          ;[:-c                          :vk_none];                              layer_1 -> c              ---------
          ;[:-v                          :vk_none];                              layer_1 -> v              ---------
          ;[:-b                          :vk_none];                              layer_1 -> b              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-escape                     :vk_none];                              layer_1 -> esc            ---------
-         ;[:-left_option                :vk_none];                              layer_1 -> opt            ---------
-         ;[:-tab                        :vk_none];                              layer_1 -> tab            ---------
+          [:-escape                     :left_control];                         layer_1 -> esc            ---------
+          [:-left_option                :left_option];                          layer_1 -> opt            ---------
+          [:-tab                        :left_command];                         layer_1 -> tab            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -603,9 +603,9 @@
           [:-v                          :!Rv];                                r_shift -> v              V
           [:-b                          :!Rb];                                r_shift -> b              B
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-escape                     :!Rescape];                           r_shift -> esc            ---------
-         ;[:-left_option                :!Rleft_option];                      r_shift -> opt            ---------
-         ;[:-tab                        :!Rtab];                              r_shift -> tab            ---------
+          [:-escape                     :!Rleft_control];                     r_shift -> esc            ---------
+          [:-left_option                :!Rleft_option];                      r_shift -> opt            ---------
+          [:-tab                        :!Rleft_command];                     r_shift -> tab            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
