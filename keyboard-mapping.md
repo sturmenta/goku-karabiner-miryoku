@@ -1,4 +1,6 @@
 ```edn
+;;
+;; ☐ = empty key
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
 ;;      from -- original keymap (keychron-k2v2 - config used by me)
@@ -15,7 +17,7 @@
 ;;      q   w   e   r   t       y   u   i   o   p
 ;;      a   s   d   f   g       h   j   k   l   '
 ;;      z   x   c   v   b       n   m   ,   .   /
-;;              esc ☐   tab     rtn spc del
+;;              esc opt tab     rtn spc del
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
