@@ -501,7 +501,7 @@
           [:-slash                      :backslash];                            layer_1 -> /              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
          ;[:-return_or_enter            :vk_none];                              layer_1 -> rtn            ---------
-         ;[:-spacebar                   :vk_none];                              layer_1 -> spc            ---------
+         ;[:-spacebar                   :vk_none];                              layer_1 -> spc            (already used by this layer)
          ;[:-delete_or_backspace        :vk_none];                              layer_1 -> bsp            ---------
 
           ; ────────────────────────────────────────────────────────────────────────────────────
@@ -513,7 +513,22 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "layer_2 - (fn layer) (delete_or_backspace)" :rules
          [
-          [:condi :layer_2 :karabiner_on]
+
+          ;─ only to add [cmd + shift + z] ──────────────────────────────────────────────────────────────────────────────────────────────────────
+
+          ; ── r_shift (slash) ───────────────────────────────────────────────────────────────────────────
+           [:-slash nil nil {:alone {:key
+            :slash :halt true} :delayed {:canceled {:key
+            :slash}} :held {:set [
+            "r_shift" 1] :repeat false} :afterup {:set [
+            "r_shift" 0]}}]
+
+          [:condi :layer_2 :r_shift :karabiner_on] ; with r_shift
+            [:-z                          :!QRz];                                 layer_2 -> z              r_cmd -> r_shift -> z
+
+          ;──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+          [:condi :layer_2 :karabiner_on] ; without r_shift
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -532,7 +547,7 @@
          ;[:-f                          :vk_none];                             layer_2 -> f              ---------
          ;[:-g                          :vk_none];                             layer_2 -> g              ---------
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-z                          :vk_none];                             layer_2 -> z              ---------
+          [:-z                          :!Qz];                                 layer_2 -> z              r_cmd -> z
          ;[:-x                          :vk_none];                             layer_2 -> x              ---------
          ;[:-c                          :vk_none];                             layer_2 -> c              ---------
          ;[:-v                          :vk_none];                             layer_2 -> v              ---------
@@ -567,7 +582,7 @@
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
          ;[:-return_or_enter            :vk_none];                             layer_2 -> rtn            ---------
          ;[:-spacebar                   :vk_none];                             layer_2 -> spc            ---------
-         ;[:-delete_or_backspace        :vk_none];                             layer_2 -> bsp            ---------
+         ;[:-delete_or_backspace        :vk_none];                             layer_2 -> bsp            (already used by this layer)
 
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys
