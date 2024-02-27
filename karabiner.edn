@@ -614,14 +614,14 @@
           ;  left side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          [:-q                          :f1];                                  layer_2 -> q              ---------
-          [:-w                          :f2];                                  layer_2 -> w              ---------
-          [:-e                          :f3];                                  layer_2 -> e              ---------
-          [:-r                          :f4];                                  layer_2 -> r              ---------
-          [:-t                          :f5];                                  layer_2 -> t              ---------
+          [:-q                          :apple_display_brightness_decrement];  layer_2 -> q              ---------
+          [:-w                          :apple_display_brightness_increment];  layer_2 -> w              ---------
+         ;[:-e                          :vk_none];                             layer_2 -> e              ---------
+          [:-r                          :mute];                                layer_2 -> r              ---------
+          [:-t                          :rewind];                              layer_2 -> t              ---------
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-          [:-a                          :f11];                                 layer_2 -> a              ---------
-          [:-s                          :f12];                                 layer_2 -> s              ---------
+          [:-a                          :volume_decrement];                    layer_2 -> a              ---------
+          [:-s                          :volume_increment];                    layer_2 -> s              ---------
          ;[:-d                          :vk_none];                             layer_2 -> d              ---------
          ;[:-f                          :vk_none];                             layer_2 -> f              ---------
          ;[:-g                          :vk_none];                             layer_2 -> g              ---------
@@ -641,11 +641,11 @@
           ;  right side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          [:-y                          :f6];                                  layer_2 -> y              ---------
-          [:-u                          :f7];                                  layer_2 -> u              ---------
-          [:-i                          :f8];                                  layer_2 -> i              ---------
-          [:-o                          :f9];                                  layer_2 -> o              ---------
-          [:-p                          :f10];                                 layer_2 -> p              ---------
+          [:-y                          :play_or_pause];                       layer_2 -> y              ---------
+          [:-u                          :fastforward];                         layer_2 -> u              ---------
+         ;[:-i                          :vk_none];                             layer_2 -> i              ---------
+         ;[:-o                          :vk_none];                             layer_2 -> o              ---------
+         ;[:-p                          :vk_none];                             layer_2 -> p              ---------
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
          ;[:-h                          :vk_none];                             layer_2 -> h              ---------
          ;[:-j                          :vk_none];                             layer_2 -> j              ---------
