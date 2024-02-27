@@ -211,9 +211,9 @@
           [:-v                          :!Sv];                                l_shift -> v              V
           [:-b                          :!Sb];                                l_shift -> b              B
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-escape                     :vk_none];                            l_shift -> esc            ---------
-         ;[:-left_option                :vk_none];                            l_shift -> opt            ---------
-         ;[:-tab                        :vk_none];                            l_shift -> tab            ---------
+         ;[:-escape                     :!Sescape];                           l_shift -> esc            ---------
+         ;[:-left_option                :!Sleft_option];                      l_shift -> opt            ---------
+         ;[:-tab                        :!Stab];                              l_shift -> tab            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -238,9 +238,9 @@
           [:-period                     :!Speriod];                           l_shift -> .              >
           [:-slash                      :!Sslash];                            l_shift -> /              ?
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-return_or_enter            :vk_none];                            l_shift -> rtn            ---------
-         ;[:-spacebar                   :vk_none];                            l_shift -> spc            ---------
-         ;[:-delete_or_backspace        :vk_none];                            l_shift -> bsp            ---------
+         ;[:-return_or_enter            :!Sreturn_or_enter];                  l_shift -> rtn            ---------
+         ;[:-spacebar                   :!Sspacebar];                         l_shift -> spc            ---------
+         ;[:-delete_or_backspace        :!Sdelete_or_backspace];              l_shift -> bsp            ---------
 
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys
@@ -383,6 +383,60 @@
          [
           [:condi :l_cmd :karabiner_on]
 
+          ;────────────────────────────────────────────────────────────────────────────────────────────
+          ;
+          ;  left side
+          ;
+          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
+          [:-q                           :!Cq];                                 l_cmd -> q              ---------
+          [:-w                           :!Cw];                                 l_cmd -> w              ---------
+          [:-e                           :!Ce];                                 l_cmd -> e              ---------
+          [:-r                           :!Cr];                                 l_cmd -> r              ---------
+          [:-t                           :!Ct];                                 l_cmd -> t              ---------
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          [:-a                           :!Ca];                                 l_cmd -> a              ---------
+          [:-s                           :!Cs];                                 l_cmd -> s              ---------
+          [:-d                           :!Cd];                                 l_cmd -> d              ---------
+          [:-f                           :!Cf];                                 l_cmd -> f              ---------
+          [:-g                           :!Cg];                                 l_cmd -> g              ---------
+          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
+          [:-z                           :!Cz];                                 l_cmd -> z              ---------
+          [:-x                           :!Cx];                                 l_cmd -> x              ---------
+          [:-c                           :!Cc];                                 l_cmd -> c              ---------
+          [:-v                           :!Cv];                                 l_cmd -> v              ---------
+          [:-b                           :!Cb];                                 l_cmd -> b              ---------
+          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
+          [:-escape                      :!Cescape];                            l_cmd -> esc            ---------
+          [:-left_option                 :!Cleft_option];                       l_cmd -> opt            ---------
+         ;[:-tab                         :!Ctab];                               l_cmd -> tab            (already used by this layer)
+
+          ;────────────────────────────────────────────────────────────────────────────────────────────
+          ;
+          ;  right side
+          ;
+          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
+          [:-y                           :!Cy];                                 l_cmd -> y              ---------
+          [:-u                           :!Cu];                                 l_cmd -> u              ---------
+          [:-i                           :!Ci];                                 l_cmd -> i              ---------
+          [:-o                           :!Co];                                 l_cmd -> o              ---------
+          [:-p                           :!Cp];                                 l_cmd -> p              ---------
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          [:-h                           :!Ch];                                 l_cmd -> h              ---------
+          [:-j                           :!Cj];                                 l_cmd -> j              ---------
+          [:-k                           :!Ck];                                 l_cmd -> k              ---------
+          [:-l                           :!Cl];                                 l_cmd -> l              ---------
+          [:-quote                       :!Cquote];                             l_cmd -> '              ---------
+          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
+          [:-n                           :!Cn];                                 l_cmd -> n              ---------
+          [:-m                           :!Cm];                                 l_cmd -> m              ---------
+          [:-comma                       :!Ccomma];                             l_cmd -> ,              ---------
+          [:-period                      :!Cperiod];                            l_cmd -> .              ---------
+          [:-slash                       :!Cslash];                             l_cmd -> /              ---------
+          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
+          [:-return_or_enter             :!Creturn_or_enter];                   l_cmd -> rtn            ---------
+          [:-spacebar                    :!Cspacebar];                          l_cmd -> spc            ---------
+          [:-delete_or_backspace         :!Cdelete_or_backspace];               l_cmd -> bsp            ---------
+
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys
           [:any_key [:vk_none]]
@@ -441,9 +495,9 @@
           [:-v                          :!Rv];                                r_shift -> v              V
           [:-b                          :!Rb];                                r_shift -> b              B
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-escape                     :vk_none];                            r_shift -> esc            ---------
-         ;[:-left_option                :vk_none];                            r_shift -> opt            ---------
-         ;[:-tab                        :vk_none];                            r_shift -> tab            ---------
+         ;[:-escape                     :!Rescape];                           r_shift -> esc            ---------
+         ;[:-left_option                :!Rleft_option];                      r_shift -> opt            ---------
+         ;[:-tab                        :!Rtab];                              r_shift -> tab            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -468,9 +522,9 @@
           [:-period                     :!Rperiod];                           r_shift -> .              >
          ;[:-slash                      :!Rslash];                            r_shift -> /              (already used by this layer)
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-return_or_enter            :vk_none];                            r_shift -> rtn            ---------
-         ;[:-spacebar                   :vk_none];                            r_shift -> spc            ---------
-         ;[:-delete_or_backspace        :vk_none];                            r_shift -> bsp            ---------
+         ;[:-return_or_enter            :!Rreturn_or_enter];                  r_shift -> rtn            ---------
+         ;[:-spacebar                   :!Rspacebar];                         r_shift -> spc            ---------
+         ;[:-delete_or_backspace        :!Rdelete_or_backspace];              r_shift -> bsp            ---------
 
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys
