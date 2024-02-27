@@ -3,7 +3,7 @@
           ;  left side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-         ;[:-q                          :vk_none];                             modifier -> q              ---------
+         ;[:-q                          :vk_none];                             modifier -> q              (already used by this layer)
          ;[:-w                          :vk_none];                             modifier -> w              ---------
          ;[:-e                          :vk_none];                             modifier -> e              ---------
          ;[:-r                          :vk_none];                             modifier -> r              ---------
@@ -51,3 +51,7 @@
          ;[:-return_or_enter            :vk_none];                             modifier -> rtn            ---------
          ;[:-spacebar                   :vk_none];                             modifier -> spc            ---------
          ;[:-delete_or_backspace        :vk_none];                             modifier -> bsp            ---------
+
+          ; ────────────────────────────────────────────────────────────────────────────────────
+          ; ignore another keys
+          [:any_key [:vk_none]]
