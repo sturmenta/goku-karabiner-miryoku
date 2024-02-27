@@ -1,3 +1,5 @@
+<!-- TO RUN USE: `export GOKU_EDN_CONFIG_FILE=./karabiner.edn && goku` -->
+
 # Goku Karabiner config for custom keyboard layout
 
 This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to create a config JSON file for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) *"A powerful and stable keyboard customizer for macOS."* using a custom keyboard layout.
