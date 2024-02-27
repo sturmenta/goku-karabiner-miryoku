@@ -3,51 +3,51 @@
           ;  left side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          ;[:-q                          :vk_none];                             modifier -> q              ---------
-          ;[:-w                          :vk_none];                             modifier -> w              ---------
-          ;[:-e                          :vk_none];                             modifier -> e              ---------
-          ;[:-r                          :vk_none];                             modifier -> r              ---------
-          ;[:-t                          :vk_none];                             modifier -> t              ---------
+         ;[:-q                          :vk_none];                             modifier -> q              ---------
+         ;[:-w                          :vk_none];                             modifier -> w              ---------
+         ;[:-e                          :vk_none];                             modifier -> e              ---------
+         ;[:-r                          :vk_none];                             modifier -> r              ---------
+         ;[:-t                          :vk_none];                             modifier -> t              ---------
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-          ;[:-a                          :vk_none];                             modifier -> a              ---------
-          ;[:-s                          :vk_none];                             modifier -> s              ---------
-          ;[:-d                          :vk_none];                             modifier -> d              ---------
-          ;[:-f                          :vk_none];                             modifier -> f              ---------
-          ;[:-g                          :vk_none];                             modifier -> g              ---------
+         ;[:-a                          :vk_none];                             modifier -> a              ---------
+         ;[:-s                          :vk_none];                             modifier -> s              ---------
+         ;[:-d                          :vk_none];                             modifier -> d              ---------
+         ;[:-f                          :vk_none];                             modifier -> f              ---------
+         ;[:-g                          :vk_none];                             modifier -> g              ---------
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          ;[:-z                          :vk_none];                             modifier -> z              ---------
-          ;[:-x                          :vk_none];                             modifier -> x              ---------
-          ;[:-c                          :vk_none];                             modifier -> c              ---------
-          ;[:-v                          :vk_none];                             modifier -> v              ---------
-          ;[:-b                          :vk_none];                             modifier -> b              ---------
+         ;[:-z                          :vk_none];                             modifier -> z              ---------
+         ;[:-x                          :vk_none];                             modifier -> x              ---------
+         ;[:-c                          :vk_none];                             modifier -> c              ---------
+         ;[:-v                          :vk_none];                             modifier -> v              ---------
+         ;[:-b                          :vk_none];                             modifier -> b              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          ;[:-escape                     :vk_none];                             modifier -> esc            ---------
-          ;[:-left_option                :vk_none];                             modifier -> opt            ---------
-          ;[:-tab                        :vk_none];                             modifier -> tab            ---------
+         ;[:-escape                     :vk_none];                             modifier -> esc            ---------
+         ;[:-left_option                :vk_none];                             modifier -> opt            ---------
+         ;[:-tab                        :vk_none];                             modifier -> tab            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
           ;  right side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          ;[:-y                          :vk_none];                             modifier -> y              ---------
-          ;[:-u                          :vk_none];                             modifier -> u              ---------
-          ;[:-i                          :vk_none];                             modifier -> i              ---------
-          ;[:-o                          :vk_none];                             modifier -> o              ---------
-          ;[:-p                          :vk_none];                             modifier -> p              ---------
+         ;[:-y                          :vk_none];                             modifier -> y              ---------
+         ;[:-u                          :vk_none];                             modifier -> u              ---------
+         ;[:-i                          :vk_none];                             modifier -> i              ---------
+         ;[:-o                          :vk_none];                             modifier -> o              ---------
+         ;[:-p                          :vk_none];                             modifier -> p              ---------
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-          ;[:-h                          :vk_none];                             modifier -> h              ---------
-          ;[:-j                          :vk_none];                             modifier -> j              ---------
-          ;[:-k                          :vk_none];                             modifier -> k              ---------
-          ;[:-l                          :vk_none];                             modifier -> l              ---------
-          ;[:-quote                      :vk_none];                             modifier -> '              ---------
+         ;[:-h                          :vk_none];                             modifier -> h              ---------
+         ;[:-j                          :vk_none];                             modifier -> j              ---------
+         ;[:-k                          :vk_none];                             modifier -> k              ---------
+         ;[:-l                          :vk_none];                             modifier -> l              ---------
+         ;[:-quote                      :vk_none];                             modifier -> '              ---------
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          ;[:-n                          :vk_none];                             modifier -> n              ---------
-          ;[:-m                          :vk_none];                             modifier -> m              ---------
-          ;[:-comma                      :vk_none];                             modifier -> ,              ---------
-          ;[:-period                     :vk_none];                             modifier -> .              ---------
-          ;[:-slash                      :vk_none];                             modifier -> /              ---------
+         ;[:-n                          :vk_none];                             modifier -> n              ---------
+         ;[:-m                          :vk_none];                             modifier -> m              ---------
+         ;[:-comma                      :vk_none];                             modifier -> ,              ---------
+         ;[:-period                     :vk_none];                             modifier -> .              ---------
+         ;[:-slash                      :vk_none];                             modifier -> /              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          ;[:-return_or_enter            :vk_none];                             modifier -> rtn            ---------
-          ;[:-spacebar                   :vk_none];                             modifier -> spc            ---------
-          ;[:-delete_or_backspace        :vk_none];                             modifier -> bsp            ---------
+         ;[:-return_or_enter            :vk_none];                             modifier -> rtn            ---------
+         ;[:-spacebar                   :vk_none];                             modifier -> spc            ---------
+         ;[:-delete_or_backspace        :vk_none];                             modifier -> bsp            ---------
