@@ -30,65 +30,59 @@
  :froms {
   :any_key {:any :key_code}
 
-  ;;
-  ;; left side
-  ;;
+  ;────────────────────────────────────────────────────────────────────────────────────────────
+  ;
+  ;  left side
+  ;
+  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
+  :-q                     {:key :##1}
+  :-w                     {:key :##2}
+  :-e                     {:key :##3}
+  :-r                     {:key :##4}
+  :-t                     {:key :##5}
+  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+  :-a                     {:key :##q}
+  :-s                     {:key :##w}
+  :-d                     {:key :##e}
+  :-f                     {:key :##r}
+  :-g                     {:key :##t}
+  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
+  :-z                     {:key :##a}
+  :-x                     {:key :##s}
+  :-c                     {:key :##d}
+  :-v                     {:key :##f}
+  :-b                     {:key :##g}
+  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
+  :-escape                {:key :##x}
+  :-left_option           {:key :##c}
+  :-tab                   {:key :##v}
 
-  ; first row
-  :-q {:key :##1}
-  :-w {:key :##2}
-  :-e {:key :##3}
-  :-r {:key :##4}
-  :-t {:key :##5}
-
-  ; second row
-  :-a {:key :##q}
-  :-s {:key :##w}
-  :-d {:key :##e}
-  :-f {:key :##r}
-  :-g {:key :##t}
-
-  ; third row
-  :-z {:key :##a}
-  :-x {:key :##s}
-  :-c {:key :##d}
-  :-v {:key :##f}
-  :-b {:key :##g}
-
-  ; modifiers
-  :-escape {:key :##x}
-  :-left_option {:key :##c}
-  :-tab {:key :##v}
-
-  ;;
-  ;; right side
-  ;;
-
-  ; first row
-  :-y {:key :##8}
-  :-u {:key :##9}
-  :-i {:key :##0}
-  :-o {:key :##hyphen}
-  :-p {:key :##equal_sign}
-
-  ; second row
-  :-h {:key :##u}
-  :-j {:key :##i}
-  :-k {:key :##o}
-  :-l {:key :##p}
-  :-quote {:key :##open_bracket}
-
-  ; third row
-  :-n {:key :##j}
-  :-m {:key :##k}
-  :-comma {:key :##l}
-  :-period {:key :##semicolon}
-  :-slash {:key :##quote}
-
-  ; modifiers
-  :-return_or_enter {:key :##m}
-  :-spacebar {:key :##comma}
-  :-delete_or_backspace {:key :##period}
+  ;────────────────────────────────────────────────────────────────────────────────────────────
+  ;
+  ;  right side
+  ;
+  ; ── row 1 ───────────────────────────────────────────────────────────────────────────
+  :-y                     {:key :##8}
+  :-u                     {:key :##9}
+  :-i                     {:key :##0}
+  :-o                     {:key :##hyphen}
+  :-p                     {:key :##equal_sign}
+  ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+  :-h                     {:key :##u}
+  :-j                     {:key :##i}
+  :-k                     {:key :##o}
+  :-l                     {:key :##p}
+  :-quote                 {:key :##open_bracket}
+  ; ── row 3 ───────────────────────────────────────────────────────────────────────────
+  :-n                     {:key :##j}
+  :-m                     {:key :##k}
+  :-comma                 {:key :##l}
+  :-period                {:key :##semicolon}
+  :-slash                 {:key :##quote}
+  ; ── row 4 ───────────────────────────────────────────────────────────────────────────
+  :-return_or_enter       {:key :##m}
+  :-spacebar              {:key :##comma}
+  :-delete_or_backspace   {:key :##period}
  }
 
  :main [
@@ -105,104 +99,85 @@
         { :des "modifier layers" :rules [
           [:condi :karabiner_on]
 
-          ;; ─────────────────────────────────────────────────────────────
-
-          ;;
-          ;; left side
-          ;;
-
-           ;l_shift (z)
+          ;────────────────────────────────────────────────────────────────────────────────────────────
+          ;
+          ;  left side
+          ;
+          ; ── l_shift (z) ───────────────────────────────────────────────────────────────────────────
            [:-z nil [
               :!l_ctrl :!l_option :!l_cmd ;without :!l_shift
-              :!r_shift
-              :!layer_1 :!layer_2
+              :!layer_1 :!layer_2 :!r_shift
             ] {:alone {:key
             :z :halt true} :delayed {:canceled {:key
             :z }} :held {:set [
             "l_shift" 1] :repeat false} :afterup {:set [
             "l_shift" 0]}}]
 
-           ;l_ctrl (escape)
+          ; ── l_ctrl (escape) ───────────────────────────────────────────────────────────────────────────
            [:-escape nil [
               :!l_shift :!l_option :!l_cmd ;without :!l_ctrl
-              :!r_shift
-              :!layer_1 :!layer_2
+              :!layer_1 :!layer_2 :!r_shift
             ] {:alone {:key
             :escape :halt true} :delayed {:canceled {:key
             :escape }} :held {:set [
             "l_ctrl" 1] :repeat false} :afterup {:set [
             "l_ctrl" 0]}}]
 
-           ;l_option (left_option)
+          ; ── l_option (left_option) ───────────────────────────────────────────────────────────────────────────
            [:-left_option nil [
               :!l_shift :!l_ctrl :!l_cmd ;without :!l_option
-              :!r_shift
-              :!layer_1 :!layer_2
+              :!layer_1 :!layer_2 :!r_shift
             ] {:alone {:key
             :left_option :halt true} :delayed {:canceled {:key
             :left_option }} :held {:set [
             "l_option" 1] :repeat false} :afterup {:set [
             "l_option" 0]}}]
 
-           ;l_cmd (tab)
+          ; ── l_cmd (tab) ───────────────────────────────────────────────────────────────────────────
            [:-tab nil [
               :!l_shift :!l_ctrl :!l_option ;without :!l_cmd
-              :!r_shift
-              :!layer_1 :!layer_2
+              :!layer_1 :!layer_2 :!r_shift
             ] {:alone {:key
             :tab :halt true} :delayed {:canceled {:key
             :tab }} :held {:set [
             "l_cmd" 1] :repeat false} :afterup {:set [
             "l_cmd" 0]}}]
 
-          ;; ─────────────────────────────────────────────────────────────
-
-          ;;
-          ;; right side
-          ;;
-
-           ;r_shift (slash)
-           [:-slash nil [
-              :!l_shift :!l_ctrl :!l_option :!l_cmd
-              ;without :!r_shift
-              :!layer_1 :!layer_2
-            ] {:alone {:key
-            :slash :halt true} :delayed {:canceled {:key
-            :slash}} :held {:set [
-            "r_shift" 1] :repeat false} :afterup {:set [
-            "r_shift" 0]}}]
-
-          ; ─────────────────────────────────────────────────────────────
-
-          ;;
-          ;; layers
-          ;;
-
-          ;layer_1 (numbers and symbols) (spacebar)
+          ;────────────────────────────────────────────────────────────────────────────────────────────
+          ;
+          ;  right side
+          ;
+          ; ── layer_1 (numbers and symbols) (spacebar) ───────────────────────────────────────────────────────────────────────────
            [:-spacebar nil [
               :!l_shift :!l_ctrl :!l_option :!l_cmd
-              :!r_shift
-              :!layer_2 ;without :!layer_1
+              :!layer_2 :!r_shift ;without :!layer_1
             ] {:alone {:key
             :spacebar :halt true} :delayed {:canceled {:key
             :spacebar}} :held {:set [
             "layer_1" 1] :repeat false} :afterup {:set [
             "layer_1" 0]}}]
 
-          ;layer_2 (fn layer) (delete_or_backspace)
+          ; ── layer_2 (fn layer) (delete_or_backspace) ───────────────────────────────────────────────────────────────────────────
            [:-delete_or_backspace nil [
               :!l_shift :!l_ctrl :!l_option :!l_cmd
-              :!r_shift
-              :!layer_1 ;without :!layer_2
+              :!layer_1 :!r_shift ;without :!layer_2
             ] {:alone {:key
             :delete_or_backspace :halt true} :delayed {:canceled {:key
             :delete_or_backspace}} :held {:set [
             "layer_2" 1] :repeat false} :afterup {:set [
             "layer_2" 0]}}]
 
-          ]
+          ; ── r_shift (slash) ───────────────────────────────────────────────────────────────────────────
+           [:-slash nil [
+              :!l_shift :!l_ctrl :!l_option :!l_cmd
+              :!layer_1 :!layer_2 ;without :!r_shift
+            ] {:alone {:key
+            :slash :halt true} :delayed {:canceled {:key
+            :slash}} :held {:set [
+            "r_shift" 1] :repeat false} :afterup {:set [
+            "r_shift" 0]}}]
 
-          ;; ─────────────────────────────────────────────────────────────
+          ]
          }
         ;; ─────────────────────────────────────────────────────────────────────────────
 
