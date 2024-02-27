@@ -240,7 +240,7 @@
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
          ;[:-return_or_enter            :vk_none];                            l_shift -> rtn            ---------
          ;[:-spacebar                   :vk_none];                            l_shift -> spc            ---------
-         ;[:-delete_or_backspace        :vk_none];                            l_shift -> del            ---------
+         ;[:-delete_or_backspace        :vk_none];                            l_shift -> bsp            ---------
 
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys

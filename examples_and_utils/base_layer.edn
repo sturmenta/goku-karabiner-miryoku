@@ -50,4 +50,4 @@
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
           ;[:-return_or_enter            :vk_none];                             modifier -> rtn            ---------
           ;[:-spacebar                   :vk_none];                             modifier -> spc            ---------
-          ;[:-delete_or_backspace        :vk_none];                             modifier -> del            ---------
+          ;[:-delete_or_backspace        :vk_none];                             modifier -> bsp            ---------

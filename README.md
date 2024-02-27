@@ -33,7 +33,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      q   w   e   r   t       y   u   i   o   p
 ;;      a   s   d   f   g       h   j   k   l   '
 ;;      z   x   c   v   b       n   m   ,   .   /
-;;              esc opt tab     rtn spc del
+;;              esc opt tab     rtn spc bsp
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
@@ -92,7 +92,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      spc -> spacebar
 ;;      tab -> tab
 ;;      rtn -> return_or_enter
-;;      del -> delete_or_backspace
+;;      bsp -> delete_or_backspace
 ;;      shf -> right_shift
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
