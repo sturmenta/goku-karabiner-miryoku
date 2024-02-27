@@ -310,6 +310,60 @@
          [;
           [:condi :r_shift :karabiner_on]
 
+          ;────────────────────────────────────────────────────────────────────────────────────────────
+          ;
+          ;  left side
+          ;
+          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
+          [:-q                          :!Rq];                                r_shift -> q              Q
+          [:-w                          :!Rw];                                r_shift -> w              W
+          [:-e                          :!Re];                                r_shift -> e              E
+          [:-r                          :!Rr];                                r_shift -> r              R
+          [:-t                          :!Rt];                                r_shift -> t              T
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          [:-a                          :!Ra];                                r_shift -> a              A
+          [:-s                          :!Rs];                                r_shift -> s              S
+          [:-d                          :!Rd];                                r_shift -> d              D
+          [:-f                          :!Rf];                                r_shift -> f              F
+          [:-g                          :!Rg];                                r_shift -> g              G
+          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
+          [:-z                          :!Rz];                                r_shift -> z              Z
+          [:-x                          :!Rx];                                r_shift -> x              X
+          [:-c                          :!Rc];                                r_shift -> c              C
+          [:-v                          :!Rv];                                r_shift -> v              V
+          [:-b                          :!Rb];                                r_shift -> b              B
+          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
+         ;[:-escape                     :vk_none];                            r_shift -> esc            ---------
+         ;[:-left_option                :vk_none];                            r_shift -> opt            ---------
+         ;[:-tab                        :vk_none];                            r_shift -> tab            ---------
+
+          ;────────────────────────────────────────────────────────────────────────────────────────────
+          ;
+          ;  right side
+          ;
+          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
+          [:-y                          :!Ry];                                r_shift -> y              Y
+          [:-u                          :!Ru];                                r_shift -> u              U
+          [:-i                          :!Ri];                                r_shift -> i              I
+          [:-o                          :!Ro];                                r_shift -> o              O
+          [:-p                          :!Rp];                                r_shift -> p              P
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          [:-h                          :!Rh];                                r_shift -> h              H
+          [:-j                          :!Rj];                                r_shift -> j              J
+          [:-k                          :!Rk];                                r_shift -> k              K
+          [:-l                          :!Rl];                                r_shift -> l              L
+          [:-quote                      :!Rquote];                            r_shift -> '              "
+          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
+          [:-n                          :!Rn];                                r_shift -> n              N
+          [:-m                          :!Rm];                                r_shift -> m              M
+          [:-comma                      :!Rcomma];                            r_shift -> ,              <
+          [:-period                     :!Rperiod];                           r_shift -> .              >
+         ;[:-slash                      :!Rslash];                            r_shift -> /              (already used by this layer)
+          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
+         ;[:-return_or_enter            :vk_none];                            r_shift -> rtn            ---------
+         ;[:-spacebar                   :vk_none];                            r_shift -> spc            ---------
+         ;[:-delete_or_backspace        :vk_none];                            r_shift -> bsp            ---------
+
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys
           [:any_key                   :vk_none]
