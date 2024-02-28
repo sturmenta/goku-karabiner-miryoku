@@ -103,6 +103,21 @@
   :-l2                    {:key :##period}
  }
 
+ :tos {
+    :-f1  {:key :display_brightness_decrement}
+    :-f2  {:key :display_brightness_increment}
+    :-f3  {:key :rewind}
+    :-f4  {:key :play_or_pause}
+    :-f5  {:key :fastforward}
+    :-f6  {:key :mute}
+    :-f7  {:key :volume_decrement}
+    :-f8  {:key :volume_increment}
+    :-f9  {:key :vk_none}
+    :-f10 {:key :vk_none}
+    :-f11 {:key :vk_none}
+    :-f12 {:key :vk_none}
+ }
+
  :main [
 
         ;; ─────────────────────────────────────────────────────────────────────────────
@@ -169,9 +184,9 @@
          ;[:-v                          :vk_none];                              layer_1 -> v              ---------
          ;[:-b                          :vk_none];                              layer_1 -> b              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-left_shift                 :vk_none];                              layer_1 -> shf            ---------
-         ;[:-left_control               :vk_none];                              layer_1 -> ctr            ---------
-         ;[:-left_option                :vk_none];                              layer_1 -> opt            ---------
+          [:-left_shift                 :left_shift];                           layer_1 -> shf            ---------
+          [:-left_control               :left_control];                         layer_1 -> ctr            ---------
+          [:-left_option                :left_option];                          layer_1 -> opt            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -196,7 +211,7 @@
           [:-period                     :close_bracket];                        layer_1 -> .              ---------
           [:-slash                      :backslash];                            layer_1 -> /              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-left_command               :vk_none];                              layer_1 -> cmd            ---------
+          [:-left_command               :left_command];                         layer_1 -> cmd            ---------
          ;[:-l1                         :vk_none];                              layer_1 -> l1             (already used by this layer)
          ;[:-l2                         :vk_none];                              layer_1 -> l2             ---------
 
@@ -216,26 +231,26 @@
           ;  left side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          [:-q                          :apple_display_brightness_decrement];  layer_2 -> q              ---------
-          [:-w                          :apple_display_brightness_increment];  layer_2 -> w              ---------
+          [:-q                          :escape];                              layer_2 -> q              ---------
+          [:-w                          :tab];                                 layer_2 -> w              ---------
          ;[:-e                          :vk_none];                             layer_2 -> e              ---------
-          [:-r                          :mute];                                layer_2 -> r              ---------
-          [:-t                          :rewind];                              layer_2 -> t              ---------
+         ;[:-r                          :vk_none];                             layer_2 -> r              ---------
+         ;[:-t                          :vk_none];                             layer_2 -> t              ---------
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-          [:-a                          :volume_decrement];                    layer_2 -> a              ---------
-          [:-s                          :volume_increment];                    layer_2 -> s              ---------
-         ;[:-d                          :vk_none];                             layer_2 -> d              ---------
-         ;[:-f                          :vk_none];                             layer_2 -> f              ---------
-         ;[:-g                          :vk_none];                             layer_2 -> g              ---------
+          [:-a                          :-f1];                                 layer_2 -> a              ---------
+          [:-s                          :-f2];                                 layer_2 -> s              ---------
+          [:-d                          :-f3];                                 layer_2 -> d              ---------
+          [:-f                          :-f4];                                 layer_2 -> f              ---------
+          [:-g                          :-f5];                                 layer_2 -> g              ---------
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-z                          :vk_none];                             layer_2 -> z              ---------
-         ;[:-x                          :vk_none];                             layer_2 -> x              ---------
-         ;[:-c                          :vk_none];                             layer_2 -> c              ---------
-         ;[:-v                          :vk_none];                             layer_2 -> v              ---------
-         ;[:-b                          :vk_none];                             layer_2 -> b              ---------
+          [:-z                          :-f6];                                 layer_2 -> z              ---------
+          [:-x                          :-f7];                                 layer_2 -> x              ---------
+          [:-c                          :-f8];                                 layer_2 -> c              ---------
+          [:-v                          :-f9];                                 layer_2 -> v              ---------
+          [:-b                          :-f10];                                layer_2 -> b              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-left_shift                 :vk_none];                             layer_2 -> shf            ---------
-         ;[:-left_control               :vk_none];                             layer_2 -> ctr            ---------
+          [:-left_shift                 :-f11];                                layer_2 -> shf            ---------
+          [:-left_control               :-f12];                                layer_2 -> ctr            ---------
          ;[:-left_option                :vk_none];                             layer_2 -> opt            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
@@ -243,11 +258,11 @@
           ;  right side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          [:-y                          :play_or_pause];                       layer_2 -> y              ---------
-          [:-u                          :fastforward];                         layer_2 -> u              ---------
+         ;[:-y                          :vk_none];                             layer_2 -> y              ---------
+         ;[:-u                          :vk_none];                             layer_2 -> u              ---------
          ;[:-i                          :vk_none];                             layer_2 -> i              ---------
          ;[:-o                          :vk_none];                             layer_2 -> o              ---------
-         ;[:-p                          :vk_none];                             layer_2 -> p              ---------
+          [:-p                          :delete_or_backspace];                 layer_2 -> p              ---------
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
          ;[:-h                          :vk_none];                             layer_2 -> h              ---------
          ;[:-j                          :vk_none];                             layer_2 -> j              ---------
@@ -261,8 +276,8 @@
          ;[:-period                     :vk_none];                             layer_2 -> .              ---------
          ;[:-slash                      :vk_none];                             layer_2 -> /              ---------
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-left_command               :vk_none];                             layer_2 -> cmd            ---------
-         ;[:-l1                         :vk_none];                             layer_2 -> l1             ---------
+          [:-left_command               :return_or_enter];                     layer_2 -> cmd            ---------
+          [:-l1                         :spacebar];                            layer_2 -> l1             ---------
          ;[:-l2                         :vk_none];                             layer_2 -> l2             (already used by this layer)
 
           ; ────────────────────────────────────────────────────────────────────────────────────
