@@ -4,25 +4,24 @@
 
  :profiles {
   :goku {
-   :default true
-
-   ; simultaneous_threshold_milliseconds (def: 50)
-   ; different from simlayers, this is for cases like [:a :b]
-   :sim     50
-
-   ; to_delayed_action_delay_milliseconds
-   ; NOTE: this should be equal to :held for mod-tap layers
-   :delay   210
-
-   ; to_if_held_down_threshold_milliseconds (def: 500)
-   ; NOTE: this should be equal to :delay for mod-tap layers
-   :held    210
-
-   ; to_if_alone_timeout_milliseconds (def: 1000)
-   ; NOTE: (i think) this must be just less than the delay / held value to avoid bug where mod-tap layer stays 1
-   :alone   209
-
-   ;you can set these delays individually in mod-tap layer definitions if you want separate default values here
+    :default true
+    :sim     50
+    :delay   210
+    :held    210
+    :alone   209
+    ;;
+    ;; :default true ; mod taps profile
+    ;; :sim     50 ; simultaneous_threshold_milliseconds (def: 50) -- different from simlayers, this is for cases like [:a :b]
+    ;; :delay   210 ; to_delayed_action_delay_milliseconds -- NOTE: this should be equal to :held for mod-tap layers
+    ;; :held    210 ; to_if_held_down_threshold_milliseconds (def: 500) -- NOTE: this should be equal to :delay for mod-tap layers
+    ;; :alone   209 ; to_if_alone_timeout_milliseconds (def: 1000) -- NOTE: (i think) this must be just less than the delay / held value to avoid bug where mod-tap layer stays 1
+    ;;
+    ;; :default true ; kiinoda profile
+    ;; :sim      200 ; keys need to be pressed within this threshold to be considered simultaneous
+    ;; :simlayer-threshold 250 ; ???????
+    ;; :alone    250 ; hold for 495ms and single tap registered; hold for 505ms and seen as modifier
+    ;; :delay    300 ; time after which the key press is count delayed
+    ;; :held     450 ; key is fired twice when 1000 ms is elapsed (otherwise seen as a hold command)
   }
  }
 
@@ -697,9 +696,9 @@
           [:-v                          :!Rv];                                r_shift -> v              V
           [:-b                          :!Rb];                                r_shift -> b              B
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-escape                     :!Rleft_control];                     r_shift -> esc            ---------
+          [:-escape                     :!Rescape];                           r_shift -> esc            ---------
           [:-left_option                :!Rleft_option];                      r_shift -> opt            ---------
-          [:-tab                        :!Rleft_command];                     r_shift -> tab            ---------
+          [:-tab                        :!Rtab];                              r_shift -> tab            ---------
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
