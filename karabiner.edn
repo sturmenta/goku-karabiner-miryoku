@@ -5,10 +5,10 @@
  :profiles {
   :goku {
     :default true
-    :sim     50
-    :delay   210
-    :held    210
-    :alone   209
+    ;; :sim     50
+    :delay   50
+    :held    50
+    ;; :alone   250
     ;;
     ;; :default true ; mod taps profile
     ;; :sim     50 ; simultaneous_threshold_milliseconds (def: 50) -- different from simlayers, this is for cases like [:a :b]
