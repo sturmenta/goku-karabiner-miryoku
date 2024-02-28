@@ -39,7 +39,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      q   w   e   r   t       y   u   i   o   p
 ;;      a   s   d   f   g       h   j   k   l   '
 ;;      z   x   c   v   b       n   m   ,   .   /
-;;              esc opt tab     rtn spc bsp
+;;              ☐   ☐   ☐       ☐   ☐   ☐
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
@@ -47,8 +47,8 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;      shf ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   shf
-;;              ctr opt cmd     ☐   l1  l2
+;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
+;;              shf ctr opt     cmd l1  l2
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
@@ -56,8 +56,8 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;;      1   2   3   4   5       6   7   8   9   0
 ;;      `   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   ;
-;;      shf ☐   ☐   ☐   ☐       -   =   [   ]   \
-;;              ctr opt cmd     ☐   ☐   ☐
+;;      ☐   ☐   ☐   ☐   ☐       -   =   [   ]   \
+;;              ☐   ☐   ☐       ☐   ☐   ☐
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
@@ -72,10 +72,10 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;;      to -- mapped keymap (with hold l2)
 ;;
-;;      f1  f2  f3  f4  f5      f6  f7  f8  f9  f10
-;;      f11 f12 ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;              ☐   ☐   ☐       ☐   ☐   ☐
+;;      esc tab ☐   ☐   ☐       ☐   ☐   ☐   ☐   bsp
+;;      f1  f2  f3  f4  f5      ☐   ☐   ☐   ☐   ☐
+;;      f6  f7  f8  f9  f10     ☐   ☐   ☐   ☐   ☐
+;;              f11 f12 ☐       rtn spc ☐
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ```
@@ -99,7 +99,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      tab -> tab
 ;;      rtn -> return_or_enter
 ;;      bsp -> delete_or_backspace
-;;      shf -> right_shift
+;;      shf -> left_shift
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 
