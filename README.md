@@ -25,34 +25,25 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      from -- original keymap (keychron-k2v2 - config used by me)
-;;
-;;      1   2   3   4   5       8   9   0   -   =
-;;      q   w   e   r   t       u   i   o   p   [
-;;      a   s   d   f   g       j   k   l   ;   '
-;;              x   c   v       m   ,   .
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;      to -- mapped keymap (single touch)
+;;      mapped keymap (single touch)
 ;;
 ;;      q   w   e   r   t       y   u   i   o   p
 ;;      a   s   d   f   g       h   j   k   l   '
 ;;      z   x   c   v   b       n   m   ,   .   /
-;;              ☐   ☐   ☐       ☐   ☐   ☐
+;;              shf ctr opt     cmd ☐   ☐
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      to -- mapped keymap (hold)
+;;      mapped keymap (hold)
 ;;
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;              shf ctr opt     cmd l1  l2
+;;              ☐   ☐   ☐       ☐   l1  l2
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      to -- mapped keymap (with hold l1)
+;;      mapped keymap (with hold l1)
 ;;
 ;;      1   2   3   4   5       6   7   8   9   0
 ;;      `   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   ;
@@ -61,7 +52,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      to -- mapped keymap (with hold l1 + shift)
+;;      mapped keymap (with hold l1 + shift)
 ;;
 ;;      !   @   #   $   %       ^   &   *   (   )
 ;;      ~   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   :
@@ -70,7 +61,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      to -- mapped keymap (with hold l2)
+;;      mapped keymap (with hold l2)
 ;;
 ;;      esc tab ☐   ☐   ☐       ☐   ☐   ☐   ☐   bsp
 ;;      f1  f2  f3  f4  f5      ☐   ☐   ☐   ☐   ☐
