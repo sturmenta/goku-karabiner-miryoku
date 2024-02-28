@@ -1,0 +1,30 @@
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        {:des "karabiner-on-off by pressing caps_lock twice"
+         :rules [
+
+          ; second time caps_lock_pressed & karabiner_off
+          [:condi :caps_lock_pressed :!karabiner_on] ; order matters
+           [:##caps_lock ; from
+            [:##caps_lock ["karabiner_on" 1] [:noti :on-off "Karabiner On 🟢"]] ; to
+            nil ; conditions
+            {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
+           ]
+
+          ; second time caps_lock_pressed & karabiner_on
+          [:condi :caps_lock_pressed :karabiner_on] ; order matters
+           [:##caps_lock ; from
+            [:##caps_lock ["karabiner_on" 0] [:noti :on-off "Karabiner Off 🔴"]] ; to
+            nil ; conditions
+            {:delayed {:invoked [:noti :on-off]} :params {:delay 1000}} ; other options ; (close notification after 1 second)
+           ]
+
+          ; first time caps_lock_pressed
+          [:condi :!caps_lock_pressed]
+           [:##caps_lock ; from
+            [:##caps_lock ["caps_lock_pressed" 1]] ; to
+            nil ; conditions
+            {:delayed { :invoked ["caps_lock_pressed" 0] :canceled ["caps_lock_pressed" 0]}} ; other options ; (set caps_lock_pressed to 0 after some time or if caps_lock is pressed again)
+           ]
+
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
