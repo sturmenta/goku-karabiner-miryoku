@@ -24,25 +24,16 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      mapped keymap (single touch)
+;;      base mapped keymap
 ;;
 ;;      q   w   e   r  t       y   u   i   o   p
 ;;      a   s   d   f  g       h   j   k   l   '
 ;;      z   x   c   v  b       n   m   ,   .   /
-;;              shf ☐  cmd     opt ☐  ctr
+;;              shf l2 cmd     opt l1  ctr
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      mapped keymap (hold)
-;;
-;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;              ☐   l2  ☐       ☐   l1  ☐
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;      mapped keymap (with hold l1)
+;;      mapped keymap with hold l1
 ;;
 ;;      1   2   3   4   5       6   7   8   9   0
 ;;      `   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   ;
@@ -51,16 +42,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      mapped keymap (with hold l1 + shift)
-;;
-;;      !   @   #   $   %       ^   &   *   (   )
-;;      ~   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   :
-;;      ☐   ☐   ☐   ☐   ☐       _   +   {   }   |
-;;              ◎   spc cmd     opt ◎   ctr
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;      mapped keymap (with hold l2)
+;;      mapped keymap with hold l2
 ;;
 ;;      esc tab ☐   ☐   ☐      rtn  ☐    ☐   ☐   bsp
 ;;      ☐   ☐   ☐   ☐   ☐      ←    ↓    ↑   →   ☐
