@@ -31,7 +31,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      q   w   e   r   t       y   u   i   o   p
 ;;      a   s   d   f   g       h   j   k   l   '
 ;;      z   x   c   v   b       n   m   ,   .   /
-;;              shf ctr opt     cmd ☐   ☐
+;;              shf ctr ☐       ☐   opt cmd
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
@@ -40,7 +40,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;              ☐   ☐   ☐       ☐   l1  l2
+;;              ☐   ☐   l2      l1  ☐   ☐
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
@@ -49,7 +49,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      1   2   3   4   5       6   7   8   9   0
 ;;      `   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   ;
 ;;      ☐   ☐   ☐   ☐   ☐       -   =   [   ]   \
-;;              shf ctr opt     cmd ◎   ☐
+;;              shf ctr spc     ◎   opt cmd
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
@@ -58,16 +58,29 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      !   @   #   $   %       ^   &   *   (   )
 ;;      ~   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   :
 ;;      ☐   ☐   ☐   ☐   ☐       _   +   {   }   |
-;;              ◎   ctr opt     cmd ◎   ☐
+;;              ◎   ctr spc     ◎   opt cmd
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
 ;;      mapped keymap (with hold l2)
 ;;
-;;      esc tab ☐   ☐   ☐       rtn     spc     ☐  ☐ bsp
-;;      f1  f2  f3  f4  f5      cmd+rtn cmd+spc ☐  ☐ cmd+bsp
-;;      f6  f7  f8  f9  f10     f11     f12     ☐  ☐ ☐
-;;              shf ctr opt     cmd ☐   ◎
+;;      esc   tab   ☐     ☐     ☐       rtn  ☐    ☐   ☐   bsp
+;;      f1    f2    f3    f4    f5      f6   f7   f8  ☐   ☐
+;;      cmd+z cmd+x cmd+c cmd+v ☐       ☐    ☐    ☐   ☐   ☐
+;;                  shf   ctr   ◎       spc  opt  cmd
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;     functions keys:
+;;
+;;     f1: display_brightness_decrement
+;;     f2: display_brightness_increment
+;;     f3: rewind
+;;     f4: play_or_pause
+;;     f5: fastforward
+;;     f6: mute
+;;     f7: volume_decrement
+;;     f8: volume_increment
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ```

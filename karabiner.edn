@@ -115,10 +115,10 @@
     :-f6  {:key :mute}
     :-f7  {:key :volume_decrement}
     :-f8  {:key :volume_increment}
-    :-f9  {:key :vk_none}
-    :-f10 {:key :vk_none}
-    :-f11 {:key :vk_none}
-    :-f12 {:key :vk_none}
+    ;; :-f9  {:key :vk_none}
+    ;; :-f10 {:key :vk_none}
+    ;; :-f11 {:key :vk_none}
+    ;; :-f12 {:key :vk_none}
  }
 
  :main [
