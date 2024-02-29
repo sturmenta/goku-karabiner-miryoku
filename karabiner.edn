@@ -45,11 +45,12 @@
   ;;      q   w   e   r   t       y   u   i   o   p
   ;;      a   s   d   f   g       h   j   k   l   '
   ;;      z   x   c   v   b       n   m   ,   .   /
-  ;;              shf ctr opt     cmd l1  l2
+  ;;              shf ctr l2      l1  opt cmd
   ;;
   ;; ─────────────────────────────────────────────────────────────────────────────
 
   :any_key {:any :key_code}
+  :any_consumer {:any :consumer_key_code }
 
   ;────────────────────────────────────────────────────────────────────────────────────────────
   ;
@@ -76,7 +77,7 @@
   ; ── row 4 ───────────────────────────────────────────────────────────────────────────
   :-left_shift            {:key :##x}
   :-left_control          {:key :##c}
-  :-left_option           {:key :##v}
+  :-l2                    {:key :##v}
 
   ;────────────────────────────────────────────────────────────────────────────────────────────
   ;
@@ -101,9 +102,9 @@
   :-period                {:key :##semicolon}
   :-slash                 {:key :##quote}
   ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-  :-left_command          {:key :##m}
-  :-l1                    {:key :##comma}
-  :-l2                    {:key :##period}
+  :-l1                    {:key :##m}
+  :-left_option           {:key :##comma}
+  :-left_command          {:key :##period}
  }
 
  :tos {
@@ -122,19 +123,9 @@
  }
 
  :main [
-
-        ;; ─────────────────────────────────────────────────────────────────────────────
-        { :des "check current keyboard and set karabiner_on" :rules [
-          [:condi :!karabiner_on :keychron_k2v2]
-            [:any_key ["karabiner_on" 1]]
-        ]}
-        ;; ─────────────────────────────────────────────────────────────────────────────
-
         ;NOTE: When adding a new layer, if you want it to be able to cross with an old one, you must add the name negated (:!new_name) to all other mod-tap layer conditions
         ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "modifier layers" :rules [
-          [:condi :karabiner_on]
-
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
           ;  right side
@@ -160,9 +151,9 @@
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
         ;; ─────────────────────────────────────────────────────────────────────────────
-        { :des "layer_1 - (numbers and symbols) (spacebar)" :rules
+        { :des "layer_1 - (numbers and symbols)" :rules
          [
-          [:condi :layer_1 :karabiner_on]
+          [:condi :layer_1]
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -220,14 +211,15 @@
 
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys
-          [:any_key [:vk_none]]
+          [:any_key :vk_none]
+          [:any_consumer :vk_none]
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
 
         ;; ─────────────────────────────────────────────────────────────────────────────
-        { :des "layer_2 - (fn layer) (delete_or_backspace)" :rules
+        { :des "layer_2 - (fn layer)" :rules
          [
-          [:condi :layer_2 :karabiner_on]
+          [:condi :layer_2]
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -285,7 +277,8 @@
 
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys
-          [:any_key [:vk_none]]
+          [:any_key :vk_none]
+          [:any_consumer :vk_none]
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
 
@@ -294,9 +287,9 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
         {:des "Base characters" :rules
          [;
-          ; use the mappings from "froms" to map all keys
           ;
-          [:condi :karabiner_on]
+          ; NOTE: use the mappings from "froms" to map all keys
+          ;
           ;
           ;; ───────────────────────────────
           ;;
@@ -353,7 +346,8 @@
           [:-l2                         :vk_none]
 
           ; ignore another keys
-          [:any_key [:vk_none]]
+          [:any_key :vk_none]
+          [:any_consumer :vk_none]
           ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
        ]
