@@ -38,7 +38,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;              ☐   ☐   l2      l1  ☐   ☐
+;;              ☐   l2  ☐       ☐   l1  ☐
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
@@ -47,7 +47,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      1   2   3   4   5       6   7   8   9   0
 ;;      `   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   ;
 ;;      ☐   ☐   ☐   ☐   ☐       -   =   [   ]   \
-;;              shf ctr spc     ◎   opt cmd
+;;              shf spc cmd     opt ◎   ctr
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
@@ -56,16 +56,16 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      !   @   #   $   %       ^   &   *   (   )
 ;;      ~   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   :
 ;;      ☐   ☐   ☐   ☐   ☐       _   +   {   }   |
-;;              ◎   ctr spc     ◎   opt cmd
+;;              ◎   spc cmd     opt ◎   ctr
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
 ;;      mapped keymap (with hold l2)
 ;;
-;;      esc   tab   ☐     ☐     ☐      rtn  ☐    ☐   ☐   bsp
-;;      cmd+a cmd+s cmd+d cmd+f ☐      ←    ↓    ↑   →   ☐
-;;      cmd+z cmd+x cmd+c cmd+v ☐      f1   f2   f3  f4  f5
-;;                  shf   ctr   ◎      spc  opt  cmd
+;;      esc tab ☐   ☐   ☐      rtn  ☐    ☐   ☐   bsp
+;;      ☐   ☐   ☐   ☐   ☐      ←    ↓    ↑   →   ☐
+;;      ☐   ☐   ☐   ☐   ☐      f1   f2   f3  f4  f5
+;;              shf ◎   cmd    opt  spc  ctr
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
