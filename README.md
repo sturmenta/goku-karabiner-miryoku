@@ -62,23 +62,20 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;;      mapped keymap (with hold l2)
 ;;
-;;      esc   tab   ☐     ☐     ☐       rtn  ☐    ☐   ☐   bsp
-;;      f1    f2    f3    f4    f5      f6   f7   f8  ☐   ☐
-;;      cmd+z cmd+x cmd+c cmd+v ☐       ☐    ☐    ☐   ☐   ☐
-;;                  shf   ctr   ◎       spc  opt  cmd
+;;      esc   tab   ☐     ☐     ☐      rtn  ☐    ☐   ☐   bsp
+;;      cmd+a cmd+s cmd+d cmd+f ☐      ←    ↓    ↑   →   ☐
+;;      cmd+z cmd+x cmd+c cmd+v ☐      f1   f2   f3  f4  f5
+;;                  shf   ctr   ◎      spc  opt  cmd
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
 ;;     functions keys:
 ;;
-;;     f1: display_brightness_decrement
-;;     f2: display_brightness_increment
-;;     f3: rewind
-;;     f4: play_or_pause
-;;     f5: fastforward
-;;     f6: mute
-;;     f7: volume_decrement
-;;     f8: volume_increment
+;;     f1: volume_decrement
+;;     f2: rewind
+;;     f3: play_or_pause
+;;     f4: fastforward
+;;     f5: volume_increment
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ```
