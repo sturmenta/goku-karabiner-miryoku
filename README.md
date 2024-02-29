@@ -26,10 +26,10 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;
 ;;      mapped keymap (single touch)
 ;;
-;;      q   w   e   r   t       y   u   i   o   p
-;;      a   s   d   f   g       h   j   k   l   '
-;;      z   x   c   v   b       n   m   ,   .   /
-;;              shf ctr ☐       ☐   opt cmd
+;;      q   w   e   r  t       y   u   i   o   p
+;;      a   s   d   f  g       h   j   k   l   '
+;;      z   x   c   v  b       n   m   ,   .   /
+;;              shf ☐  cmd     opt ☐  ctr
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
