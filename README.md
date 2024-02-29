@@ -22,60 +22,65 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ```edn
 ;;
 ;; ☐ = empty key
+;; ◎ = hold
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      from -- original keymap (keychron-k2v2 - config used by me)
-;;
-;;      1   2   3   4   5       8   9   0   -   =
-;;      q   w   e   r   t       u   i   o   p   [
-;;      a   s   d   f   g       j   k   l   ;   '
-;;              x   c   v       m   ,   .
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;      to -- mapped keymap (single touch)
+;;      mapped keymap (single touch)
 ;;
 ;;      q   w   e   r   t       y   u   i   o   p
 ;;      a   s   d   f   g       h   j   k   l   '
 ;;      z   x   c   v   b       n   m   ,   .   /
-;;              esc opt tab     rtn spc bsp
+;;              shf ctr ☐       ☐   opt cmd
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      to -- mapped keymap (hold)
+;;      mapped keymap (hold)
 ;;
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
 ;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;      shf ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   shf
-;;              ctr opt cmd     ☐   l1  l2
+;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
+;;              ☐   ☐   l2      l1  ☐   ☐
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      to -- mapped keymap (with hold l1)
+;;      mapped keymap (with hold l1)
 ;;
 ;;      1   2   3   4   5       6   7   8   9   0
 ;;      `   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   ;
-;;      shf ☐   ☐   ☐   ☐       -   =   [   ]   \
-;;              ctr opt cmd     ☐   ☐   ☐
+;;      ☐   ☐   ☐   ☐   ☐       -   =   [   ]   \
+;;              shf ctr spc     ◎   opt cmd
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      to -- mapped keymap (with hold l1 + shift)
+;;      mapped keymap (with hold l1 + shift)
 ;;
 ;;      !   @   #   $   %       ^   &   *   (   )
 ;;      ~   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   :
 ;;      ☐   ☐   ☐   ☐   ☐       _   +   {   }   |
-;;              ☐   ☐   ☐       ☐   ☐   ☐
+;;              ◎   ctr spc     ◎   opt cmd
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ;;
-;;      to -- mapped keymap (with hold l2)
+;;      mapped keymap (with hold l2)
 ;;
-;;      f1  f2  f3  f4  f5      f6  f7  f8  f9  f10
-;;      f11 f12 ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;      ☐   ☐   ☐   ☐   ☐       ☐   ☐   ☐   ☐   ☐
-;;              ☐   ☐   ☐       ☐   ☐   ☐
+;;      esc   tab   ☐     ☐     ☐       rtn  ☐    ☐   ☐   bsp
+;;      f1    f2    f3    f4    f5      f6   f7   f8  ☐   ☐
+;;      cmd+z cmd+x cmd+c cmd+v ☐       ☐    ☐    ☐   ☐   ☐
+;;                  shf   ctr   ◎       spc  opt  cmd
+;;
+;; ─────────────────────────────────────────────────────────────────────────────
+;;
+;;     functions keys:
+;;
+;;     f1: display_brightness_decrement
+;;     f2: display_brightness_increment
+;;     f3: rewind
+;;     f4: play_or_pause
+;;     f5: fastforward
+;;     f6: mute
+;;     f7: volume_decrement
+;;     f8: volume_increment
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 ```
@@ -99,7 +104,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ;;      tab -> tab
 ;;      rtn -> return_or_enter
 ;;      bsp -> delete_or_backspace
-;;      shf -> right_shift
+;;      shf -> left_shift
 ;;
 ;; ─────────────────────────────────────────────────────────────────────────────
 
