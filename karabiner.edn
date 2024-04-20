@@ -1,5 +1,5 @@
 ;; TODO:
-;; - [ ] add the functionalities for l1
+;; - [1] add the functionalities for l1
 ;; - [ ] add the functionalities for l2
 ;; - [ ] add the functionalities for l3
 ;; - [ ] add the functionalities for l4
@@ -297,10 +297,10 @@
          ;[:-quote                      :vk_none];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
          ;[:-m                          :vk_none];
-         ;[:-n                          :vk_none];
-         ;[:-e                          :vk_none];
-         ;[:-i                          :vk_none];
-         ;[:-o                          :vk_none];
+          [:-n                          :vk_consumer_previous];
+          [:-e                          :volume_down];
+          [:-i                          :volume_up];
+          [:-o                          :vk_consumer_next];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
          ;[:-k                          :vk_none];
          ;[:-h                          :vk_none];
@@ -309,8 +309,8 @@
          ;[:-slash                      :vk_none];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
          ;[:-l4                         :vk_none];
-         ;[:-l5                         :vk_none];
-         ;[:-l6                         :vk_none];
+          [:-l5                         :play_or_pause];
+          [:-l6                         :mute];
 
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys

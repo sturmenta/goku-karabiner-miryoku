@@ -8,7 +8,6 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 
 The keyboard im using (Keychron k2 v2) it's a great keyboard, but it's not programmable, so i'm using Goku to create a config for Karabiner-Elements to make it programmable.
 
-
 ## Steps
 
 1) Install [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements)
