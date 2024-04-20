@@ -1,7 +1,11 @@
 ;; TODO:
-;; - [x] base layer characters
-;; - [x] base layer hold modifier keys
-;; - [x] fix only insert a space or use the modifier key if press and leave fast (not when hold)
+;; - [ ] add the functionalities for l1
+;; - [ ] add the functionalities for l2
+;; - [ ] add the functionalities for l3
+;; - [ ] add the functionalities for l4
+;; - [ ] add the functionalities for l5
+;; - [ ] add the functionalities for l6
+;; - [ ] check how to implement aditional features
 
 {
 
@@ -33,7 +37,7 @@
  :froms {
   ;; ─────────────────────────────────────────────────────────────────────────────
   ;;
-  ;;      mapping of original keymap (keychron-k2v2 - config used by me)
+  ;;      from -- keychron-k2v2 keyboard layout used
   ;;
   ;;      1   2   3   4   5       8   9   0   -   =
   ;;      q   w   e   r   t       u   i   o   p   [
@@ -42,7 +46,7 @@
   ;;
   ;; ─────────────────────────────────────────────────────────────────────────────
   ;;
-  ;;      to -- mapped keymap
+  ;;      to -- new mapped keymap (colemak mod-dh with apostrophe replacing semicolon)
   ;;
   ;;      q   w   f   p   b       j   l   u   y   '
   ;;      a   r   s   t   g       m   n   e   i   o
@@ -136,10 +140,7 @@
         ;NOTE: When adding a new layer, if you want it to be able to cross with an old one, you must add the name negated (:!new_name) to all other mod-tap layer conditions
         ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "modifier layers" :rules [
-          ;────────────────────────────────────────────────────────────────────────────────────────────
-          ;
-          ;  right side
-          ;
+
           ; ── layer_1 ───────────────────────────────────────────────────────────────────────────
            [:-l1 nil [
               :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_1

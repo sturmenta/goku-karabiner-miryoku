@@ -1,10 +1,12 @@
-# Goku Karabiner config for custom keyboard layout
+# Goku-Karabiner-Miryoku config
 
-This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to create a config JSON file for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) *"A powerful and stable keyboard customizer for macOS."* using a custom keyboard layout.
+This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to create a config JSON file for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) *"A powerful and stable keyboard customizer for macOS."* implementing [Miryoku](https://github.com/manna-harbour/miryoku/tree/master) keyboard layout in a not programmable keyboard.
 
-## The keyboard i'm using: (Keychron K2 v2)
+![Miryoku keyboard layout](https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/cover/miryoku-kle-cover.png)
+
+## Why all of this?
 >
-> This is the keyboard i'm using, it's a 75% keyboard with a lot of keys, it's a great keyboard, but it's not programmable, so i'm using Goku to create a config for Karabiner-Elements to make it programmable.
+> The keyboard im using (Keychron k2 v2) it's a 75% keyboard with a lot of keys, it's a great keyboard, but it's not programmable, so i'm using Goku to create a config for Karabiner-Elements to make it programmable.
 >
 
 ## Steps
