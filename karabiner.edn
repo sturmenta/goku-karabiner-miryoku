@@ -2,8 +2,8 @@
 ;; - [x] add the functionalities for l1
 ;; - [x] add the functionalities for l2
 ;; - [x] add the functionalities for l3
-;; - [ ] add the functionalities for l4
-;; - [ ] add the functionalities for l5
+;; - [x] add the functionalities for l4
+;; - [x] add the functionalities for l5
 ;; - [ ] add the functionalities for l6
 ;; - [ ] check how to implement aditional features
 
@@ -461,27 +461,27 @@
           ;  left side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-         ;[:-q                          :vk_none];
-         ;[:-w                          :vk_none];
-         ;[:-f                          :vk_none];
-         ;[:-p                          :vk_none];
-         ;[:-b                          :vk_none];
+          [:-q                          :!Sopen_bracket];
+          [:-w                          :!S7];
+          [:-f                          :!S8];
+          [:-p                          :!S9];
+          [:-b                          :!Sclose_bracket];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-         ;[:-a                          :vk_none];
-         ;[:-r                          :vk_none];
-         ;[:-s                          :vk_none];
-         ;[:-t                          :vk_none];
-         ;[:-g                          :vk_none];
+          [:-a                          :!Ssemicolon];
+          [:-r                          :!S4];
+          [:-s                          :!S5];
+          [:-t                          :!S6];
+          [:-g                          :!Sequal_sign];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-z                          :vk_none];
-         ;[:-x                          :vk_none];
-         ;[:-c                          :vk_none];
-         ;[:-d                          :vk_none];
-         ;[:-v                          :vk_none];
+          [:-z                          :!Sgrave_accent_and_tilde];
+          [:-x                          :!S1];
+          [:-c                          :!S2];
+          [:-d                          :!S3];
+          [:-v                          :!Sbackslash];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-l1                         :vk_none];
-         ;[:-l2                         :vk_none];
-         ;[:-l3                         :vk_none];
+          [:-l1                         :!S9];
+          [:-l2                         :!S0];
+          [:-l3                         :!Shyphen];
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -527,27 +527,27 @@
           ;  left side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-         ;[:-q                          :vk_none];
-         ;[:-w                          :vk_none];
-         ;[:-f                          :vk_none];
-         ;[:-p                          :vk_none];
-         ;[:-b                          :vk_none];
+          [:-q                          :open_bracket];
+          [:-w                          :7];
+          [:-f                          :8];
+          [:-p                          :9];
+          [:-b                          :close_bracket];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-         ;[:-a                          :vk_none];
-         ;[:-r                          :vk_none];
-         ;[:-s                          :vk_none];
-         ;[:-t                          :vk_none];
-         ;[:-g                          :vk_none];
+          [:-a                          :semicolon];
+          [:-r                          :4];
+          [:-s                          :5];
+          [:-t                          :6];
+          [:-g                          :equal_sign];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-z                          :vk_none];
-         ;[:-x                          :vk_none];
-         ;[:-c                          :vk_none];
-         ;[:-d                          :vk_none];
-         ;[:-v                          :vk_none];
+          [:-z                          :grave_accent_and_tilde];
+          [:-x                          :1];
+          [:-c                          :2];
+          [:-d                          :3];
+          [:-v                          :backslash];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-l1                         :vk_none];
-         ;[:-l2                         :vk_none];
-         ;[:-l3                         :vk_none];
+          [:-l1                         :period];
+          [:-l2                         :0];
+          [:-l3                         :hyphen];
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
