@@ -6,7 +6,7 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 
 ## Why all of this?
 >
-> The keyboard im using (Keychron k2 v2) it's a 75% keyboard with a lot of keys, it's a great keyboard, but it's not programmable, so i'm using Goku to create a config for Karabiner-Elements to make it programmable.
+> The keyboard im using (Keychron k2 v2) it's a great keyboard, but it's not programmable, so i'm using Goku to create a config for Karabiner-Elements to make it programmable.
 >
 
 ## Steps
@@ -14,33 +14,6 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 1) Install [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements)
 2) Install [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo)
 3) clone the repo and run `export GOKU_EDN_CONFIG_FILE=./karabiner.edn && goku`
-
-<!--
-
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;      correct words for karabiner
-;;
-;;      - -> hyphen
-;;      = -> equal_sign
-;;      [ -> open_bracket
-;;      ; -> semicolon
-;;      ' -> quote
-;;      , -> comma
-;;      . -> period
-;;      / -> slash
-;;      esc -> escape
-;;      spc -> spacebar
-;;      tab -> tab
-;;      rtn -> return_or_enter
-;;      bsp -> delete_or_backspace
-;;      shf -> left_shift
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-
--->
-
----
 
 ## Thanks to:
 
