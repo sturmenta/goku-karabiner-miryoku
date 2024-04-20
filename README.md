@@ -5,9 +5,9 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 ![Miryoku keyboard layout](https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/cover/miryoku-kle-cover.png)
 
 ## Why all of this?
->
-> The keyboard im using (Keychron k2 v2) it's a great keyboard, but it's not programmable, so i'm using Goku to create a config for Karabiner-Elements to make it programmable.
->
+
+The keyboard im using (Keychron k2 v2) it's a great keyboard, but it's not programmable, so i'm using Goku to create a config for Karabiner-Elements to make it programmable.
+
 
 ## Steps
 
