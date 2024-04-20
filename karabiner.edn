@@ -4,8 +4,9 @@
 ;; - [x] add the functionalities for l3
 ;; - [x] add the functionalities for l4
 ;; - [x] add the functionalities for l5
-;; - [ ] add the functionalities for l6
+;; - [x] add the functionalities for l6
 ;; - [ ] check how to implement aditional features
+;; - [ ] check button layer for shortcuts use with only one hand
 
 {
 
@@ -121,19 +122,6 @@
     :-l4  {:key :return_or_enter}
     :-l5  {:key :delete_or_backspace}
     :-l6  {:key :delete_forward}
-
-    ;; :-f1  {:key :volume_decrement}
-    ;; :-f2  {:key :rewind}
-    ;; :-f3  {:key :play_or_pause}
-    ;; :-f4  {:key :fastforward}
-    ;; :-f5  {:key :volume_increment}
-    ;; :-f6  {:key :mute}
-    ;; :-f7  {:key :display_brightness_decrement}
-    ;; :-f8  {:key :display_brightness_increment}
-    ;; :-f9  {:key :vk_none}
-    ;; :-f10 {:key :vk_none}
-    ;; :-f11 {:key :vk_none}
-    ;; :-f12 {:key :vk_none}
  }
 
  :main [
@@ -593,22 +581,22 @@
           ;  left side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-         ;[:-q                          :vk_none];
-         ;[:-w                          :vk_none];
-         ;[:-f                          :vk_none];
-         ;[:-p                          :vk_none];
+          [:-q                          :f12];
+          [:-w                          :f7];
+          [:-f                          :f8];
+          [:-p                          :f9];
          ;[:-b                          :vk_none];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-         ;[:-a                          :vk_none];
-         ;[:-r                          :vk_none];
-         ;[:-s                          :vk_none];
-         ;[:-t                          :vk_none];
+          [:-a                          :f11];
+          [:-r                          :f4];
+          [:-s                          :f5];
+          [:-t                          :f6];
          ;[:-g                          :vk_none];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-z                          :vk_none];
-         ;[:-x                          :vk_none];
-         ;[:-c                          :vk_none];
-         ;[:-d                          :vk_none];
+          [:-z                          :f10];
+          [:-x                          :f1];
+          [:-c                          :f2];
+          [:-d                          :f3];
          ;[:-v                          :vk_none];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
          ;[:-l1                         :vk_none];
