@@ -1,7 +1,7 @@
 ;; TODO:
 ;; - [x] add the functionalities for l1
 ;; - [x] add the functionalities for l2
-;; - [ ] add the functionalities for l3
+;; - [x] add the functionalities for l3
 ;; - [ ] add the functionalities for l4
 ;; - [ ] add the functionalities for l5
 ;; - [ ] add the functionalities for l6
@@ -422,27 +422,27 @@
           ;  right side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-         ;[:-j                          :vk_none];
-         ;[:-l                          :vk_none];
-         ;[:-u                          :vk_none];
-         ;[:-y                          :vk_none];
-         ;[:-quote                      :vk_none];
+          [:-j                          :!Cy];
+          [:-l                          :!Cv];
+          [:-u                          :!Cc];
+          [:-y                          :!Cx];
+          [:-quote                      :!Cz];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
          ;[:-m                          :vk_none];
-         ;[:-n                          :vk_none];
-         ;[:-e                          :vk_none];
-         ;[:-i                          :vk_none];
-         ;[:-o                          :vk_none];
+          [:-n                          {:mkey {:x -1500}}];
+          [:-e                          {:mkey {:y -1500}}];
+          [:-i                          {:mkey {:y 1500}}];
+          [:-o                          {:mkey {:x 1500}}];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
          ;[:-k                          :vk_none];
-         ;[:-h                          :vk_none];
-         ;[:-comma                      :vk_none];
-         ;[:-period                     :vk_none];
-         ;[:-slash                      :vk_none];
+          [:-h                          {:mkey {:hwheel -80}}];
+          [:-comma                      {:mkey {:vwheel 80}}];
+          [:-period                     {:mkey {:vwheel -80}}];
+          [:-slash                      {:mkey {:hwheel 80}}];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-l4                         :vk_none];
-         ;[:-l5                         :vk_none];
-         ;[:-l6                         :vk_none];
+          [:-l4                         {:pkey :button2}];
+          [:-l5                         {:pkey :button1}];
+          [:-l6                         {:pkey :button3}];
 
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys
