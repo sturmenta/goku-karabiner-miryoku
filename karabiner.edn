@@ -1,7 +1,7 @@
 ;; TODO:
 ;; - [x] base layer characters
-;; - [ ] base layer hold modifier keys
-;; - [ ] fix only insert a space or use the modifier key if press and leave fast (not when hold)
+;; - [x] base layer hold modifier keys
+;; - [x] fix only insert a space or use the modifier key if press and leave fast (not when hold)
 
 {
 
@@ -141,46 +141,52 @@
           ;  right side
           ;
           ; ── layer_1 ───────────────────────────────────────────────────────────────────────────
-           [:-l1 :-l1 [
+           [:-l1 nil [
               :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_1
             ] {:held {:set [
             "layer_1" 1] :repeat false} :afterup {:set [
-            "layer_1" 0]}}]
+            "layer_1" 0]} :alone
+            :-l1}]
 
           ; ── layer_2 ───────────────────────────────────────────────────────────────────────────
-           [:-l2 :-l2 [
+           [:-l2 nil [
               :!layer_1 :!layer_3 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_2
             ] {:held {:set [
             "layer_2" 1] :repeat false} :afterup {:set [
-            "layer_2" 0]}}]
+            "layer_2" 0]} :alone
+            :-l2}]
 
           ; ── layer_3 ───────────────────────────────────────────────────────────────────────────
-           [:-l3 :-l3 [
+           [:-l3 nil [
               :!layer_1 :!layer_2 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_3
             ] {:held {:set [
             "layer_3" 1] :repeat false} :afterup {:set [
-            "layer_3" 0]}}]
+            "layer_3" 0]} :alone
+            :-l3}]
 
           ; ── layer_4 ───────────────────────────────────────────────────────────────────────────
-           [:-l4 :-l4 [
+           [:-l4 nil [
               :!layer_1 :!layer_2 :!layer_3 :!layer_5 :!layer_6 ;without :!layer_4
             ] {:held {:set [
             "layer_4" 1] :repeat false} :afterup {:set [
-            "layer_4" 0]}}]
+            "layer_4" 0]} :alone
+            :-l4}]
 
           ; ── layer_5 ───────────────────────────────────────────────────────────────────────────
-           [:-l5 :-l5 [
+           [:-l5 nil [
               :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_6 ;without :!layer_5
             ] {:held {:set [
             "layer_5" 1] :repeat false} :afterup {:set [
-            "layer_5" 0]}}]
+            "layer_5" 0]} :alone
+            :-l5}]
 
           ; ── layer_6 ───────────────────────────────────────────────────────────────────────────
-           [:-l6 :-l6 [
+           [:-l6 nil [
               :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 ;without :!layer_6
             ] {:held {:set [
             "layer_6" 1] :repeat false} :afterup {:set [
-            "layer_6" 0]}}]
+            "layer_6" 0]} :alone
+            :-l6}]
 
           ]
          }
