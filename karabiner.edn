@@ -5,6 +5,8 @@
 ;; - [x] add the functionalities for l4
 ;; - [x] add the functionalities for l5
 ;; - [x] add the functionalities for l6
+;; - [ ] find a way to use modifiers with one side and the base layer with the other side
+;;    - extra line of modifiers on top, but this modifiers make the other side be like the layer 0 again
 ;; - [ ] check how to implement aditional features
 ;; - [ ] check button layer for shortcuts use with only one hand
 
