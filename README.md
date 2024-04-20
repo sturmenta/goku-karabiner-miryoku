@@ -6,63 +6,12 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 >
 > This is the keyboard i'm using, it's a 75% keyboard with a lot of keys, it's a great keyboard, but it's not programmable, so i'm using Goku to create a config for Karabiner-Elements to make it programmable.
 >
-![Screenshot 2024-02-27 at 15 57 44](https://github.com/sturmenta/goku-karabiner-my-config/assets/30802967/60f70448-9c91-41e0-95c4-cbf05fcf1c68)
-
-![Screenshot 2024-02-27 at 15 55 14](https://github.com/sturmenta/goku-karabiner-my-config/assets/30802967/698dfe67-6d88-41d2-a6d3-c5043dce22ce)
 
 ## Steps
 
 1) Install [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements)
 2) Install [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo)
 3) clone the repo and run `export GOKU_EDN_CONFIG_FILE=./karabiner.edn && goku`
-
----
-## The mapping i'm using:
-
-```edn
-;;
-;; ☐ = empty key
-;; ◎ = hold
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;      base mapped keymap
-;;
-;;      q   w   e   r  t       y   u   i   o   p
-;;      a   s   d   f  g       h   j   k   l   '
-;;      z   x   c   v  b       n   m   ,   .   /
-;;              shf l2 cmd     opt l1  ctr
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;      mapped keymap with hold l1
-;;
-;;      1   2   3   4   5       6   7   8   9   0
-;;      `   ☐   ☐   ☐   ☐       ←   ↓   ↑   →   ;
-;;      ☐   ☐   ☐   ☐   ☐       -   =   [   ]   \
-;;              shf spc cmd     opt ◎   ctr
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;      mapped keymap with hold l2
-;;
-;;      esc tab ☐   ☐   ☐      rtn  ☐    ☐   ☐   bsp
-;;      ☐   ☐   ☐   ☐   ☐      ←    ↓    ↑   →   ☐
-;;      ☐   ☐   ☐   ☐   ☐      f1   f2   f3  f4  f5
-;;              shf ◎   cmd    opt  spc  ctr
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-;;
-;;     functions keys:
-;;
-;;     f1: volume_decrement
-;;     f2: rewind
-;;     f3: play_or_pause
-;;     f4: fastforward
-;;     f5: volume_increment
-;;
-;; ─────────────────────────────────────────────────────────────────────────────
-```
 
 <!--
 
