@@ -1,5 +1,3 @@
-<!-- TO RUN USE: `export GOKU_EDN_CONFIG_FILE=./karabiner.edn && goku` -->
-
 # Goku Karabiner config for custom keyboard layout
 
 This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to create a config JSON file for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) *"A powerful and stable keyboard customizer for macOS."* using a custom keyboard layout.
@@ -12,7 +10,11 @@ This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to 
 
 ![Screenshot 2024-02-27 at 15 55 14](https://github.com/sturmenta/goku-karabiner-my-config/assets/30802967/698dfe67-6d88-41d2-a6d3-c5043dce22ce)
 
+## Steps
 
+1) Install [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements)
+2) Install [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo)
+3) clone the repo and run `export GOKU_EDN_CONFIG_FILE=./karabiner.edn && goku`
 
 ---
 ## The mapping i'm using:
