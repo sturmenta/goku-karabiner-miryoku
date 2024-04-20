@@ -1,6 +1,6 @@
 ;; TODO:
-;; - [1] add the functionalities for l1
-;; - [ ] add the functionalities for l2
+;; - [x] add the functionalities for l1
+;; - [x] add the functionalities for l2
 ;; - [ ] add the functionalities for l3
 ;; - [ ] add the functionalities for l4
 ;; - [ ] add the functionalities for l5
@@ -356,27 +356,27 @@
           ;  right side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-         ;[:-j                          :vk_none];
-         ;[:-l                          :vk_none];
-         ;[:-u                          :vk_none];
-         ;[:-y                          :vk_none];
-         ;[:-quote                      :vk_none];
+          [:-j                          :!Cy];
+          [:-l                          :!Cv];
+          [:-u                          :!Cc];
+          [:-y                          :!Cx];
+          [:-quote                      :!Cz];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-         ;[:-m                          :vk_none];
-         ;[:-n                          :vk_none];
-         ;[:-e                          :vk_none];
-         ;[:-i                          :vk_none];
-         ;[:-o                          :vk_none];
+          [:-m                          :caps_lock];
+          [:-n                          :left_arrow];
+          [:-e                          :down_arrow];
+          [:-i                          :up_arrow];
+          [:-o                          :right_arrow];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-k                          :vk_none];
-         ;[:-h                          :vk_none];
-         ;[:-comma                      :vk_none];
-         ;[:-period                     :vk_none];
-         ;[:-slash                      :vk_none];
+          [:-k                          :insert];
+          [:-h                          :home];
+          [:-comma                      :page_down];
+          [:-period                     :page_up];
+          [:-slash                      :end];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-l4                         :vk_none];
-         ;[:-l5                         :vk_none];
-         ;[:-l6                         :vk_none];
+          [:-l4                         :-l4];
+          [:-l5                         :-l5];
+          [:-l6                         :-l6];
 
           ; ────────────────────────────────────────────────────────────────────────────────────
           ; ignore another keys
