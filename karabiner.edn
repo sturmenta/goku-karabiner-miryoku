@@ -8,7 +8,7 @@
 ;; - [x] find a way to use modifiers with one side and the base layer with the other side
 ;;    - extra line of modifiers on top, but this modifiers make the other side be like the layer 0 again
 ;; - [ ] check how to implement aditional features
-;; - [ ] check button layer for shortcuts use with only one hand
+;; - [x] check button layer for shortcuts use with only one hand
 
 {
 
@@ -272,11 +272,11 @@
           [:-t                          :left_shift];
           [:-g                          :vk_none];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-z                          :vk_none];
-          [:-x                          :vk_none];
-          [:-c                          :vk_none];
-          [:-d                          :vk_none];
-          [:-v                          :vk_none];
+          [:-z                          :!Cz];
+          [:-x                          :!Cx];
+          [:-c                          :!Cc];
+          [:-d                          :!Cy];
+          [:-v                          :!Cv];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
           [:-l1                         :vk_none];
           [:-l2                         :vk_none];
@@ -344,11 +344,11 @@
           [:-t                          :left_shift];
           [:-g                          :vk_none];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-z                          :vk_none];
-          [:-x                          :vk_none];
-          [:-c                          :vk_none];
-          [:-d                          :vk_none];
-          [:-v                          :vk_none];
+          [:-z                          :!Cz];
+          [:-x                          :!Cx];
+          [:-c                          :!Cc];
+          [:-d                          :!Cy];
+          [:-v                          :!Cv];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
           [:-l1                         :vk_none];
           [:-l2                         :vk_none];
@@ -416,11 +416,11 @@
           [:-t                          :left_shift];
           [:-g                          :vk_none];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-z                          :vk_none];
-          [:-x                          :vk_none];
-          [:-c                          :vk_none];
-          [:-d                          :vk_none];
-          [:-v                          :vk_none];
+          [:-z                          :!Cz];
+          [:-x                          :!Cx];
+          [:-c                          :!Cc];
+          [:-d                          :!Cy];
+          [:-v                          :!Cv];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
           [:-l1                         :vk_none];
           [:-l2                         :vk_none];
