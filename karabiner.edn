@@ -5,7 +5,7 @@
 ;; - [x] add the functionalities for l4
 ;; - [x] add the functionalities for l5
 ;; - [x] add the functionalities for l6
-;; - [ ] find a way to use modifiers with one side and the base layer with the other side
+;; - [x] find a way to use modifiers with one side and the base layer with the other side
 ;;    - extra line of modifiers on top, but this modifiers make the other side be like the layer 0 again
 ;; - [ ] check how to implement aditional features
 ;; - [ ] check button layer for shortcuts use with only one hand
@@ -319,27 +319,35 @@
           ;  left side
           ;
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-         ;[:-q                          :vk_none];
-         ;[:-w                          :vk_none];
-         ;[:-f                          :vk_none];
-         ;[:-p                          :vk_none];
-         ;[:-b                          :vk_none];
+          ; NOTE: add a row with modifiers and set the other side to base layer
+          ;       to allow use only modifiers with base layer
+          [:-q nil nil {:held [{:set ["layer_0" 1] :repeat false}
+                                        :left_command] :afterup {:set ["layer_0" 0]}}]
+          [:-w nil nil {:held [{:set ["layer_0" 1] :repeat false}
+                                        :left_option] :afterup {:set ["layer_0" 0]}}]
+          [:-f nil nil {:held [{:set ["layer_0" 1] :repeat false}
+                                        :left_control] :afterup {:set ["layer_0" 0]}}]
+          [:-p nil nil {:held [{:set ["layer_0" 1] :repeat false}
+                                        :left_shift] :afterup {:set ["layer_0" 0]}}]
+          [:-b                          :vk_none];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
           [:-a                          :left_command];
           [:-r                          :left_option];
           [:-s                          :left_control];
           [:-t                          :left_shift];
-         ;[:-g                          :vk_none];
+          [:-g                          :vk_none];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-z                          :vk_none];
-         ;[:-x                          :vk_none];
-         ;[:-c                          :vk_none];
-         ;[:-d                          :vk_none];
-         ;[:-v                          :vk_none];
+          [:-z                          :vk_none];
+          [:-x                          :vk_none];
+          [:-c                          :vk_none];
+          [:-d                          :vk_none];
+          [:-v                          :vk_none];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-l1                         :vk_none];
-         ;[:-l2                         :vk_none];
-         ;[:-l3                         :vk_none];
+          [:-l1                         :vk_none];
+          [:-l2                         :vk_none];
+          [:-l3                         :vk_none];
+
+          [:condi :!layer_0 :layer_2]
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -368,10 +376,6 @@
           [:-l5                         :-l5];
           [:-l6                         :-l6];
 
-          ; ────────────────────────────────────────────────────────────────────────────────────
-          ; ignore another keys
-          [:any_key :vk_none]
-          [:any_consumer :vk_none]
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
 
