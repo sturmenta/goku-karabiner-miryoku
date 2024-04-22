@@ -1,3 +1,8 @@
+;; TODO:
+;; - [ ] remove code duplications using a new var for layer_1_2_3 and another for layer_4_5_6 and re-use the code
+;; - [x] remove unused combinations
+;; - [ ] add a github-readme new link with all the layers combinations I personal use in one big image with the 8 keyboard sections
+
 {
 
  :devices {:keychron_k2v2 [{:product_id 591 :vendor_id 1452}]}
@@ -350,11 +355,11 @@
           [:condi :!layer_0 :layer_2]
 
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          [:-j                          :!Cy];
-          [:-l                          :!Cv];
-          [:-u                          :!Cc];
-          [:-y                          :!Cx];
-          [:-quote                      :!Cz];
+          [:-j                          :vk_none];
+          [:-l                          :vk_none];
+          [:-u                          :vk_none];
+          [:-y                          :vk_none];
+          [:-quote                      :vk_none];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
           [:-m                          :caps_lock];
           [:-n                          :left_arrow];
@@ -362,7 +367,7 @@
           [:-i                          :up_arrow];
           [:-o                          :right_arrow];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-k                          :insert];
+          [:-k                          :vk_none];
           [:-h                          :home];
           [:-comma                      :page_down];
           [:-period                     :page_up];
@@ -422,11 +427,11 @@
           [:condi :!layer_0 :layer_3]
 
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          [:-j                          :!Cy];
-          [:-l                          :!Cv];
-          [:-u                          :!Cc];
-          [:-y                          :!Cx];
-          [:-quote                      :!Cz];
+          [:-j                          :vk_none];
+          [:-l                          :vk_none];
+          [:-u                          :vk_none];
+          [:-y                          :vk_none];
+          [:-quote                      :vk_none];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
           [:-m                          :vk_none];
           [:-n                          {:mkey {:x -1500}}];
