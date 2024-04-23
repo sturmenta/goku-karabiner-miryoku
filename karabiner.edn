@@ -1,11 +1,7 @@
 ;; TODO:
-;; - [ ] remove code duplications using a new var for layer_1_2_3 and another for layer_4_5_6 and re-use the code
-;; - [x] remove unused combinations
 ;; - [ ] add a github-readme new link with all the layers combinations I personal use in one big image with the 8 keyboard sections
 
 {
-
- :devices {:keychron_k2v2 [{:product_id 591 :vendor_id 1452}]}
 
  :profiles {
   :goku {
@@ -127,50 +123,44 @@
           ; ── layer_1 ───────────────────────────────────────────────────────────────────────────
            [:-l1 nil [
               :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_1
-            ] {:held {:set [
-            "layer_1" 1] :repeat false} :afterup {:set [
-            "layer_1" 0]} :alone
-            :-l1}]
+            ] {:held [{:set ["layer_1" 1] :repeat false} {:set ["layer_1_2_3" 1] :repeat false}]
+               :afterup [{:set ["layer_1" 0]} {:set ["layer_1_2_3" 0]}]
+               :alone :-l1}]
 
           ; ── layer_2 ───────────────────────────────────────────────────────────────────────────
            [:-l2 nil [
               :!layer_1 :!layer_3 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_2
-            ] {:held {:set [
-            "layer_2" 1] :repeat false} :afterup {:set [
-            "layer_2" 0]} :alone
-            :-l2}]
+            ] {:held [{:set ["layer_2" 1] :repeat false} {:set ["layer_1_2_3" 1] :repeat false}]
+               :afterup [{:set ["layer_2" 0]} {:set ["layer_1_2_3" 0]}]
+               :alone :-l2}]
 
           ; ── layer_3 ───────────────────────────────────────────────────────────────────────────
            [:-l3 nil [
               :!layer_1 :!layer_2 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_3
-            ] {:held {:set [
-            "layer_3" 1] :repeat false} :afterup {:set [
-            "layer_3" 0]} :alone
-            :-l3}]
+            ] {:held [{:set ["layer_3" 1] :repeat false} {:set ["layer_1_2_3" 1] :repeat false}]
+               :afterup [{:set ["layer_3" 0]} {:set ["layer_1_2_3" 0]}]
+               :alone :-l3}]
 
           ; ── layer_4 ───────────────────────────────────────────────────────────────────────────
            [:-l4 nil [
               :!layer_1 :!layer_2 :!layer_3 :!layer_5 :!layer_6 ;without :!layer_4
-            ] {:held {:set [
-            "layer_4" 1] :repeat false} :afterup {:set [
-            "layer_4" 0]} :alone
-            :-l4}]
+            ] {:held [{:set ["layer_4" 1] :repeat false} {:set ["layer_4_5_6" 1] :repeat false}]
+               :afterup [{:set ["layer_4" 0]} {:set ["layer_4_5_6" 0]}]
+               :alone :-l4}]
 
           ; ── layer_5 ───────────────────────────────────────────────────────────────────────────
            [:-l5 nil [
               :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_6 ;without :!layer_5
-            ] {:held {:set [
-            "layer_5" 1] :repeat false} :afterup {:set [
-            "layer_5" 0]} :alone
-            :-l5}]
+            ] {:held [{:set ["layer_5" 1] :repeat false} {:set ["layer_4_5_6" 1] :repeat false}]
+               :afterup [{:set ["layer_5" 0]} {:set ["layer_4_5_6" 0]}]
+               :alone :-l5}]
 
           ; ── layer_6 ───────────────────────────────────────────────────────────────────────────
            [:-l6 nil [
               :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 ;without :!layer_6
-            ] {:held {:set [
-            "layer_6" 1] :repeat false} :afterup {:set [
-            "layer_6" 0]} :alone
-            :-l6}]
+            ] {:held [{:set ["layer_6" 1] :repeat false} {:set ["layer_4_5_6" 1] :repeat false}]
+               :afterup [{:set ["layer_6" 0]} {:set ["layer_4_5_6" 0]}]
+               :alone :-l6}]
 
           ]
          }
@@ -178,77 +168,19 @@
 
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
-         ;; Example empty layer
-
-          ;────────────────────────────────────────────────────────────────────────────────────────────
-          ;
-          ;  left side
-          ;
-          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-         ;[:-q                          :vk_none];
-         ;[:-w                          :vk_none];
-         ;[:-f                          :vk_none];
-         ;[:-p                          :vk_none];
-         ;[:-b                          :vk_none];
-          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-         ;[:-a                          :vk_none];
-         ;[:-r                          :vk_none];
-         ;[:-s                          :vk_none];
-         ;[:-t                          :vk_none];
-         ;[:-g                          :vk_none];
-          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-z                          :vk_none];
-         ;[:-x                          :vk_none];
-         ;[:-c                          :vk_none];
-         ;[:-d                          :vk_none];
-         ;[:-v                          :vk_none];
-          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-l1                         :vk_none];
-         ;[:-l2                         :vk_none];
-         ;[:-l3                         :vk_none];
-
-          ;────────────────────────────────────────────────────────────────────────────────────────────
-          ;
-          ;  right side
-          ;
-          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-         ;[:-j                          :vk_none];
-         ;[:-l                          :vk_none];
-         ;[:-u                          :vk_none];
-         ;[:-y                          :vk_none];
-         ;[:-quote                      :vk_none];
-          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-         ;[:-m                          :vk_none];
-         ;[:-n                          :vk_none];
-         ;[:-e                          :vk_none];
-         ;[:-i                          :vk_none];
-         ;[:-o                          :vk_none];
-          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-         ;[:-k                          :vk_none];
-         ;[:-h                          :vk_none];
-         ;[:-comma                      :vk_none];
-         ;[:-period                     :vk_none];
-         ;[:-slash                      :vk_none];
-          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-         ;[:-l4                         :vk_none];
-         ;[:-l5                         :vk_none];
-         ;[:-l6                         :vk_none];
-
-        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-
         ;; ─────────────────────────────────────────────────────────────────────────────
-        { :des "layer_1 - (media)" :rules
+        { :des "layer_1_2_3" :rules
          [
+
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
           ;  left side
           ;
 
-          [:condi :layer_1]
+          [:condi :layer_1_2_3]
 
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          ; NOTE: add a row with modifiers and set the other side to base layer
-          ;       to allow use only modifiers with base layer
+          ; modifiers with base layer
           [:-q nil nil {:held [{:set ["layer_0" 1] :repeat false}
                                         :left_command] :afterup {:set ["layer_0" 0]}}]
           [:-w nil nil {:held [{:set ["layer_0" 1] :repeat false}
@@ -259,6 +191,7 @@
                                         :left_shift] :afterup {:set ["layer_0" 0]}}]
           [:-b                          :vk_none];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          ; modifiers with current layer
           [:-a                          :left_command];
           [:-r                          :left_option];
           [:-s                          :left_control];
@@ -274,6 +207,58 @@
           [:-l1                         :vk_none];
           [:-l2                         :vk_none];
           [:-l3                         :vk_none];
+
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "layer_4_5_6" :rules
+         [
+
+          ;────────────────────────────────────────────────────────────────────────────────────────────
+          ;
+          ;  right side
+          ;
+
+          [:condi :layer_4_5_6]
+
+          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
+          ; modifiers with base layer
+          [:-j                          :vk_none];
+          [:-l nil nil {:held [{:set ["layer_0" 1] :repeat false}
+                                        :right_shift] :afterup {:set ["layer_0" 0]}}]
+          [:-u nil nil {:held [{:set ["layer_0" 1] :repeat false}
+                                        :right_control] :afterup {:set ["layer_0" 0]}}]
+          [:-y nil nil {:held [{:set ["layer_0" 1] :repeat false}
+                                        :right_option] :afterup {:set ["layer_0" 0]}}]
+          [:-quote nil nil {:held [{:set ["layer_0" 1] :repeat false}
+                                        :right_command] :afterup {:set ["layer_0" 0]}}]
+          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
+          ; modifiers with current layer
+          [:-m                          :vk_none];
+          [:-n                          :right_shift];
+          [:-e                          :right_control];
+          [:-i                          :right_option];
+          [:-o                          :right_command];
+          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
+          [:-k                          :vk_none];
+          [:-h                          :vk_none];
+          [:-comma                      :vk_none];
+          [:-period                     :vk_none];
+          [:-slash                      :vk_none];
+          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
+          [:-l4                         :vk_none];
+          [:-l5                         :vk_none];
+          [:-l6                         :vk_none];
+
+         ]}
+        ;; ─────────────────────────────────────────────────────────────────────────────
+
+        ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+        ;; ─────────────────────────────────────────────────────────────────────────────
+        { :des "layer_1 - (media)" :rules
+         [
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -311,41 +296,6 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "layer_2 - (navigation)" :rules
          [
-          ;────────────────────────────────────────────────────────────────────────────────────────────
-          ;
-          ;  left side
-          ;
-
-          [:condi :layer_2]
-
-          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          ; NOTE: add a row with modifiers and set the other side to base layer
-          ;       to allow use only modifiers with base layer
-          [:-q nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :left_command] :afterup {:set ["layer_0" 0]}}]
-          [:-w nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :left_option] :afterup {:set ["layer_0" 0]}}]
-          [:-f nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :left_control] :afterup {:set ["layer_0" 0]}}]
-          [:-p nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :left_shift] :afterup {:set ["layer_0" 0]}}]
-          [:-b                          :vk_none];
-          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-          [:-a                          :left_command];
-          [:-r                          :left_option];
-          [:-s                          :left_control];
-          [:-t                          :left_shift];
-          [:-g                          :vk_none];
-          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-z                          :!Cz];
-          [:-x                          :!Cx];
-          [:-c                          :!Cc];
-          [:-d                          :!Cy];
-          [:-v                          :!Cv];
-          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-l1                         :vk_none];
-          [:-l2                         :vk_none];
-          [:-l3                         :vk_none];
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -383,41 +333,6 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "layer_3 - (mouse)" :rules
          [
-          ;────────────────────────────────────────────────────────────────────────────────────────────
-          ;
-          ;  left side
-          ;
-
-          [:condi :layer_3]
-
-          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          ; NOTE: add a row with modifiers and set the other side to base layer
-          ;       to allow use only modifiers with base layer
-          [:-q nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :left_command] :afterup {:set ["layer_0" 0]}}]
-          [:-w nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :left_option] :afterup {:set ["layer_0" 0]}}]
-          [:-f nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :left_control] :afterup {:set ["layer_0" 0]}}]
-          [:-p nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :left_shift] :afterup {:set ["layer_0" 0]}}]
-          [:-b                          :vk_none];
-          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-          [:-a                          :left_command];
-          [:-r                          :left_option];
-          [:-s                          :left_control];
-          [:-t                          :left_shift];
-          [:-g                          :vk_none];
-          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-z                          :!Cz];
-          [:-x                          :!Cx];
-          [:-c                          :!Cc];
-          [:-d                          :!Cy];
-          [:-v                          :!Cv];
-          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-l1                         :vk_none];
-          [:-l2                         :vk_none];
-          [:-l3                         :vk_none];
 
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
@@ -455,6 +370,7 @@
         ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "layer_4 - (symbols)" :rules
          [
+
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
           ;  left side
@@ -485,48 +401,13 @@
           [:-l2                         :!S0];
           [:-l3                         :!Shyphen];
 
-          ;────────────────────────────────────────────────────────────────────────────────────────────
-          ;
-          ;  right side
-          ;
-
-          [:condi :layer_4]
-
-          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          ; NOTE: add a row with modifiers and set the other side to base layer
-          ;       to allow use only modifiers with base layer
-          [:-j                          :vk_none];
-          [:-l nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_shift] :afterup {:set ["layer_0" 0]}}]
-          [:-u nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_control] :afterup {:set ["layer_0" 0]}}]
-          [:-y nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_option] :afterup {:set ["layer_0" 0]}}]
-          [:-quote nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_command] :afterup {:set ["layer_0" 0]}}]
-          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-          [:-m                          :vk_none];
-          [:-n                          :right_shift];
-          [:-e                          :right_control];
-          [:-i                          :right_option];
-          [:-o                          :right_command];
-          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-k                          :vk_none];
-          [:-h                          :vk_none];
-          [:-comma                      :vk_none];
-          [:-period                     :vk_none];
-          [:-slash                      :vk_none];
-          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-l4                         :vk_none];
-          [:-l5                         :vk_none];
-          [:-l6                         :vk_none];
-
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
 
         ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "layer_5 - (numbers)" :rules
          [
+
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
           ;  left side
@@ -557,48 +438,13 @@
           [:-l2                         :0];
           [:-l3                         :hyphen];
 
-          ;────────────────────────────────────────────────────────────────────────────────────────────
-          ;
-          ;  right side
-          ;
-
-          [:condi :layer_5]
-
-          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          ; NOTE: add a row with modifiers and set the other side to base layer
-          ;       to allow use only modifiers with base layer
-          [:-j                          :vk_none];
-          [:-l nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_shift] :afterup {:set ["layer_0" 0]}}]
-          [:-u nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_control] :afterup {:set ["layer_0" 0]}}]
-          [:-y nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_option] :afterup {:set ["layer_0" 0]}}]
-          [:-quote nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_command] :afterup {:set ["layer_0" 0]}}]
-          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-          [:-m                          :vk_none];
-          [:-n                          :right_shift];
-          [:-e                          :right_control];
-          [:-i                          :right_option];
-          [:-o                          :right_command];
-          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-k                          :vk_none];
-          [:-h                          :vk_none];
-          [:-comma                      :vk_none];
-          [:-period                     :vk_none];
-          [:-slash                      :vk_none];
-          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-l4                         :vk_none];
-          [:-l5                         :vk_none];
-          [:-l6                         :vk_none];
-
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
 
         ;; ─────────────────────────────────────────────────────────────────────────────
         { :des "layer_6 - (functions)" :rules
          [
+
           ;────────────────────────────────────────────────────────────────────────────────────────────
           ;
           ;  left side
@@ -629,55 +475,15 @@
           [:-l2                         :-l2];
           [:-l3                         :-l3];
 
-          ;────────────────────────────────────────────────────────────────────────────────────────────
-          ;
-          ;  right side
-          ;
-
-          [:condi :layer_6]
-
-          ; ── row 1 ───────────────────────────────────────────────────────────────────────────
-          ; NOTE: add a row with modifiers and set the other side to base layer
-          ;       to allow use only modifiers with base layer
-          [:-j                          :vk_none];
-          [:-l nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_shift] :afterup {:set ["layer_0" 0]}}]
-          [:-u nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_control] :afterup {:set ["layer_0" 0]}}]
-          [:-y nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_option] :afterup {:set ["layer_0" 0]}}]
-          [:-quote nil nil {:held [{:set ["layer_0" 1] :repeat false}
-                                        :right_command] :afterup {:set ["layer_0" 0]}}]
-          ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-          [:-m                          :vk_none];
-          [:-n                          :right_shift];
-          [:-e                          :right_control];
-          [:-i                          :right_option];
-          [:-o                          :right_command];
-          ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-k                          :vk_none];
-          [:-h                          :vk_none];
-          [:-comma                      :vk_none];
-          [:-period                     :vk_none];
-          [:-slash                      :vk_none];
-          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-l4                         :vk_none];
-          [:-l5                         :vk_none];
-          [:-l6                         :vk_none];
-
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
-
 
         ;; ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
         ;; ─────────────────────────────────────────────────────────────────────────────
         {:des "Base characters" :rules
          [;
-          ;
           ; NOTE: use the mappings from "froms" to map all keys
-          ;
-          ;
           ;; ───────────────────────────────
           ;;
           ;; left side
