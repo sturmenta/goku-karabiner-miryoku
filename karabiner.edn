@@ -106,13 +106,15 @@
  }
 
  :tos {
-    ;; layers keys
-    :-l1  {:key :escape}
-    :-l2  {:key :spacebar}
-    :-l3  {:key :tab}
-    :-l4  {:key :return_or_enter}
-    :-l5  {:key :delete_or_backspace}
-    :-l6  {:key :delete_forward}
+   ;; layers keys
+   :-l1  {:key :escape}
+   :-l2  {:key :spacebar}
+   :-l3  {:key :tab}
+   :-l4  {:key :return_or_enter}
+   :-l5  {:key :delete_or_backspace}
+   :-l6  {:key :delete_forward}
+
+   :emoji_picker {:key :spacebar :modi [:control :command]} ;!CTspacebar
  }
 
  :main [
@@ -286,7 +288,7 @@
           [:-period                     :vk_none];
           [:-slash                      :vk_none];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-l4                         :vk_none];
+          [:-l4                         :emoji_picker];
           [:-l5                         :play_or_pause];
           [:-l6                         :mute];
 
