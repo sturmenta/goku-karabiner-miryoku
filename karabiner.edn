@@ -116,46 +116,32 @@
         { :des "modifier layers" :rules [
 
           ; ── layer_1 ───────────────────────────────────────────────────────────────────────────
-           [:-l1 nil [
-              :!layer_2 :!layer_3 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_1
-            ] {:held [{:set ["layer_1" 1] :repeat false} {:set ["layer_1_2_3" 1] :repeat false}]
-               :afterup [{:set ["layer_1" 0]} {:set ["layer_1_2_3" 0]}]
-               :alone :-l1}]
+           [:-x1 nil [
+              :!layer_2 :!layer_3 :!layer_4 ;without :!layer_1
+            ] {:held [{:set ["layer_1" 1] :repeat false} {:set ["layer_1_2" 1] :repeat false}]
+               :afterup [{:set ["layer_1" 0]} {:set ["layer_1_2" 0]}]
+               :alone :-x1}]
 
           ; ── layer_2 ───────────────────────────────────────────────────────────────────────────
-           [:-l2 nil [
-              :!layer_1 :!layer_3 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_2
-            ] {:held [{:set ["layer_2" 1] :repeat false} {:set ["layer_1_2_3" 1] :repeat false}]
-               :afterup [{:set ["layer_2" 0]} {:set ["layer_1_2_3" 0]}]
-               :alone :-l2}]
+           [:-x2 nil [
+              :!layer_1 :!layer_3 :!layer_4 ;without :!layer_2
+            ] {:held [{:set ["layer_2" 1] :repeat false} {:set ["layer_1_2" 1] :repeat false}]
+               :afterup [{:set ["layer_2" 0]} {:set ["layer_1_2" 0]}]
+               :alone :-x2}]
 
           ; ── layer_3 ───────────────────────────────────────────────────────────────────────────
-           [:-l3 nil [
-              :!layer_1 :!layer_2 :!layer_4 :!layer_5 :!layer_6 ;without :!layer_3
-            ] {:held [{:set ["layer_3" 1] :repeat false} {:set ["layer_1_2_3" 1] :repeat false}]
-               :afterup [{:set ["layer_3" 0]} {:set ["layer_1_2_3" 0]}]
-               :alone :-l3}]
+           [:-x3 nil [
+              :!layer_1 :!layer_2 :!layer_4 ;without :!layer_3
+            ] {:held [{:set ["layer_3" 1] :repeat false} {:set ["layer_3_4" 1] :repeat false}]
+               :afterup [{:set ["layer_3" 0]} {:set ["layer_3_4" 0]}]
+               :alone :-x3}]
 
           ; ── layer_4 ───────────────────────────────────────────────────────────────────────────
-           [:-l4 nil [
-              :!layer_1 :!layer_2 :!layer_3 :!layer_5 :!layer_6 ;without :!layer_4
-            ] {:held [{:set ["layer_4" 1] :repeat false} {:set ["layer_4_5_6" 1] :repeat false}]
-               :afterup [{:set ["layer_4" 0]} {:set ["layer_4_5_6" 0]}]
-               :alone :-l4}]
-
-          ; ── layer_5 ───────────────────────────────────────────────────────────────────────────
-           [:-l5 nil [
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_6 ;without :!layer_5
-            ] {:held [{:set ["layer_5" 1] :repeat false} {:set ["layer_4_5_6" 1] :repeat false}]
-               :afterup [{:set ["layer_5" 0]} {:set ["layer_4_5_6" 0]}]
-               :alone :-l5}]
-
-          ; ── layer_6 ───────────────────────────────────────────────────────────────────────────
-           [:-l6 nil [
-              :!layer_1 :!layer_2 :!layer_3 :!layer_4 :!layer_5 ;without :!layer_6
-            ] {:held [{:set ["layer_6" 1] :repeat false} {:set ["layer_4_5_6" 1] :repeat false}]
-               :afterup [{:set ["layer_6" 0]} {:set ["layer_4_5_6" 0]}]
-               :alone :-l6}]
+           [:-x4 nil [
+              :!layer_1 :!layer_2 :!layer_3 ;without :!layer_4
+            ] {:held [{:set ["layer_4" 1] :repeat false} {:set ["layer_3_4" 1] :repeat false}]
+               :afterup [{:set ["layer_4" 0]} {:set ["layer_3_4" 0]}]
+               :alone :-x4}]
 
           ]
          }
