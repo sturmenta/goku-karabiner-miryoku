@@ -1,6 +1,3 @@
-;; TODO:
-;; - [ ] add a github-readme new link with all the layers combinations I personal use in one big image with the 8 keyboard sections
-
 {
 
  :profiles {
@@ -13,7 +10,7 @@
     ;;
     ;; :default true ; mod taps profile
     ;; :sim     50 ; simultaneous_threshold_milliseconds (def: 50) -- different from simlayers, this is for cases like [:a :b]
-    ;; :delay   210 ; to_delayed_action_delay_milliseconds -- NOTE: this should be equal to :held for mod-tap layers
+    ;; :delay  0 ; to_delayed_action_delay_milliseconds -- NOTE: this should be equal to :held for mod-tap layers
     ;; :held    210 ; to_if_held_down_threshold_milliseconds (def: 500) -- NOTE: this should be equal to :delay for mod-tap layers
     ;; :alone   209 ; to_if_alone_timeout_milliseconds (def: 1000) -- NOTE: (i think) this must be just less than the delay / held value to avoid bug where mod-tap layer stays 1
     ;;
@@ -34,7 +31,7 @@
   ;;      1   2   3   4   5       8   9   0   -   =
   ;;      q   w   e   r   t       u   i   o   p   [
   ;;      a   s   d   f   g       j   k   l   ;   '
-  ;;              x   c   v       m   ,   .
+  ;;                  c   v       m   ,
   ;;
   ;; ─────────────────────────────────────────────────────────────────────────────
   ;;
@@ -43,7 +40,7 @@
   ;;      q   w   f   p   b       j   l   u   y   '
   ;;      a   r   s   t   g       m   n   e   i   o
   ;;      z   x   c   d   v       k   h   ,   .   /
-  ;;              esc spc tab     rtn del dfw
+  ;;                  spc tab     rtn del
   ;;
   ;; ─────────────────────────────────────────────────────────────────────────────
 
@@ -73,9 +70,8 @@
   :-d                     {:key :##f}
   :-v                     {:key :##g}
   ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-  :-l1                    {:key :##x}
-  :-l2                    {:key :##c}
-  :-l3                    {:key :##v}
+  :-x1                    {:key :##c}
+  :-x2                    {:key :##v}
 
   ;────────────────────────────────────────────────────────────────────────────────────────────
   ;
@@ -100,19 +96,16 @@
   :-period                {:key :##semicolon}
   :-slash                 {:key :##quote}
   ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-  :-l4                    {:key :##m}
-  :-l5                    {:key :##comma}
-  :-l6                    {:key :##period}
+  :-x3                    {:key :##m}
+  :-x4                    {:key :##comma}
  }
 
  :tos {
    ;; layers keys
-   :-l1  {:key :escape}
-   :-l2  {:key :spacebar}
-   :-l3  {:key :tab}
-   :-l4  {:key :return_or_enter}
-   :-l5  {:key :delete_or_backspace}
-   :-l6  {:key :delete_forward}
+   :-x1  {:key :spacebar}
+   :-x2  {:key :tab}
+   :-x3  {:key :return_or_enter}
+   :-x4  {:key :delete_or_backspace}
 
    :emoji_picker {:key :spacebar :modi [:control :command]} ;!CTspacebar
  }
