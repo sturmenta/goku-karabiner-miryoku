@@ -245,9 +245,9 @@
           [:-h                          :vk_none];
           [:-comma                      :vk_none];
           [:-period                     :vk_none];
-          [:-slash                      :vk_none];
+          [:-slash                      :emoji_picker];
           ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-x3                         :emoji_picker];
+         ;[:-x3                         :vk_none];
           [:-x4                         :play_or_pause];
 
          ]}
