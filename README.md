@@ -1,6 +1,6 @@
 # Goku-Karabiner-Miryoku config
 
-This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to create a config JSON file for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) *"A powerful and stable keyboard customizer for macOS."* implementing [Miryoku](https://github.com/manna-harbour/miryoku/tree/master) keyboard layout in a not programmable keyboard.
+This config uses [GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo) to create a config JSON file for [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements) *"A powerful and stable keyboard customizer for macOS."* implementing a keyboard layout inspired in [Miryoku](https://github.com/manna-harbour/miryoku/tree/master) in a not programmable keyboard.
 
 ![Miryoku keyboard layout](https://raw.githubusercontent.com/manna-harbour/miryoku/master/data/cover/miryoku-kle-cover.png)
 
