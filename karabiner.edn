@@ -40,7 +40,7 @@
   ;;      q   w   f   p   b       j   l   u   y   '
   ;;      a   r   s   t   g       m   n   e   i   o
   ;;      z   x   c   d   v       k   h   ,   .   /
-  ;;                  spc tab     rtn del
+  ;;                      spc     rtn
   ;;
   ;; ─────────────────────────────────────────────────────────────────────────────
 
@@ -102,10 +102,10 @@
 
  :tos {
    ;; layers keys
-   :-x1  {:key :spacebar}
-   :-x2  {:key :tab}
+   :-x1  {:key :vk_none}
+   :-x2  {:key :spacebar}
    :-x3  {:key :return_or_enter}
-   :-x4  {:key :delete_or_backspace}
+   :-x4  {:key :vk_none}
 
    :emoji_picker {:key :spacebar :modi [:control :command]} ;!CTspacebar
  }
@@ -162,7 +162,7 @@
 
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
           [:-q                          :escape];
-          [:-w                          :vk_none];
+          [:-w                          :tab];
           [:-f                          :vk_none];
           [:-p                          :vk_none];
           [:-b                          :vk_none];
@@ -178,9 +178,6 @@
           [:-c                          :!Cc];
           [:-d                          :vk_none];
           [:-v                          :!Cv];
-          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-x1                         :vk_none];
-          [:-x2                         :vk_none];
 
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
@@ -199,9 +196,9 @@
           ; ── row 1 ───────────────────────────────────────────────────────────────────────────
           [:-j                          :vk_none];
           [:-l                          :vk_none];
-          [:-u                          :vk_none];
-          [:-y                          :vk_none];
-          [:-quote                      :vk_none];
+          [:-u                          :!Cdelete_or_backspace];
+          [:-y                          :!Odelete_or_backspace];
+          [:-quote                      :delete_or_backspace];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
           [:-m                          :vk_none];
           [:-n                          :right_shift];
@@ -214,9 +211,6 @@
           [:-comma                      :vk_none];
           [:-period                     :vk_none];
           [:-slash                      :vk_none];
-          ; ── row 4 ───────────────────────────────────────────────────────────────────────────
-          [:-x3                         :vk_none];
-          [:-x4                         :vk_none];
 
          ]}
         ;; ─────────────────────────────────────────────────────────────────────────────
@@ -241,13 +235,13 @@
           [:-y                          :volume_up];
           [:-quote                      :vk_consumer_next];
           ; ── row 2 ───────────────────────────────────────────────────────────────────────────
-          [:-m                          :vk_none];
+          [:-m                          :vk_none]; TODO: mute mic
           [:-n                          :left_arrow];
           [:-e                          :down_arrow];
           [:-i                          :up_arrow];
           [:-o                          :right_arrow];
           ; ── row 3 ───────────────────────────────────────────────────────────────────────────
-          [:-k                          :vk_none];
+          [:-k                          :vk_none]; TODO: on/off webcam
           [:-h                          :vk_none];
           [:-comma                      :vk_none];
           [:-period                     :vk_none];
